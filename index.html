@@ -12,67 +12,59 @@
 
     <link href="dist/output.css" rel="stylesheet">
     <script defer src="https://kit.fontawesome.com/6718c180c3.js" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.0/dist/cdn.min.js"></script>
 </head>
 
 <body>
-    <header class="">
-        <nav class="navbar bg-base-100 sm:px-4 hidden md:flex">
-            <div class="flex-1">
+    <header class="shadow sticky top-0 bg-white">
+        <nav class="grid-nav grid-rows-1 items-center md:py-0 p-2">
+            <div class="grit-logo md:py-1">
                 <a href="/" class="">
-                    <img src="img/logopmii.png" alt="Logo Komisariat" class="h-10">
+                    <img src="img/logopmii.png" alt="Logo Komisariat" class="h-10 inline">
                 </a>
             </div>
-            <div class="flex-none">
-                <ul class="menu menu-horizontal px-1">
-                    <li tabindex="0">
-                        <a href="rayon">
-                            Rayon <i class="fa-solid fa-chevron-down"></i>
-                        </a>
-                        <ul class="p-2 bg-base-100 shadow border">
-                            <li><a>Rayon Lorem ipsum dolor sit amet.</a></li>
-                            <li><a>Rayon Lorem consectetur adipisicing elit. Maxime, corrupti.</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a href="kegiatan">Kegiatan</a></li>
-                    <li><a href="tentang-kami">Tentang Kami</a></li>
-                    <li><a href="kata-mereka">Kata Mereka</a></li>
-                    <li><a href="faq">FAQ</a></li>
-                    <li><a href="kontak">Kontak</a></li>
-                </ul>
+            <ul class="grit-link flex justify-center items-center my-1">
+                <li>
+                    <a href="#rayon" class="btn btn-sm btn-ghost font-bold">
+                        <i class="fa-solid fa-school-flag xs:fa-hidden"></i>
+                        <span class="hidden xs:block">Rayon</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#kegiatan" class="btn btn-sm btn-ghost font-bold">
+                        <i class="fa-solid fa-bullhorn xs:fa-hidden"></i>
+                        <span class="hidden xs:block">Kegiatan</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#profile" class="btn btn-sm btn-ghost font-bold">
+                        <i class="fa-solid fa-circle-user xs:fa-hidden"></i>
+                        <span class="hidden xs:block">Profile</span>
+                    </a>
+                </li>
+                <li><a href="#faq" class="btn btn-sm btn-ghost font-bold">
+                        <i class="fa-solid fa-question xs:fa-hidden"></i>
+                        <span class="hidden xs:block">FAQ</span>
+                    </a></li>
+                <li><a href="#kontak" class="btn btn-sm btn-ghost font-bold">
+                        <i class="fa-solid fa-phone-volume xs:fa-hidden"></i>
+                        <span class="hidden xs:block">Kontak</span>
+                    </a></li>
+            </ul>
+            <div class="grit-cta flex justify-end">
+                <a href="" class="btn btn-sm bg-blue-800 hover:bg-blue-900">Gabung</a>
             </div>
         </nav>
-        <div class="btm-nav bg-base-200 flex md:hidden">
-            <a href="#rayon">
-                <i class="fa-solid fa-school text-xl xs:text-base"></i>
-                <span class="btm-nav-label hidden xs:block">Rayon</span>
-            </a>
-            <a href="kegiatan">
-                <i class="fa-solid fa-hand-fist text-xl xs:text-base"></i>
-                <span class="btm-nav-label hidden xs:block">Kegiatan</span>
-            </a>
-            <a href="tentang-kami">
-                <i class="fa-regular fa-id-card text-xl xs:text-base"></i>
-                <span class="btm-nav-label hidden xs:block">Tentang</span>
-            </a>
-            <a href="faq">
-                <i class="fa-solid fa-clipboard-question text-xl xs:text-base"></i>
-                <span class="btm-nav-label hidden xs:block">FAQ</span>
-            </a>
-            <a href="kontak">
-                <i class="fa-solid fa-square-phone-flip text-xl xs:text-base"></i>
-                <span class="btm-nav-label hidden xs:block">Kontak</span>
-            </a>
-        </div>
     </header>
-    <main class="bg-red-300">lorem</main>
-    <div class="my-32">lorem</div>
-    <div class="my-32">lorem</div>
-    <div class="my-32">lorem</div>
-    <div class="my-32">lorem</div>
-    <div class="my-32">lorem</div>
-    <div class="my-32">lorem</div>
-    <div class="my-32">lorem</div>
+    <main class="bg-red-300">
+        <div class="">lorem sleidksalfe</div>
+        <div class="my-32">lorem</div>
+        <div class="my-32">lorem</div>
+        <div class="my-32">lorem</div>
+        <div class="my-32">lorem</div>
+        <div class="my-32">lorem</div>
+        <div class="my-32">lorem</div>
+    </main>
     <footer class="bg-sky-900">Lorem</footer>
 </body>
 

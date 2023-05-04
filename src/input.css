@@ -1,3 +1,39 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  /* Kode Sendiri */
+  .grid-nav {
+    display: grid;
+    grid-template-areas: "logo logo cta cta cta" "link link link link link";
+    grid-template-columns: auto;
+    grid-template-rows: repeat(1, minmax(0, 1fr));
+  }
+  .grit-logo {
+    grid-area: logo;
+  }
+  .grit-link {
+    grid-area: link;
+  }
+  .grit-cta {
+    grid-area: cta;
+  }
+
+  /* Replace daisyUI */
+  .btn {
+    @apply rounded capitalize;
+  }
+}
+
+@layer utilities {
+  .fa-hidden {
+    --fa-display: none;
+  }
+}
+
+@media (min-width: 640px) {
+  .grid-nav {
+    grid-template-areas: "logo link link link cta" "logo link link link cta";
+  }
+}
