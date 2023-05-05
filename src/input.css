@@ -30,6 +30,10 @@
   .fa-hidden {
     --fa-display: none;
   }
+  .strong {
+    text-decoration: underline blue wavy 2px;
+    /* text-underline-offset: 0.3em; */
+  }
 }
 
 @media (min-width: 640px) {
