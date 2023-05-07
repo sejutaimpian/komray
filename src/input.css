@@ -34,6 +34,9 @@
     text-decoration: underline blue wavy 2px;
     /* text-underline-offset: 0.3em; */
   }
+  [x-cloak] {
+    display: none !important;
+  }
 }
 
 @media (min-width: 640px) {
