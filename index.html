@@ -17,8 +17,8 @@
 
 <body class="bg-[#ecd791] text-gray-800">
     <header class="shadow sticky top-0 bg-slate-50 z-[999]">
-        <nav class="grid-nav grid-rows-1 items-center px-2 pt-1">
-            <div class="grit-logo md:py-1">
+        <nav class="grid-nav grid-rows-1 items-center pt-1">
+            <div class="grit-logo md:py-1 pl-4 sm:pl-8 md:pl-12 lg:pl-16">
                 <a href="#" class="">
                     <img src="img/logopmii.png" alt="Logo Komisariat" class="h-10 inline">
                 </a>
@@ -51,7 +51,7 @@
                         <span class="hidden xs:block">Kontak</span>
                     </a></li>
             </ul>
-            <div class="grit-cta flex justify-end">
+            <div class="grit-cta flex justify-end pr-4 sm:pr-8 md:pr-12 lg:pr-16">
                 <a href="#" class="btn btn-sm bg-blue-800 hover:bg-blue-900"><i
                         class="fa-solid fa-rocket pe-2"></i>Gabung</a>
             </div>
@@ -113,7 +113,7 @@
         </section>
         <section class="flex my-10 flex-wrap">
             <div id="rayon" class="invisible -mt-20"></div>
-            <div class="w-full md:w-1/2 mb-5 md:pr-6">
+            <div class="w-full md:w-1/2 md:pr-6">
                 <h2 class="text-5xl font-bold border-b-4 border-gray-800 mx-4 sm:mx-8 md:ml-12 md:mr-0 lg:ml-16 mb-4">
                     RAYON</h2>
                 <p class="mx-4 sm:mx-8 md:ml-12 md:mr-0 lg:ml-16 mb-2">
@@ -122,23 +122,27 @@
                     officiis commodi numquam
                     molestias maiores, iure veritatis qui temporibus eius necessitatibus hic!
                 </p>
-                <div class="aspect-video my-5 sm:mx-8 md:ml-12 md:mr-0 lg:mx-16">
+                <div class="aspect-video my-5 sm:mx-8 md:ml-12 md:mr-0 lg:ml-16">
                     <!-- Aspect Ratio 16/9, 1920px/1080px -->
                     <img src="img/komray_mobile 16-9.png" alt="Foto Organisasi Landscape" class="md:rounded-md">
                 </div>
             </div>
-            <div
-                class="w-full md:w-1/2 flex justify-center items-center flex-wrap mt-5 px-4 sm:px-8 md:pl-0 md:pr-12 lg:pr-16">
+            <div class="w-full md:w-1/2 flex justify-center flex-wrap px-4 sm:px-8 md:pl-0 md:pr-12 lg:pr-16">
                 <div class="w-full sm:w-1/2 md:w-full lg:w-1/2 px-2 my-2">
-                    <div x-data="{tooltip: false}" class="relative bg-slate-50 rounded-lg">
-                        <div class="flex items-center pr-2 border-b-2 border-gray-800">
-                            <img src="img/logopmii.png" alt="Logo Rayon Humaniora" class="mx-2 my-2 h-7 inline">
-                            <h3 class="inline text-lg font-semibold leading-5 my-1">Rayon Humaniora
-                            </h3>
-                        </div>
-                        <div class="mx-4 mt-1 mb-4">
-                            Ber-PMII dapat mengakibatkan pintar, logis, berani, dan soleh dalam waktu yang bersamaan.
-                            Lorem ipsum dolor sit amet consectetur adipisicing.
+                    <div x-data="{tooltip: false}"
+                        class="relative bg-slate-50 rounded-lg flex flex-col justify-between h-full">
+                        <div>
+                            <div class="flex items-center pr-2 border-b-2 border-gray-800">
+                                <img src="img/logo_kemendikbud.png" alt="Logo Rayon Pendidikan"
+                                    class="mx-2 my-2 h-7 inline">
+                                <h3 class="inline text-lg font-semibold leading-5 my-1">Rayon Pendidikan Merdeka
+                                </h3>
+                            </div>
+                            <div class="mx-4 mt-1 mb-4">
+                                Ambil kendali masa depanmu dengan gabung rayon pendidikan. Dapatkan kemerdekaan untuk
+                                membentuk masa depan yang
+                                sesuai dengan aspirasi kariermu.
+                            </div>
                         </div>
                         <div class="btn-group btn-block">
                             <a href="#" class="btn bg-blue-800 hover:bg-blue-900 btn-sm flex-1">
@@ -174,61 +178,19 @@
                     </div>
                 </div>
                 <div class="w-full sm:w-1/2 md:w-full lg:w-1/2 px-2 my-2">
-                    <div x-data="{tooltip: false}" class="relative bg-slate-50 rounded-lg">
-                        <div class="flex items-center pr-2 border-b-2 border-gray-800">
-                            <img src="img/logopmii.png" alt="Logo Rayon Humaniora" class="mx-2 my-2 h-7 inline">
-                            <h3 class="inline text-lg font-semibold leading-5 my-1">Rayon Pelangi
-                            </h3>
-                        </div>
-                        <div class="mx-4 mt-1 mb-4">
-                            Ber-PMII dapat mengakibatkan pintar, logis, berani, dan soleh dalam waktu yang bersamaan.
-                            Lorem
-                            ipsum dolor sit amet consectetur adipisicing.
-                        </div>
-                        <div class="btn-group btn-block">
-                            <a href="#" class="btn bg-blue-800 hover:bg-blue-900 btn-sm flex-1">
-                                Lihat Situs Rayon
-                            </a>
-                            <button @click="tooltip = !tooltip" class="btn bg-blue-800 hover:bg-blue-900 btn-sm">
-                                <i class="fa-solid fa-ellipsis-vertical"></i>
-                            </button>
-                        </div>
-                        <div x-cloak x-transition x-show="tooltip"
-                            class="absolute bottom-9 right-1 bg-blue-800 rounded-md" @click.outside="tooltip = false">
-                            <a href="#" class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
-                                data-tip="Email">
-                                <i class="fa-solid fa-envelope"></i>
-                            </a>
-                            <a href="#" class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
-                                data-tip="Instagram">
-                                <i class="fa-brands fa-instagram"></i>
-                            </a>
-                            <a href="#" class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
-                                data-tip="Twitter">
-                                <i class="fa-brands fa-twitter"></i>
-                            </a>
-                            <a href="#" class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
-                                data-tip="Facebook">
-                                <i class="fa-brands fa-facebook"></i>
-                            </a>
-                            <a href="#" class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
-                                data-tip="Whatsapp">
-                                <i class="fa-brands fa-whatsapp"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="w-full sm:w-1/2 md:w-full lg:w-1/2 px-2 my-2">
-                    <div x-data="{tooltip: false}" class="relative bg-slate-50 rounded-lg">
-                        <div class="flex items-center pr-2 border-b-2 border-gray-800">
-                            <img src="img/logopmii.png" alt="Logo Rayon Humaniora" class="mx-2 my-2 h-7 inline">
-                            <h3 class="inline text-lg font-semibold leading-5 my-1">Rayon Al-Misbah
-                            </h3>
-                        </div>
-                        <div class="mx-4 mt-1 mb-4">
-                            Ber-PMII dapat mengakibatkan pintar, logis, berani, dan soleh dalam waktu yang bersamaan.
-                            Lorem
-                            ipsum dolor sit amet consectetur adipisicing.
+                    <div x-data="{tooltip: false}"
+                        class="relative bg-slate-50 rounded-lg flex flex-col justify-between h-full">
+                        <div>
+                            <div class="flex items-center pr-2 border-b-2 border-gray-800">
+                                <img src="img/logo_kemenhan.png" alt="Logo Rayon Pertahanan Nalar"
+                                    class="mx-2 my-2 h-7 inline">
+                                <h3 class="inline text-lg font-semibold leading-5 my-1">Rayon Pertahanan Nalar
+                                </h3>
+                            </div>
+                            <div class="mx-4 mt-1 mb-4">
+                                Siap mengasah, mengawal, serta mempertajam nalar anda sehingga menjadi teknik bela
+                                diri pribadi.
+                            </div>
                         </div>
                         <div class="btn-group btn-block">
                             <a href="#" class="btn bg-blue-800 hover:bg-blue-900 btn-sm flex-1">
@@ -264,16 +226,66 @@
                     </div>
                 </div>
                 <div class="w-full sm:w-1/2 md:w-full lg:w-1/2 px-2 my-2">
-                    <div x-data="{tooltip: false}" class="relative bg-slate-50 rounded-lg">
-                        <div class="flex items-center pr-2 border-b-2 border-gray-800">
-                            <img src="img/logopmii.png" alt="Logo Rayon Humaniora" class="mx-2 my-2 h-7 inline">
-                            <h3 class="inline text-lg font-semibold leading-5 my-1">Rayon Sahitya
-                            </h3>
+                    <div x-data="{tooltip: false}"
+                        class="relative bg-slate-50 rounded-lg flex flex-col justify-between h-full">
+                        <div>
+                            <div class="flex items-center pr-2 border-b-2 border-gray-800">
+                                <img src="img/logo_kemenperin.png" alt="Logo Rayon Pembangunan Gerakan"
+                                    class="mx-2 my-2 h-7 inline">
+                                <h3 class="inline text-lg font-semibold leading-5 my-1">Rayon Pembangunan Gerakan
+                                </h3>
+                            </div>
+                            <div class="mx-4 mt-1 mb-4">
+                                Kami membangun, kami kerja, dan kami bahagia. Masuklah barisan, lalu jadilah manusia
+                                yang memanusiakan manusia.
+                            </div>
                         </div>
-                        <div class="mx-4 mt-1 mb-4">
-                            Ber-PMII dapat mengakibatkan pintar, logis, berani, dan soleh dalam waktu yang bersamaan.
-                            Lorem
-                            ipsum dolor sit amet consectetur adipisicing.
+                        <div class="btn-group btn-block">
+                            <a href="#" class="btn bg-blue-800 hover:bg-blue-900 btn-sm flex-1">
+                                Lihat Situs Rayon
+                            </a>
+                            <button @click="tooltip = !tooltip" class="btn bg-blue-800 hover:bg-blue-900 btn-sm">
+                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </button>
+                        </div>
+                        <div x-cloak x-transition x-show="tooltip"
+                            class="absolute bottom-9 right-1 bg-blue-800 rounded-md" @click.outside="tooltip = false">
+                            <a href="#" class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                data-tip="Email">
+                                <i class="fa-solid fa-envelope"></i>
+                            </a>
+                            <a href="#" class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                data-tip="Instagram">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                            <a href="#" class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                data-tip="Twitter">
+                                <i class="fa-brands fa-twitter"></i>
+                            </a>
+                            <a href="#" class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                data-tip="Facebook">
+                                <i class="fa-brands fa-facebook"></i>
+                            </a>
+                            <a href="#" class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                data-tip="Whatsapp">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full sm:w-1/2 md:w-full lg:w-1/2 px-2 my-2">
+                    <div x-data="{tooltip: false}"
+                        class="relative bg-slate-50 rounded-lg flex flex-col justify-between h-full">
+                        <div>
+                            <div class="flex items-center pr-2 border-b-2 border-gray-800">
+                                <img src="img/logo_kemenag.png" alt="Logo Rayon Aswaja" class="mx-2 my-2 h-7 inline">
+                                <h3 class="inline text-lg font-semibold leading-5 my-1">Rayon Aswaja
+                                </h3>
+                            </div>
+                            <div class="mx-4 mt-1 mb-4">
+                                Walaupun hidup seribu tahun kalau tak sembahyang apa gunanya. Login yuk! Bersahabat
+                                dalam organisasi juga bersahabat dalam mengejar ridha Allah.
+                            </div>
                         </div>
                         <div class="btn-group btn-block">
                             <a href="#" class="btn bg-blue-800 hover:bg-blue-900 btn-sm flex-1">
@@ -314,6 +326,8 @@
 
         </section>
     </main>
+    <footer class="bg-sky-900 h-72">Lorem</footer>
+    <footer class="bg-sky-900 h-72">Lorem</footer>
     <footer class="bg-sky-900 h-72">Lorem</footer>
     <footer class="bg-sky-900 h-72">Lorem</footer>
 </body>

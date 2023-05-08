@@ -6,9 +6,8 @@
   /* Kode Sendiri */
   .grid-nav {
     display: grid;
-    grid-template-areas: "logo logo cta cta cta" "link link link link link";
+    grid-template-areas: "logo auto auto auto cta" "link link link link link";
     grid-template-columns: auto;
-    grid-template-rows: repeat(1, minmax(0, 1fr));
   }
   .grit-logo {
     grid-area: logo;
