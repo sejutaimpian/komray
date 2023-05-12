@@ -15,7 +15,7 @@
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.0/dist/cdn.min.js"></script>
 </head>
 
-<body class="bg-[#ecd791] text-gray-800">
+<body class="bg-[#fff8dc] text-gray-800">
     <header class="shadow sticky top-0 bg-slate-50 z-[999]">
         <nav class="grid-nav grid-rows-1 items-center pt-1">
             <div class="grit-logo md:py-1 pl-4 sm:pl-8 md:pl-12 lg:pl-16">
@@ -24,29 +24,39 @@
                 </a>
             </div>
             <ul class="grit-link flex justify-center items-center">
-                <li>
-                    <a href="#rayon" class="btn btn-sm btn-ghost font-bold">
-                        <i class="fa-solid fa-school-flag xs:fa-hidden"></i>
-                        <span class="hidden xs:block">Rayon</span>
+                <li x-data="{isHover: false}" x-on:mouseenter="isHover = true" x-on:mouseleave="isHover = false"
+                    class="relative">
+                    <a x-on:click="isHover = !isHover" class="btn btn-sm btn-ghost font-bold px-2">
+                        <i class="fa-solid fa-sitemap xs:fa-hidden"></i>
+                        <span class="hidden xs:block">Struktural <i class="fa-solid fa-chevron-down"></i></span>
                     </a>
+                    <ul x-cloak x-show="isHover"
+                        class="min-w-full absolute bottom-auto top-full left-0 bg-gray-50 border-2 rounded py-1">
+                        <li class="w-full hover:bg-gray-200 px-2">
+                            <a x-on:click="isHover = false" href="#rayon" class="block">Rayon</a>
+                        </li>
+                        <li class="w-full hover:bg-gray-200 px-2">
+                            <a x-on:click="isHover = false" href="#kopri" class="block">Kopri</a>
+                        </li>
+                    </ul>
                 </li>
                 <li>
-                    <a href="#kegiatan" class="btn btn-sm btn-ghost font-bold">
+                    <a href="#kegiatan" class="btn btn-sm btn-ghost font-bold px-2">
                         <i class="fa-solid fa-bullhorn xs:fa-hidden"></i>
                         <span class="hidden xs:block">Kegiatan</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#profile" class="btn btn-sm btn-ghost font-bold">
+                    <a href="#profil" class="btn btn-sm btn-ghost font-bold px-2">
                         <i class="fa-solid fa-circle-user xs:fa-hidden"></i>
-                        <span class="hidden xs:block">Profile</span>
+                        <span class="hidden xs:block">Profil</span>
                     </a>
                 </li>
-                <li><a href="#faq" class="btn btn-sm btn-ghost font-bold">
+                <li><a href="#faq" class="btn btn-sm btn-ghost font-bold px-2">
                         <i class="fa-solid fa-question xs:fa-hidden"></i>
                         <span class="hidden xs:block">FAQ</span>
                     </a></li>
-                <li><a href="#kontak" class="btn btn-sm btn-ghost font-bold">
+                <li><a href="#kontak" class="btn btn-sm btn-ghost font-bold px-2">
                         <i class="fa-solid fa-phone-volume xs:fa-hidden"></i>
                         <span class="hidden xs:block">Kontak</span>
                     </a></li>
@@ -76,8 +86,8 @@
                     dan bertanggungjawab dalam mengamalkan ilmunya serta komitmen memperjuangkan cita-cita kemerdekaan
                     Indonesia.
                 </p>
-                <p class="text-right text-sm md:text-base text-gray-500">- Universitas Bakti Kencana Kota Tasikmalaya
-                    Raya Sejahtera
+                <p class="text-right text-sm md:text-base">
+                    - PMII Universitas Tadika Kencana Kota Tasikmalaya Raya Sejahtera
                 </p>
                 <div class="py-3">
                     <a href="#" class="btn btn-sm bg-blue-800 hover:bg-blue-900">
@@ -93,535 +103,691 @@
         <section class="flex justify-center items-center my-10">
             <div id="data" class="invisible -mt-80 md:-mt-72"></div>
             <div class="flex-auto flex flex-col text-center">
-                <i class="fa-solid fa-user-graduate text-5xl text-slate-50 md:text-8xl"></i>
+                <i class="fa-solid fa-user-graduate text-5xl text-gray-200 md:text-8xl"></i>
                 <h5 class="font-extrabold text-2xl md:text-5xl -mt-5">100+</h5>
                 <span class="font-normal uppercase">Alumni</span>
             </div>
             <div class="flex-auto flex flex-col text-center">
-                <i class="fa-solid fa-school-flag text-5xl text-slate-50 md:text-8xl"></i>
+                <i class="fa-solid fa-school-flag text-5xl text-gray-200 md:text-8xl"></i>
                 <h5 class="font-extrabold text-2xl md:text-5xl -mt-5">4</h5>
                 <span class="font-normal uppercase">Rayon</span>
             </div>
             <div class="flex-auto flex flex-col text-center">
-                <i class="fa-solid fa-user-secret text-5xl text-slate-50 md:text-8xl"></i>
+                <i class="fa-solid fa-user-secret text-5xl text-gray-200 md:text-8xl"></i>
                 <h5 class="font-extrabold text-2xl md:text-5xl -mt-5">20</h5>
                 <span class="font-normal uppercase">Kader</span>
             </div>
             <div class="flex-auto flex flex-col text-center">
-                <i class="fa-solid fa-user text-5xl text-slate-50 md:text-8xl"></i>
+                <i class="fa-solid fa-user text-5xl text-gray-200 md:text-8xl"></i>
                 <h5 class="font-extrabold text-2xl md:text-5xl -mt-5">50</h5>
                 <span class="font-normal uppercase">Anggota</span>
             </div>
         </section>
-        <!-- Rayon -->
+        <!-- Struktural -->
         <section class="flex my-10 flex-wrap bg-slate-50 py-10">
-            <div id="rayon" class="invisible -mt-20"></div>
-            <div class="w-full md:w-1/2 md:pr-6">
-                <div class="mb-5 leading-tight mx-4 sm:mx-8 md:ml-12 md:mr-0 lg:ml-16">
-                    <h2 class="text-5xl font-bold border-b-4 border-gray-800 mb-4">
-                        RAYON</h2>
-                    <p class="mb-2">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Consectetur, earum. Voluptatibus sint consectetur, ex, repellat facere fugiat exercitationem
-                        officiis commodi numquam
-                        molestias maiores, iure veritatis qui temporibus eius necessitatibus hic!
-                    </p>
-                    <p class="mb-2">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Consectetur, earum. Voluptatibus sint consectetur, ex, repellat facere fugiat exercitationem
-                        officiis commodi numquam
-                        molestias maiores, iure veritatis qui temporibus eius necessitatibus hic!
-                    </p>
-                    <ul role="list" class="list-disc pl-5 space-y-0">
-                        <li>Mencerdaskan Bangsa Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio eos
-                            explicabo, optio officia consectetur placeat debitis perferendis, magni accusantium in
-                            numquam quas nemo est repellat. Commodi pariatur perspiciatis nobis natus!</li>
-                        <li>Menghidupkan Agama</li>
-                        <li>Mengabdi Pada Negara</li>
-                    </ul>
+            <!-- Rayon -->
+            <div class="flex flex-wrap mb-10">
+                <div id="rayon" class="invisible -mt-20"></div>
+                <div class="w-full md:w-1/2 md:pr-6">
+                    <div class="mb-5 leading-tight mx-4 sm:mx-8 md:ml-12 md:mr-0 lg:ml-16">
+                        <h2 class="text-5xl font-bold mb-4">
+                            RAYON</h2>
+                        <p class="mb-2">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Consectetur, earum. Voluptatibus sint consectetur, ex, repellat facere fugiat exercitationem
+                            officiis commodi numquam
+                            molestias maiores, iure veritatis qui temporibus eius necessitatibus hic!
+                        </p>
+                        <p class="mb-2">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Consectetur, earum. Voluptatibus sint consectetur, ex, repellat facere fugiat exercitationem
+                            officiis commodi numquam
+                            molestias maiores, iure veritatis qui temporibus eius necessitatibus hic!
+                        </p>
+                    </div>
+                    <div class="aspect-video my-5 sm:mx-8 md:ml-12 md:mr-0 lg:ml-16">
+                        <!-- Aspect Ratio 16/9, 1920px/1080px -->
+                        <img src="img/rayon.png" alt="Foto Organisasi Landscape" class="md:rounded-md">
+                    </div>
                 </div>
-                <div class="aspect-video my-5 sm:mx-8 md:ml-12 md:mr-0 lg:ml-16">
-                    <!-- Aspect Ratio 16/9, 1920px/1080px -->
-                    <img src="img/rayon.png" alt="Foto Organisasi Landscape" class="md:rounded-md">
+                <div class="w-full md:w-1/2 flex justify-center flex-wrap px-4 sm:px-8 md:pl-0 md:pr-12 lg:pr-16">
+                    <div class="w-full sm:w-1/2 md:w-full lg:w-1/2 px-2 my-2">
+                        <div x-data="{tooltip: false}"
+                            class="relative bg-gray-200 rounded-lg flex flex-col justify-between h-full">
+                            <div>
+                                <div class="flex items-center pr-2 border-b-2 border-gray-800">
+                                    <img src="img/logo_kemendikbud.png" alt="Logo Rayon Pendidikan"
+                                        class="mx-2 my-2 h-7 inline">
+                                    <h3 class="inline text-lg font-semibold leading-5 my-1">Rayon Pendidikan Merdeka
+                                    </h3>
+                                </div>
+                                <div class="mx-4 mt-1 mb-4">
+                                    <p class="mb-2">
+                                        Ambil kendali masa depanmu dengan gabung rayon pendidikan. Dapatkan kemerdekaan
+                                        untuk
+                                        membentuk masa depan yang
+                                        sesuai dengan aspirasi kariermu.
+                                    </p>
+                                    <ul role="list" class="list-disc pl-5 space-y-0">
+                                        <li>Mencerdaskan Bangsa</li>
+                                        <li>Menghidupkan Agama</li>
+                                        <li>Mengabdi Pada Negara</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class=" btn-group btn-block p-3">
+                                <a href="#" class="btn bg-blue-800 hover:bg-blue-900 btn-sm flex-1">
+                                    Lihat Situs Rayon
+                                </a>
+                                <button @click="tooltip = !tooltip" class="btn bg-blue-800 hover:bg-blue-900 btn-sm">
+                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                </button>
+                            </div>
+                            <div x-cloak x-transition x-show="tooltip"
+                                class="absolute bottom-12 right-3 bg-blue-800 rounded-md"
+                                @click.outside="tooltip = false">
+                                <a href="#"
+                                    class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                    data-tip="Email">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </a>
+                                <a href="#"
+                                    class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                    data-tip="Instagram">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                                <a href="#"
+                                    class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                    data-tip="Twitter">
+                                    <i class="fa-brands fa-twitter"></i>
+                                </a>
+                                <a href="#"
+                                    class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                    data-tip="Facebook">
+                                    <i class="fa-brands fa-facebook"></i>
+                                </a>
+                                <a href="#"
+                                    class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                    data-tip="Whatsapp">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full sm:w-1/2 md:w-full lg:w-1/2 px-2 my-2">
+                        <div x-data="{tooltip: false}"
+                            class="relative bg-gray-200 rounded-lg flex flex-col justify-between h-full">
+                            <div>
+                                <div class="flex items-center pr-2 border-b-2 border-gray-800">
+                                    <img src="img/logo_kemenhan.png" alt="Logo Rayon Pertahanan Nalar"
+                                        class="mx-2 my-2 h-7 inline">
+                                    <h3 class="inline text-lg font-semibold leading-5 my-1">Rayon Pertahanan Nalar
+                                    </h3>
+                                </div>
+                                <div class="mx-4 mt-1 mb-4">
+                                    <p class="mb-2">
+                                        Siap mengasah, mengawal, serta mempertajam nalar anda sehingga menjadi teknik
+                                        bela
+                                        diri pribadi.
+                                    </p>
+                                    <ul role="list" class="list-disc pl-5 space-y-0">
+                                        <li>Mencerdaskan Bangsa</li>
+                                        <li>Menghidupkan Agama</li>
+                                        <li>Mengabdi Pada Negara</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class=" btn-group btn-block p-3">
+                                <a href="#" class="btn bg-blue-800 hover:bg-blue-900 btn-sm flex-1">
+                                    Lihat Situs Rayon
+                                </a>
+                                <button @click="tooltip = !tooltip" class="btn bg-blue-800 hover:bg-blue-900 btn-sm">
+                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                </button>
+                            </div>
+                            <div x-cloak x-transition x-show="tooltip"
+                                class="absolute bottom-12 right-3 bg-blue-800 rounded-md"
+                                @click.outside="tooltip = false">
+                                <a href="#"
+                                    class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                    data-tip="Email">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </a>
+                                <a href="#"
+                                    class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                    data-tip="Instagram">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                                <a href="#"
+                                    class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                    data-tip="Twitter">
+                                    <i class="fa-brands fa-twitter"></i>
+                                </a>
+                                <a href="#"
+                                    class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                    data-tip="Facebook">
+                                    <i class="fa-brands fa-facebook"></i>
+                                </a>
+                                <a href="#"
+                                    class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                    data-tip="Whatsapp">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full sm:w-1/2 md:w-full lg:w-1/2 px-2 my-2">
+                        <div x-data="{tooltip: false}"
+                            class="relative bg-gray-200 rounded-lg flex flex-col justify-between h-full">
+                            <div>
+                                <div class="flex items-center pr-2 border-b-2 border-gray-800">
+                                    <img src="img/logo_kemenperin.png" alt="Logo Rayon Pembangunan Gerakan"
+                                        class="mx-2 my-2 h-7 inline">
+                                    <h3 class="inline text-lg font-semibold leading-5 my-1">Rayon Pembangunan Gerakan
+                                    </h3>
+                                </div>
+                                <div class="mx-4 mt-1 mb-4">
+                                    <p class="mb-2">
+                                        Kami membangun, kami kerja, dan kami bahagia. Masuklah barisan, lalu jadilah
+                                        manusia
+                                        yang memanusiakan manusia.
+                                    </p>
+                                    <ul role="list" class="list-disc pl-5 space-y-0">
+                                        <li>Mencerdaskan Bangsa</li>
+                                        <li>Menghidupkan Agama</li>
+                                        <li>Mengabdi Pada Negara</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class=" btn-group btn-block p-3">
+                                <a href="#" class="btn bg-blue-800 hover:bg-blue-900 btn-sm flex-1">
+                                    Lihat Situs Rayon
+                                </a>
+                                <button @click="tooltip = !tooltip" class="btn bg-blue-800 hover:bg-blue-900 btn-sm">
+                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                </button>
+                            </div>
+                            <div x-cloak x-transition x-show="tooltip"
+                                class="absolute bottom-12 right-3 bg-blue-800 rounded-md"
+                                @click.outside="tooltip = false">
+                                <a href="#"
+                                    class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                    data-tip="Email">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </a>
+                                <a href="#"
+                                    class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                    data-tip="Instagram">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                                <a href="#"
+                                    class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                    data-tip="Twitter">
+                                    <i class="fa-brands fa-twitter"></i>
+                                </a>
+                                <a href="#"
+                                    class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                    data-tip="Facebook">
+                                    <i class="fa-brands fa-facebook"></i>
+                                </a>
+                                <a href="#"
+                                    class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                    data-tip="Whatsapp">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full sm:w-1/2 md:w-full lg:w-1/2 px-2 my-2">
+                        <div x-data="{tooltip: false}"
+                            class="relative bg-gray-200 rounded-lg flex flex-col justify-between h-full">
+                            <div>
+                                <div class="flex items-center pr-2 border-b-2 border-gray-800">
+                                    <img src="img/logo_kemenag.png" alt="Logo Rayon Aswaja"
+                                        class="mx-2 my-2 h-7 inline">
+                                    <h3 class="inline text-lg font-semibold leading-5 my-1">Rayon Aswaja
+                                    </h3>
+                                </div>
+                                <div class="mx-4 mt-1 mb-4">
+                                    <p class="mb-2">
+                                        Walaupun hidup seribu tahun kalau tak sembahyang apa gunanya. Login yuk!
+                                        Bersahabat
+                                        dalam organisasi juga bersahabat dalam mengejar ridha Allah.
+                                    </p>
+                                    <ul role="list" class="list-disc pl-5 space-y-0">
+                                        <li>Mencerdaskan Bangsa</li>
+                                        <li>Menghidupkan Agama</li>
+                                        <li>Mengabdi Pada Negara</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class=" btn-group btn-block p-3">
+                                <a href="#" class="btn bg-blue-800 hover:bg-blue-900 btn-sm flex-1">
+                                    Lihat Situs Rayon
+                                </a>
+                                <button @click="tooltip = !tooltip" class="btn bg-blue-800 hover:bg-blue-900 btn-sm">
+                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                </button>
+                            </div>
+                            <div x-cloak x-transition x-show="tooltip"
+                                class="absolute bottom-12 right-3 bg-blue-800 rounded-md"
+                                @click.outside="tooltip = false">
+                                <a href="#"
+                                    class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                    data-tip="Email">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </a>
+                                <a href="#"
+                                    class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                    data-tip="Instagram">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                                <a href="#"
+                                    class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                    data-tip="Twitter">
+                                    <i class="fa-brands fa-twitter"></i>
+                                </a>
+                                <a href="#"
+                                    class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                    data-tip="Facebook">
+                                    <i class="fa-brands fa-facebook"></i>
+                                </a>
+                                <a href="#"
+                                    class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                    data-tip="Whatsapp">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="w-full md:w-1/2 flex justify-center flex-wrap px-4 sm:px-8 md:pl-0 md:pr-12 lg:pr-16">
-                <div class="w-full sm:w-1/2 md:w-full lg:w-1/2 px-2 my-2">
-                    <div x-data="{tooltip: false}"
-                        class="relative bg-gray-200 rounded-lg flex flex-col justify-between h-full">
-                        <div>
-                            <div class="flex items-center pr-2 border-b-2 border-gray-800">
-                                <img src="img/logo_kemendikbud.png" alt="Logo Rayon Pendidikan"
-                                    class="mx-2 my-2 h-7 inline">
-                                <h3 class="inline text-lg font-semibold leading-5 my-1">Rayon Pendidikan Merdeka
-                                </h3>
-                            </div>
-                            <div class="mx-4 mt-1 mb-4">
-                                <p class="mb-2">
-                                    Ambil kendali masa depanmu dengan gabung rayon pendidikan. Dapatkan kemerdekaan
-                                    untuk
-                                    membentuk masa depan yang
-                                    sesuai dengan aspirasi kariermu.
-                                </p>
-                                <ul role="list" class="list-disc pl-5 space-y-0">
-                                    <li>Mencerdaskan Bangsa</li>
-                                    <li>Menghidupkan Agama</li>
-                                    <li>Mengabdi Pada Negara</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="btn-group btn-block">
-                            <a href="#" class="btn bg-blue-800 hover:bg-blue-900 btn-sm flex-1">
-                                Lihat Situs Rayon
-                            </a>
-                            <button @click="tooltip = !tooltip" class="btn bg-blue-800 hover:bg-blue-900 btn-sm">
-                                <i class="fa-solid fa-ellipsis-vertical"></i>
-                            </button>
-                        </div>
-                        <div x-cloak x-transition x-show="tooltip"
-                            class="absolute bottom-9 right-1 bg-blue-800 rounded-md" @click.outside="tooltip = false">
-                            <a href="#" class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
-                                data-tip="Email">
-                                <i class="fa-solid fa-envelope"></i>
-                            </a>
-                            <a href="#" class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
-                                data-tip="Instagram">
-                                <i class="fa-brands fa-instagram"></i>
-                            </a>
-                            <a href="#" class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
-                                data-tip="Twitter">
-                                <i class="fa-brands fa-twitter"></i>
-                            </a>
-                            <a href="#" class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
-                                data-tip="Facebook">
-                                <i class="fa-brands fa-facebook"></i>
-                            </a>
-                            <a href="#" class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
-                                data-tip="Whatsapp">
-                                <i class="fa-brands fa-whatsapp"></i>
-                            </a>
-                        </div>
+            <!-- Kopri -->
+            <div class="flex flex-wrap mt-10">
+                <div id="kopri" class="invisible -mt-20"></div>
+                <div class="w-full md:w-1/2 md:pr-6">
+                    <div class="mb-5 leading-tight mx-4 sm:mx-8 md:ml-12 md:mr-0 lg:ml-16">
+                        <h2 class="text-5xl font-bold mb-4">
+                            KOPRI</h2>
+                        <p class="mb-2">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Consectetur, earum. Voluptatibus sint consectetur, ex, repellat facere fugiat exercitationem
+                            officiis commodi numquam
+                            molestias maiores, iure veritatis qui temporibus eius necessitatibus hic!
+                        </p>
+                        <p class="mb-2">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Consectetur, earum. Voluptatibus sint consectetur, ex, repellat facere fugiat exercitationem
+                            officiis commodi numquam
+                            molestias maiores, iure veritatis qui temporibus eius necessitatibus hic!
+                        </p>
+                    </div>
+                    <div class="aspect-video my-5 sm:mx-8 md:ml-12 md:mr-0 lg:ml-16">
+                        <!-- Aspect Ratio 16/9, 1920px/1080px -->
+                        <img src="img/kopri.png" alt="Foto Organisasi Landscape" class="md:rounded-md">
                     </div>
                 </div>
-                <div class="w-full sm:w-1/2 md:w-full lg:w-1/2 px-2 my-2">
-                    <div x-data="{tooltip: false}"
-                        class="relative bg-gray-200 rounded-lg flex flex-col justify-between h-full">
-                        <div>
-                            <div class="flex items-center pr-2 border-b-2 border-gray-800">
-                                <img src="img/logo_kemenhan.png" alt="Logo Rayon Pertahanan Nalar"
-                                    class="mx-2 my-2 h-7 inline">
-                                <h3 class="inline text-lg font-semibold leading-5 my-1">Rayon Pertahanan Nalar
-                                </h3>
+                <div class="w-full md:w-1/2 flex justify-center flex-wrap px-4 sm:px-8 md:pl-0 md:pr-12 lg:pr-16">
+                    <div class="w-full sm:w-1/2 md:w-full lg:w-1/2 px-2 my-2">
+                        <div x-data="{tooltip: false}"
+                            class="relative bg-gray-200 rounded-lg flex flex-col justify-between h-full">
+                            <div>
+                                <div class="flex items-center pr-2 border-b-2 border-gray-800">
+                                    <img src="img/logo_kemendikbud.png" alt="Logo Kopri Pendidikan"
+                                        class="mx-2 my-2 h-7 inline">
+                                    <h3 class="inline text-lg font-semibold leading-5 my-1">Kopri Pendidikan Merdeka
+                                    </h3>
+                                </div>
+                                <div class="mx-4 mt-1 mb-4">
+                                    <p class="mb-2">
+                                        Ambil kendali masa depanmu dengan gabung Kopri pendidikan. Dapatkan kemerdekaan
+                                        untuk
+                                        membentuk masa depan yang
+                                        sesuai dengan aspirasi kariermu.
+                                    </p>
+                                    <ul role="list" class="list-disc pl-5 space-y-0">
+                                        <li>Mencerdaskan Bangsa</li>
+                                        <li>Menghidupkan Agama</li>
+                                        <li>Mengabdi Pada Negara</li>
+                                    </ul>
+                                </div>
                             </div>
-                            <div class="mx-4 mt-1 mb-4">
-                                <p class="mb-2">
-                                    Siap mengasah, mengawal, serta mempertajam nalar anda sehingga menjadi teknik bela
-                                    diri pribadi.
-                                </p>
-                                <ul role="list" class="list-disc pl-5 space-y-0">
-                                    <li>Mencerdaskan Bangsa</li>
-                                    <li>Menghidupkan Agama</li>
-                                    <li>Mengabdi Pada Negara</li>
-                                </ul>
+                            <div class=" btn-group btn-block p-3">
+                                <a href="#" class="btn bg-blue-800 hover:bg-blue-900 btn-sm flex-1">
+                                    Lihat Situs Kopri
+                                </a>
+                                <button @click="tooltip = !tooltip" class="btn bg-blue-800 hover:bg-blue-900 btn-sm">
+                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                </button>
                             </div>
-                        </div>
-                        <div class="btn-group btn-block">
-                            <a href="#" class="btn bg-blue-800 hover:bg-blue-900 btn-sm flex-1">
-                                Lihat Situs Rayon
-                            </a>
-                            <button @click="tooltip = !tooltip" class="btn bg-blue-800 hover:bg-blue-900 btn-sm">
-                                <i class="fa-solid fa-ellipsis-vertical"></i>
-                            </button>
-                        </div>
-                        <div x-cloak x-transition x-show="tooltip"
-                            class="absolute bottom-9 right-1 bg-blue-800 rounded-md" @click.outside="tooltip = false">
-                            <a href="#" class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
-                                data-tip="Email">
-                                <i class="fa-solid fa-envelope"></i>
-                            </a>
-                            <a href="#" class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
-                                data-tip="Instagram">
-                                <i class="fa-brands fa-instagram"></i>
-                            </a>
-                            <a href="#" class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
-                                data-tip="Twitter">
-                                <i class="fa-brands fa-twitter"></i>
-                            </a>
-                            <a href="#" class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
-                                data-tip="Facebook">
-                                <i class="fa-brands fa-facebook"></i>
-                            </a>
-                            <a href="#" class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
-                                data-tip="Whatsapp">
-                                <i class="fa-brands fa-whatsapp"></i>
-                            </a>
+                            <div x-cloak x-transition x-show="tooltip"
+                                class="absolute bottom-12 right-3 bg-blue-800 rounded-md"
+                                @click.outside="tooltip = false">
+                                <a href="#"
+                                    class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                    data-tip="Email">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </a>
+                                <a href="#"
+                                    class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                    data-tip="Instagram">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                                <a href="#"
+                                    class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                    data-tip="Twitter">
+                                    <i class="fa-brands fa-twitter"></i>
+                                </a>
+                                <a href="#"
+                                    class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                    data-tip="Facebook">
+                                    <i class="fa-brands fa-facebook"></i>
+                                </a>
+                                <a href="#"
+                                    class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                    data-tip="Whatsapp">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="w-full sm:w-1/2 md:w-full lg:w-1/2 px-2 my-2">
-                    <div x-data="{tooltip: false}"
-                        class="relative bg-gray-200 rounded-lg flex flex-col justify-between h-full">
-                        <div>
-                            <div class="flex items-center pr-2 border-b-2 border-gray-800">
-                                <img src="img/logo_kemenperin.png" alt="Logo Rayon Pembangunan Gerakan"
-                                    class="mx-2 my-2 h-7 inline">
-                                <h3 class="inline text-lg font-semibold leading-5 my-1">Rayon Pembangunan Gerakan
-                                </h3>
+                    <div class="w-full sm:w-1/2 md:w-full lg:w-1/2 px-2 my-2">
+                        <div x-data="{tooltip: false}"
+                            class="relative bg-gray-200 rounded-lg flex flex-col justify-between h-full">
+                            <div>
+                                <div class="flex items-center pr-2 border-b-2 border-gray-800">
+                                    <img src="img/logo_kemenhan.png" alt="Logo Kopri Pertahanan Nalar"
+                                        class="mx-2 my-2 h-7 inline">
+                                    <h3 class="inline text-lg font-semibold leading-5 my-1">Kopri Pertahanan Nalar
+                                    </h3>
+                                </div>
+                                <div class="mx-4 mt-1 mb-4">
+                                    <p class="mb-2">
+                                        Siap mengasah, mengawal, serta mempertajam nalar anda sehingga menjadi teknik
+                                        bela
+                                        diri pribadi.
+                                    </p>
+                                    <ul role="list" class="list-disc pl-5 space-y-0">
+                                        <li>Mencerdaskan Bangsa</li>
+                                        <li>Menghidupkan Agama</li>
+                                        <li>Mengabdi Pada Negara</li>
+                                    </ul>
+                                </div>
                             </div>
-                            <div class="mx-4 mt-1 mb-4">
-                                <p class="mb-2">
-                                    Kami membangun, kami kerja, dan kami bahagia. Masuklah barisan, lalu jadilah manusia
-                                    yang memanusiakan manusia.
-                                </p>
-                                <ul role="list" class="list-disc pl-5 space-y-0">
-                                    <li>Mencerdaskan Bangsa</li>
-                                    <li>Menghidupkan Agama</li>
-                                    <li>Mengabdi Pada Negara</li>
-                                </ul>
+                            <div class=" btn-group btn-block p-3">
+                                <a href="#" class="btn bg-blue-800 hover:bg-blue-900 btn-sm flex-1">
+                                    Lihat Situs Kopri
+                                </a>
+                                <button @click="tooltip = !tooltip" class="btn bg-blue-800 hover:bg-blue-900 btn-sm">
+                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                </button>
                             </div>
-                        </div>
-                        <div class="btn-group btn-block">
-                            <a href="#" class="btn bg-blue-800 hover:bg-blue-900 btn-sm flex-1">
-                                Lihat Situs Rayon
-                            </a>
-                            <button @click="tooltip = !tooltip" class="btn bg-blue-800 hover:bg-blue-900 btn-sm">
-                                <i class="fa-solid fa-ellipsis-vertical"></i>
-                            </button>
-                        </div>
-                        <div x-cloak x-transition x-show="tooltip"
-                            class="absolute bottom-9 right-1 bg-blue-800 rounded-md" @click.outside="tooltip = false">
-                            <a href="#" class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
-                                data-tip="Email">
-                                <i class="fa-solid fa-envelope"></i>
-                            </a>
-                            <a href="#" class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
-                                data-tip="Instagram">
-                                <i class="fa-brands fa-instagram"></i>
-                            </a>
-                            <a href="#" class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
-                                data-tip="Twitter">
-                                <i class="fa-brands fa-twitter"></i>
-                            </a>
-                            <a href="#" class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
-                                data-tip="Facebook">
-                                <i class="fa-brands fa-facebook"></i>
-                            </a>
-                            <a href="#" class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
-                                data-tip="Whatsapp">
-                                <i class="fa-brands fa-whatsapp"></i>
-                            </a>
+                            <div x-cloak x-transition x-show="tooltip"
+                                class="absolute bottom-12 right-3 bg-blue-800 rounded-md"
+                                @click.outside="tooltip = false">
+                                <a href="#"
+                                    class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                    data-tip="Email">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </a>
+                                <a href="#"
+                                    class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                    data-tip="Instagram">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                                <a href="#"
+                                    class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                    data-tip="Twitter">
+                                    <i class="fa-brands fa-twitter"></i>
+                                </a>
+                                <a href="#"
+                                    class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                    data-tip="Facebook">
+                                    <i class="fa-brands fa-facebook"></i>
+                                </a>
+                                <a href="#"
+                                    class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                    data-tip="Whatsapp">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="w-full sm:w-1/2 md:w-full lg:w-1/2 px-2 my-2">
-                    <div x-data="{tooltip: false}"
-                        class="relative bg-gray-200 rounded-lg flex flex-col justify-between h-full">
-                        <div>
-                            <div class="flex items-center pr-2 border-b-2 border-gray-800">
-                                <img src="img/logo_kemenag.png" alt="Logo Rayon Aswaja" class="mx-2 my-2 h-7 inline">
-                                <h3 class="inline text-lg font-semibold leading-5 my-1">Rayon Aswaja
-                                </h3>
+                    <div class="w-full sm:w-1/2 md:w-full lg:w-1/2 px-2 my-2">
+                        <div x-data="{tooltip: false}"
+                            class="relative bg-gray-200 rounded-lg flex flex-col justify-between h-full">
+                            <div>
+                                <div class="flex items-center pr-2 border-b-2 border-gray-800">
+                                    <img src="img/logo_kemenperin.png" alt="Logo Kopri Pembangunan Gerakan"
+                                        class="mx-2 my-2 h-7 inline">
+                                    <h3 class="inline text-lg font-semibold leading-5 my-1">Kopri Pembangunan Gerakan
+                                    </h3>
+                                </div>
+                                <div class="mx-4 mt-1 mb-4">
+                                    <p class="mb-2">
+                                        Kami membangun, kami kerja, dan kami bahagia. Masuklah barisan, lalu jadilah
+                                        manusia
+                                        yang memanusiakan manusia.
+                                    </p>
+                                    <ul role="list" class="list-disc pl-5 space-y-0">
+                                        <li>Mencerdaskan Bangsa</li>
+                                        <li>Menghidupkan Agama</li>
+                                        <li>Mengabdi Pada Negara</li>
+                                    </ul>
+                                </div>
                             </div>
-                            <div class="mx-4 mt-1 mb-4">
-                                <p class="mb-2">
-                                    Walaupun hidup seribu tahun kalau tak sembahyang apa gunanya. Login yuk! Bersahabat
-                                    dalam organisasi juga bersahabat dalam mengejar ridha Allah.
-                                </p>
-                                <ul role="list" class="list-disc pl-5 space-y-0">
-                                    <li>Mencerdaskan Bangsa</li>
-                                    <li>Menghidupkan Agama</li>
-                                    <li>Mengabdi Pada Negara</li>
-                                </ul>
+                            <div class=" btn-group btn-block p-3">
+                                <a href="#" class="btn bg-blue-800 hover:bg-blue-900 btn-sm flex-1">
+                                    Lihat Situs Kopri
+                                </a>
+                                <button @click="tooltip = !tooltip" class="btn bg-blue-800 hover:bg-blue-900 btn-sm">
+                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                </button>
+                            </div>
+                            <div x-cloak x-transition x-show="tooltip"
+                                class="absolute bottom-12 right-3 bg-blue-800 rounded-md"
+                                @click.outside="tooltip = false">
+                                <a href="#"
+                                    class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                    data-tip="Email">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </a>
+                                <a href="#"
+                                    class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                    data-tip="Instagram">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                                <a href="#"
+                                    class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                    data-tip="Twitter">
+                                    <i class="fa-brands fa-twitter"></i>
+                                </a>
+                                <a href="#"
+                                    class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                    data-tip="Facebook">
+                                    <i class="fa-brands fa-facebook"></i>
+                                </a>
+                                <a href="#"
+                                    class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                    data-tip="Whatsapp">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </a>
                             </div>
                         </div>
-                        <div class="btn-group btn-block">
-                            <a href="#" class="btn bg-blue-800 hover:bg-blue-900 btn-sm flex-1">
-                                Lihat Situs Rayon
-                            </a>
-                            <button @click="tooltip = !tooltip" class="btn bg-blue-800 hover:bg-blue-900 btn-sm">
-                                <i class="fa-solid fa-ellipsis-vertical"></i>
-                            </button>
-                        </div>
-                        <div x-cloak x-transition x-show="tooltip"
-                            class="absolute bottom-9 right-1 bg-blue-800 rounded-md" @click.outside="tooltip = false">
-                            <a href="#" class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
-                                data-tip="Email">
-                                <i class="fa-solid fa-envelope"></i>
-                            </a>
-                            <a href="#" class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
-                                data-tip="Instagram">
-                                <i class="fa-brands fa-instagram"></i>
-                            </a>
-                            <a href="#" class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
-                                data-tip="Twitter">
-                                <i class="fa-brands fa-twitter"></i>
-                            </a>
-                            <a href="#" class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
-                                data-tip="Facebook">
-                                <i class="fa-brands fa-facebook"></i>
-                            </a>
-                            <a href="#" class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
-                                data-tip="Whatsapp">
-                                <i class="fa-brands fa-whatsapp"></i>
-                            </a>
+                    </div>
+                    <div class="w-full sm:w-1/2 md:w-full lg:w-1/2 px-2 my-2">
+                        <div x-data="{tooltip: false}"
+                            class="relative bg-gray-200 rounded-lg flex flex-col justify-between h-full">
+                            <div>
+                                <div class="flex items-center pr-2 border-b-2 border-gray-800">
+                                    <img src="img/logo_kemenag.png" alt="Logo Kopri Aswaja"
+                                        class="mx-2 my-2 h-7 inline">
+                                    <h3 class="inline text-lg font-semibold leading-5 my-1">Kopri Aswaja
+                                    </h3>
+                                </div>
+                                <div class="mx-4 mt-1 mb-4">
+                                    <p class="mb-2">
+                                        Walaupun hidup seribu tahun kalau tak sembahyang apa gunanya. Login yuk!
+                                        Bersahabat
+                                        dalam organisasi juga bersahabat dalam mengejar ridha Allah.
+                                    </p>
+                                    <ul role="list" class="list-disc pl-5 space-y-0">
+                                        <li>Mencerdaskan Bangsa</li>
+                                        <li>Menghidupkan Agama</li>
+                                        <li>Mengabdi Pada Negara</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class=" btn-group btn-block p-3">
+                                <a href="#" class="btn bg-blue-800 hover:bg-blue-900 btn-sm flex-1">
+                                    Lihat Situs Rayon
+                                </a>
+                                <button @click="tooltip = !tooltip" class="btn bg-blue-800 hover:bg-blue-900 btn-sm">
+                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                </button>
+                            </div>
+                            <div x-cloak x-transition x-show="tooltip"
+                                class="absolute bottom-12 right-3 bg-blue-800 rounded-md"
+                                @click.outside="tooltip = false">
+                                <a href="#"
+                                    class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                    data-tip="Email">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </a>
+                                <a href="#"
+                                    class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                    data-tip="Instagram">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                                <a href="#"
+                                    class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                    data-tip="Twitter">
+                                    <i class="fa-brands fa-twitter"></i>
+                                </a>
+                                <a href="#"
+                                    class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                    data-tip="Facebook">
+                                    <i class="fa-brands fa-facebook"></i>
+                                </a>
+                                <a href="#"
+                                    class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                    data-tip="Whatsapp">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
         </section>
-        <!-- Kopri -->
-        <section class="flex my-10 flex-wrap">
-            <div id="kopri" class="invisible -mt-20"></div>
-            <div class="w-full md:w-1/2 md:pr-6">
-                <div class="mb-5 leading-tight mx-4 sm:mx-8 md:ml-12 md:mr-0 lg:ml-16">
-                    <h2 class="text-5xl font-bold border-b-4 border-gray-800 mb-4">
-                        Kopri</h2>
-                    <p class="mb-2">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Consectetur, earum. Voluptatibus sint consectetur, ex, repellat facere fugiat exercitationem
-                        officiis commodi numquam
-                        molestias maiores, iure veritatis qui temporibus eius necessitatibus hic!
-                    </p>
-                    <p class="mb-2">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Consectetur, earum. Voluptatibus sint consectetur, ex, repellat facere fugiat exercitationem
-                        officiis commodi numquam
-                        molestias maiores, iure veritatis qui temporibus eius necessitatibus hic!
-                    </p>
-                    <ul role="list" class="list-disc pl-5 space-y-0">
-                        <li>Mencerdaskan Bangsa Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio eos
-                            explicabo, optio officia consectetur placeat debitis perferendis, magni accusantium in
-                            numquam quas nemo est repellat. Commodi pariatur perspiciatis nobis natus!</li>
-                        <li>Menghidupkan Agama</li>
-                        <li>Mengabdi Pada Negara</li>
-                    </ul>
-                </div>
-                <div class="aspect-video my-5 sm:mx-8 md:ml-12 md:mr-0 lg:ml-16">
-                    <!-- Aspect Ratio 16/9, 1920px/1080px -->
-                    <img src="img/kopri.png" alt="Foto Organisasi Landscape" class="md:rounded-md">
-                </div>
-            </div>
-            <div class="w-full md:w-1/2 flex justify-center flex-wrap px-4 sm:px-8 md:pl-0 md:pr-12 lg:pr-16">
-                <div class="w-full sm:w-1/2 md:w-full lg:w-1/2 px-2 my-2">
-                    <div x-data="{tooltip: false}"
-                        class="relative bg-gray-200 rounded-lg flex flex-col justify-between h-full">
-                        <div>
-                            <div class="flex items-center pr-2 border-b-2 border-gray-800">
-                                <img src="img/logo_kemendikbud.png" alt="Logo Kopri Pendidikan"
-                                    class="mx-2 my-2 h-7 inline">
-                                <h3 class="inline text-lg font-semibold leading-5 my-1">Kopri Pendidikan Merdeka
-                                </h3>
-                            </div>
-                            <div class="mx-4 mt-1 mb-4">
-                                <p class="mb-2">
-                                    Ambil kendali masa depanmu dengan gabung Kopri pendidikan. Dapatkan kemerdekaan
-                                    untuk
-                                    membentuk masa depan yang
-                                    sesuai dengan aspirasi kariermu.
-                                </p>
-                                <ul role="list" class="list-disc pl-5 space-y-0">
-                                    <li>Mencerdaskan Bangsa</li>
-                                    <li>Menghidupkan Agama</li>
-                                    <li>Mengabdi Pada Negara</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="btn-group btn-block">
-                            <a href="#" class="btn bg-blue-800 hover:bg-blue-900 btn-sm flex-1">
-                                Lihat Situs Kopri
-                            </a>
-                            <button @click="tooltip = !tooltip" class="btn bg-blue-800 hover:bg-blue-900 btn-sm">
-                                <i class="fa-solid fa-ellipsis-vertical"></i>
-                            </button>
-                        </div>
-                        <div x-cloak x-transition x-show="tooltip"
-                            class="absolute bottom-9 right-1 bg-blue-800 rounded-md" @click.outside="tooltip = false">
-                            <a href="#" class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
-                                data-tip="Email">
-                                <i class="fa-solid fa-envelope"></i>
-                            </a>
-                            <a href="#" class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
-                                data-tip="Instagram">
-                                <i class="fa-brands fa-instagram"></i>
-                            </a>
-                            <a href="#" class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
-                                data-tip="Twitter">
-                                <i class="fa-brands fa-twitter"></i>
-                            </a>
-                            <a href="#" class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
-                                data-tip="Facebook">
-                                <i class="fa-brands fa-facebook"></i>
-                            </a>
-                            <a href="#" class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
-                                data-tip="Whatsapp">
-                                <i class="fa-brands fa-whatsapp"></i>
-                            </a>
-                        </div>
+        <!-- Kegiatan -->
+        <section class="leading-tight my-10 mx-4 sm:mx-8 md:mx-12 lg:mx-16">
+            <!-- <div id="kegiatan" class="invisible -mt-20"></div> -->
+            <h2 class="text-5xl font-bold mb-4 text-center">Kegiatan</h2>
+            <p class="mb-2 text-center">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet.
+            </p>
+            <div class="flex flex-wrap flex-row mt-4">
+                <div class="w-full sm:w-1/2 md:w-1/4 space-y-1 my-1 p-2 md:p-4">
+                    <div>
+                        <i class="fa-solid fa-book-quran px-2 py-2 bg-gray-200 text-blue-800 text-2xl rounded-md"></i>
                     </div>
+                    <h3 class="text-2xl font-semibold">Mengaji Kitab Kuning</h3>
+                    <p class="text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis,
+                        repellendus.</p>
                 </div>
-                <div class="w-full sm:w-1/2 md:w-full lg:w-1/2 px-2 my-2">
-                    <div x-data="{tooltip: false}"
-                        class="relative bg-gray-200 rounded-lg flex flex-col justify-between h-full">
-                        <div>
-                            <div class="flex items-center pr-2 border-b-2 border-gray-800">
-                                <img src="img/logo_kemenhan.png" alt="Logo Kopri Pertahanan Nalar"
-                                    class="mx-2 my-2 h-7 inline">
-                                <h3 class="inline text-lg font-semibold leading-5 my-1">Kopri Pertahanan Nalar
-                                </h3>
-                            </div>
-                            <div class="mx-4 mt-1 mb-4">
-                                <p class="mb-2">
-                                    Siap mengasah, mengawal, serta mempertajam nalar anda sehingga menjadi teknik bela
-                                    diri pribadi.
-                                </p>
-                                <ul role="list" class="list-disc pl-5 space-y-0">
-                                    <li>Mencerdaskan Bangsa</li>
-                                    <li>Menghidupkan Agama</li>
-                                    <li>Mengabdi Pada Negara</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="btn-group btn-block">
-                            <a href="#" class="btn bg-blue-800 hover:bg-blue-900 btn-sm flex-1">
-                                Lihat Situs Kopri
-                            </a>
-                            <button @click="tooltip = !tooltip" class="btn bg-blue-800 hover:bg-blue-900 btn-sm">
-                                <i class="fa-solid fa-ellipsis-vertical"></i>
-                            </button>
-                        </div>
-                        <div x-cloak x-transition x-show="tooltip"
-                            class="absolute bottom-9 right-1 bg-blue-800 rounded-md" @click.outside="tooltip = false">
-                            <a href="#" class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
-                                data-tip="Email">
-                                <i class="fa-solid fa-envelope"></i>
-                            </a>
-                            <a href="#" class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
-                                data-tip="Instagram">
-                                <i class="fa-brands fa-instagram"></i>
-                            </a>
-                            <a href="#" class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
-                                data-tip="Twitter">
-                                <i class="fa-brands fa-twitter"></i>
-                            </a>
-                            <a href="#" class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
-                                data-tip="Facebook">
-                                <i class="fa-brands fa-facebook"></i>
-                            </a>
-                            <a href="#" class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
-                                data-tip="Whatsapp">
-                                <i class="fa-brands fa-whatsapp"></i>
-                            </a>
-                        </div>
+                <div class="w-full sm:w-1/2 md:w-1/4 space-y-1 my-1 p-2 md:p-4">
+                    <div>
+                        <i class="fa-solid fa-scroll px-2 py-2 bg-gray-200 text-blue-800 text-2xl rounded-md"></i>
                     </div>
+                    <h3 class="text-2xl font-semibold">Mengkaji Kebijakan Pemerintah</h3>
+                    <p class="text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis,
+                        repellendus.</p>
                 </div>
-                <div class="w-full sm:w-1/2 md:w-full lg:w-1/2 px-2 my-2">
-                    <div x-data="{tooltip: false}"
-                        class="relative bg-gray-200 rounded-lg flex flex-col justify-between h-full">
-                        <div>
-                            <div class="flex items-center pr-2 border-b-2 border-gray-800">
-                                <img src="img/logo_kemenperin.png" alt="Logo Kopri Pembangunan Gerakan"
-                                    class="mx-2 my-2 h-7 inline">
-                                <h3 class="inline text-lg font-semibold leading-5 my-1">Kopri Pembangunan Gerakan
-                                </h3>
-                            </div>
-                            <div class="mx-4 mt-1 mb-4">
-                                <p class="mb-2">
-                                    Kami membangun, kami kerja, dan kami bahagia. Masuklah barisan, lalu jadilah manusia
-                                    yang memanusiakan manusia.
-                                </p>
-                                <ul role="list" class="list-disc pl-5 space-y-0">
-                                    <li>Mencerdaskan Bangsa</li>
-                                    <li>Menghidupkan Agama</li>
-                                    <li>Mengabdi Pada Negara</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="btn-group btn-block">
-                            <a href="#" class="btn bg-blue-800 hover:bg-blue-900 btn-sm flex-1">
-                                Lihat Situs Kopri
-                            </a>
-                            <button @click="tooltip = !tooltip" class="btn bg-blue-800 hover:bg-blue-900 btn-sm">
-                                <i class="fa-solid fa-ellipsis-vertical"></i>
-                            </button>
-                        </div>
-                        <div x-cloak x-transition x-show="tooltip"
-                            class="absolute bottom-9 right-1 bg-blue-800 rounded-md" @click.outside="tooltip = false">
-                            <a href="#" class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
-                                data-tip="Email">
-                                <i class="fa-solid fa-envelope"></i>
-                            </a>
-                            <a href="#" class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
-                                data-tip="Instagram">
-                                <i class="fa-brands fa-instagram"></i>
-                            </a>
-                            <a href="#" class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
-                                data-tip="Twitter">
-                                <i class="fa-brands fa-twitter"></i>
-                            </a>
-                            <a href="#" class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
-                                data-tip="Facebook">
-                                <i class="fa-brands fa-facebook"></i>
-                            </a>
-                            <a href="#" class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
-                                data-tip="Whatsapp">
-                                <i class="fa-brands fa-whatsapp"></i>
-                            </a>
-                        </div>
+                <div class="w-full sm:w-1/2 md:w-1/4 space-y-1 my-1 p-2 md:p-4">
+                    <div>
+                        <i class="fa-solid fa-bullhorn px-2 py-2 bg-gray-200 text-blue-800 text-2xl rounded-md"></i>
                     </div>
+                    <h3 class="text-2xl font-semibold">Menyuarakan Aspirasi</h3>
+                    <p class="text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis,
+                        repellendus.</p>
                 </div>
-                <div class="w-full sm:w-1/2 md:w-full lg:w-1/2 px-2 my-2">
-                    <div x-data="{tooltip: false}"
-                        class="relative bg-gray-200 rounded-lg flex flex-col justify-between h-full">
-                        <div>
-                            <div class="flex items-center pr-2 border-b-2 border-gray-800">
-                                <img src="img/logo_kemenag.png" alt="Logo Kopri Aswaja" class="mx-2 my-2 h-7 inline">
-                                <h3 class="inline text-lg font-semibold leading-5 my-1">Kopri Aswaja
-                                </h3>
-                            </div>
-                            <div class="mx-4 mt-1 mb-4">
-                                <p class="mb-2">
-                                    Walaupun hidup seribu tahun kalau tak sembahyang apa gunanya. Login yuk! Bersahabat
-                                    dalam organisasi juga bersahabat dalam mengejar ridha Allah.
-                                </p>
-                                <ul role="list" class="list-disc pl-5 space-y-0">
-                                    <li>Mencerdaskan Bangsa</li>
-                                    <li>Menghidupkan Agama</li>
-                                    <li>Mengabdi Pada Negara</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="btn-group btn-block">
-                            <a href="#" class="btn bg-blue-800 hover:bg-blue-900 btn-sm flex-1">
-                                Lihat Situs Rayon
-                            </a>
-                            <button @click="tooltip = !tooltip" class="btn bg-blue-800 hover:bg-blue-900 btn-sm">
-                                <i class="fa-solid fa-ellipsis-vertical"></i>
-                            </button>
-                        </div>
-                        <div x-cloak x-transition x-show="tooltip"
-                            class="absolute bottom-9 right-1 bg-blue-800 rounded-md" @click.outside="tooltip = false">
-                            <a href="#" class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
-                                data-tip="Email">
-                                <i class="fa-solid fa-envelope"></i>
-                            </a>
-                            <a href="#" class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
-                                data-tip="Instagram">
-                                <i class="fa-brands fa-instagram"></i>
-                            </a>
-                            <a href="#" class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
-                                data-tip="Twitter">
-                                <i class="fa-brands fa-twitter"></i>
-                            </a>
-                            <a href="#" class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
-                                data-tip="Facebook">
-                                <i class="fa-brands fa-facebook"></i>
-                            </a>
-                            <a href="#" class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
-                                data-tip="Whatsapp">
-                                <i class="fa-brands fa-whatsapp"></i>
-                            </a>
-                        </div>
+                <div class="w-full sm:w-1/2 md:w-1/4 space-y-1 my-1 p-2 md:p-4">
+                    <div>
+                        <i class="fa-solid fa-brain px-2 py-2 bg-gray-200 text-blue-800 text-2xl rounded-md"></i>
                     </div>
+                    <h3 class="text-2xl font-semibold">Mengasah Nalar</h3>
+                    <p class="text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis,
+                        repellendus.</p>
+                </div>
+                <div class="w-full sm:w-1/2 md:w-1/4 space-y-1 my-1 p-2 md:p-4">
+                    <div>
+                        <i
+                            class="fa-solid fa-handshake-angle px-2 py-2 bg-gray-200 text-blue-800 text-2xl rounded-md"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold">Mengabdi Kepada Masyarakat</h3>
+                    <p class="text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis,
+                        repellendus.</p>
+                </div>
+                <div class="w-full sm:w-1/2 md:w-1/4 space-y-1 my-1 p-2 md:p-4">
+                    <div>
+                        <i class="fa-solid fa-video px-2 py-2 bg-gray-200 text-blue-800 text-2xl rounded-md"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold">Bedah Film</h3>
+                    <p class="text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis,
+                        repellendus.</p>
+                </div>
+                <div class="w-full sm:w-1/2 md:w-1/4 space-y-1 my-1 p-2 md:p-4">
+                    <div>
+                        <i class="fa-solid fa-book px-2 py-2 bg-gray-200 text-blue-800 text-2xl rounded-md"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold">Bedah Buku</h3>
+                    <p class="text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis,
+                        repellendus.</p>
+                </div>
+                <div class="w-full sm:w-1/2 md:w-1/4 space-y-1 my-1 p-2 md:p-4">
+                    <div>
+                        <i
+                            class="fa-solid fa-person-chalkboard px-2 py-2 bg-gray-200 text-blue-800 text-2xl rounded-md"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold">Melatih Public Speaking</h3>
+                    <p class="text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis,
+                        repellendus.</p>
+                </div>
+                <div class="w-full sm:w-1/2 md:w-1/4 space-y-1 my-1 p-2 md:p-4">
+                    <div>
+                        <i
+                            class="fa-solid fa-person-arrow-up-from-line px-2 py-2 bg-gray-200 text-blue-800 text-2xl rounded-md"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold">Mengembangkan Minat & Bakat</h3>
+                    <p class="text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis,
+                        repellendus.</p>
+                </div>
+                <div class="w-full sm:w-1/2 md:w-1/4 space-y-1 my-1 p-2 md:p-4">
+                    <div>
+                        <i
+                            class="fa-solid fa-person-through-window px-2 py-2 bg-gray-200 text-blue-800 text-2xl rounded-md"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold">Event Organizing</h3>
+                    <p class="text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis,
+                        repellendus.</p>
+                </div>
+                <div class="w-full sm:w-1/2 md:w-1/4 space-y-1 my-1 p-2 md:p-4">
+                    <div>
+                        <i class="fa-solid fa-comments px-2 py-2 bg-gray-200 text-blue-800 text-2xl rounded-md"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold">Diskusi/Sharing Ilmu</h3>
+                    <p class="text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis,
+                        repellendus.</p>
+                </div>
+                <div class="w-full sm:w-1/2 md:w-1/4 space-y-1 my-1 p-2 md:p-4">
+                    <div>
+                        <i class="fa-solid fa-question px-2 py-2 bg-gray-200 text-blue-800 text-2xl rounded-md"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold">Masih Banyak Lagi...</h3>
+                    <p class="text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis,
+                        repellendus.</p>
                 </div>
             </div>
         </section>
