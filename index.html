@@ -12,11 +12,12 @@
 
     <link href="dist/output.css" rel="stylesheet">
     <script defer src="https://kit.fontawesome.com/6718c180c3.js" crossorigin="anonymous"></script>
+    <script defer src="myAlpine.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.0/dist/cdn.min.js"></script>
 </head>
 
-<body class="bg-[#fff8dc] text-gray-800">
-    <header class="shadow sticky top-0 bg-slate-50 z-[999]">
+<body class="bg-[#29286b] text-gray-800">
+    <header class="shadow sticky top-0 bg-slate-50 z-[10]">
         <nav class="grid-nav grid-rows-1 items-center pt-1">
             <div class="grit-logo md:py-1 pl-4 sm:pl-8 md:pl-12 lg:pl-16">
                 <a href="#" class="">
@@ -68,6 +69,7 @@
         </nav>
     </header>
     <main class="">
+
         <!-- Hero -->
         <section id="hero" class="mt-32 sm:mt-0 border-t sm:border-t-0 bg-slate-50 sm:flex sm:items-center">
             <div class="aspect-video sm:aspect-[7/9] rounded-md sm:rounded-sm -mt-28 sm:mt-0 mx-3 sm:mx-0 sm:w-1/3">
@@ -99,35 +101,35 @@
                 </div>
             </div>
         </section>
+
         <!-- Data -->
-        <section class="flex justify-center items-center my-10">
-            <div id="data" class="invisible -mt-80 md:-mt-72"></div>
+        <section id="data" class="flex justify-center items-center my-10 scroll-mt-28 md:scroll-mt-24 text-gray-200">
             <div class="flex-auto flex flex-col text-center">
-                <i class="fa-solid fa-user-graduate text-5xl text-gray-200 md:text-8xl"></i>
+                <i class="fa-solid fa-user-graduate text-5xl text-blue-950 md:text-8xl"></i>
                 <h5 class="font-extrabold text-2xl md:text-5xl -mt-5">100+</h5>
                 <span class="font-normal uppercase">Alumni</span>
             </div>
             <div class="flex-auto flex flex-col text-center">
-                <i class="fa-solid fa-school-flag text-5xl text-gray-200 md:text-8xl"></i>
+                <i class="fa-solid fa-school-flag text-5xl text-blue-950 md:text-8xl"></i>
                 <h5 class="font-extrabold text-2xl md:text-5xl -mt-5">4</h5>
                 <span class="font-normal uppercase">Rayon</span>
             </div>
             <div class="flex-auto flex flex-col text-center">
-                <i class="fa-solid fa-user-secret text-5xl text-gray-200 md:text-8xl"></i>
+                <i class="fa-solid fa-user-secret text-5xl text-blue-950 md:text-8xl"></i>
                 <h5 class="font-extrabold text-2xl md:text-5xl -mt-5">20</h5>
                 <span class="font-normal uppercase">Kader</span>
             </div>
             <div class="flex-auto flex flex-col text-center">
-                <i class="fa-solid fa-user text-5xl text-gray-200 md:text-8xl"></i>
+                <i class="fa-solid fa-user text-5xl text-blue-950 md:text-8xl"></i>
                 <h5 class="font-extrabold text-2xl md:text-5xl -mt-5">50</h5>
                 <span class="font-normal uppercase">Anggota</span>
             </div>
         </section>
+
         <!-- Struktural -->
         <section class="flex my-10 flex-wrap bg-slate-50 py-10">
             <!-- Rayon -->
-            <div class="flex flex-wrap mb-10">
-                <div id="rayon" class="invisible -mt-20"></div>
+            <div id="rayon" class="flex flex-wrap mb-10 scroll-mt-24 md:scroll-mt-16">
                 <div class="w-full md:w-1/2 md:pr-6">
                     <div class="mb-5 leading-tight mx-4 sm:mx-8 md:ml-12 md:mr-0 lg:ml-16">
                         <h2 class="text-5xl font-bold mb-4">
@@ -152,8 +154,8 @@
                 </div>
                 <div class="w-full md:w-1/2 flex justify-center flex-wrap px-4 sm:px-8 md:pl-0 md:pr-12 lg:pr-16">
                     <div class="w-full sm:w-1/2 md:w-full lg:w-1/2 px-2 my-2">
-                        <div x-data="{tooltip: false}"
-                            class="relative bg-gray-200 rounded-lg flex flex-col justify-between h-full">
+                        <div x-data="{tooltip:false}"
+                            class="relative bg-[#f1ead1] rounded-lg flex flex-col justify-between h-full">
                             <div>
                                 <div class="flex items-center pr-2 border-b-2 border-gray-800">
                                     <img src="img/logo_kemendikbud.png" alt="Logo Rayon Pendidikan"
@@ -175,11 +177,11 @@
                                     </ul>
                                 </div>
                             </div>
-                            <div class=" btn-group btn-block p-3">
+                            <div class="btn-group btn-block p-3">
                                 <a href="#" class="btn bg-blue-800 hover:bg-blue-900 btn-sm flex-1">
                                     Lihat Situs Rayon
                                 </a>
-                                <button @click="tooltip = !tooltip" class="btn bg-blue-800 hover:bg-blue-900 btn-sm">
+                                <button @click="tooltip = ! tooltip" class="btn bg-blue-800 hover:bg-blue-900 btn-sm">
                                     <i class="fa-solid fa-ellipsis-vertical"></i>
                                 </button>
                             </div>
@@ -215,8 +217,8 @@
                         </div>
                     </div>
                     <div class="w-full sm:w-1/2 md:w-full lg:w-1/2 px-2 my-2">
-                        <div x-data="{tooltip: false}"
-                            class="relative bg-gray-200 rounded-lg flex flex-col justify-between h-full">
+                        <div x-data="{tooltip:false}"
+                            class="relative bg-[#f1ead1] rounded-lg flex flex-col justify-between h-full">
                             <div>
                                 <div class="flex items-center pr-2 border-b-2 border-gray-800">
                                     <img src="img/logo_kemenhan.png" alt="Logo Rayon Pertahanan Nalar"
@@ -277,8 +279,8 @@
                         </div>
                     </div>
                     <div class="w-full sm:w-1/2 md:w-full lg:w-1/2 px-2 my-2">
-                        <div x-data="{tooltip: false}"
-                            class="relative bg-gray-200 rounded-lg flex flex-col justify-between h-full">
+                        <div x-data="{tooltip:false}"
+                            class="relative bg-[#f1ead1] rounded-lg flex flex-col justify-between h-full">
                             <div>
                                 <div class="flex items-center pr-2 border-b-2 border-gray-800">
                                     <img src="img/logo_kemenperin.png" alt="Logo Rayon Pembangunan Gerakan"
@@ -303,13 +305,13 @@
                                 <a href="#" class="btn bg-blue-800 hover:bg-blue-900 btn-sm flex-1">
                                     Lihat Situs Rayon
                                 </a>
-                                <button @click="tooltip = !tooltip" class="btn bg-blue-800 hover:bg-blue-900 btn-sm">
+                                <button @click="tooltip=!tooltip" class="btn bg-blue-800 hover:bg-blue-900 btn-sm">
                                     <i class="fa-solid fa-ellipsis-vertical"></i>
                                 </button>
                             </div>
                             <div x-cloak x-transition x-show="tooltip"
                                 class="absolute bottom-12 right-3 bg-blue-800 rounded-md"
-                                @click.outside="tooltip = false">
+                                @click.outside="tooltip=false">
                                 <a href="#"
                                     class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
                                     data-tip="Email">
@@ -339,8 +341,8 @@
                         </div>
                     </div>
                     <div class="w-full sm:w-1/2 md:w-full lg:w-1/2 px-2 my-2">
-                        <div x-data="{tooltip: false}"
-                            class="relative bg-gray-200 rounded-lg flex flex-col justify-between h-full">
+                        <div x-data="{tooltip:false}"
+                            class="relative bg-[#f1ead1] rounded-lg flex flex-col justify-between h-full">
                             <div>
                                 <div class="flex items-center pr-2 border-b-2 border-gray-800">
                                     <img src="img/logo_kemenag.png" alt="Logo Rayon Aswaja"
@@ -365,13 +367,13 @@
                                 <a href="#" class="btn bg-blue-800 hover:bg-blue-900 btn-sm flex-1">
                                     Lihat Situs Rayon
                                 </a>
-                                <button @click="tooltip = !tooltip" class="btn bg-blue-800 hover:bg-blue-900 btn-sm">
+                                <button @click="tooltip=!tooltip" class="btn bg-blue-800 hover:bg-blue-900 btn-sm">
                                     <i class="fa-solid fa-ellipsis-vertical"></i>
                                 </button>
                             </div>
                             <div x-cloak x-transition x-show="tooltip"
                                 class="absolute bottom-12 right-3 bg-blue-800 rounded-md"
-                                @click.outside="tooltip = false">
+                                @click.outside="tooltip=false">
                                 <a href="#"
                                     class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
                                     data-tip="Email">
@@ -403,8 +405,7 @@
                 </div>
             </div>
             <!-- Kopri -->
-            <div class="flex flex-wrap mt-10">
-                <div id="kopri" class="invisible -mt-20"></div>
+            <div id="kopri" class="flex flex-wrap mt-10 scroll-mt-24 md:scroll-mt-16">
                 <div class="w-full md:w-1/2 md:pr-6">
                     <div class="mb-5 leading-tight mx-4 sm:mx-8 md:ml-12 md:mr-0 lg:ml-16">
                         <h2 class="text-5xl font-bold mb-4">
@@ -429,8 +430,8 @@
                 </div>
                 <div class="w-full md:w-1/2 flex justify-center flex-wrap px-4 sm:px-8 md:pl-0 md:pr-12 lg:pr-16">
                     <div class="w-full sm:w-1/2 md:w-full lg:w-1/2 px-2 my-2">
-                        <div x-data="{tooltip: false}"
-                            class="relative bg-gray-200 rounded-lg flex flex-col justify-between h-full">
+                        <div x-data="{tooltip:false}"
+                            class="relative bg-[#f1ead1] rounded-lg flex flex-col justify-between h-full">
                             <div>
                                 <div class="flex items-center pr-2 border-b-2 border-gray-800">
                                     <img src="img/logo_kemendikbud.png" alt="Logo Kopri Pendidikan"
@@ -456,13 +457,13 @@
                                 <a href="#" class="btn bg-blue-800 hover:bg-blue-900 btn-sm flex-1">
                                     Lihat Situs Kopri
                                 </a>
-                                <button @click="tooltip = !tooltip" class="btn bg-blue-800 hover:bg-blue-900 btn-sm">
+                                <button @click="tooltip=!tooltip" class="btn bg-blue-800 hover:bg-blue-900 btn-sm">
                                     <i class="fa-solid fa-ellipsis-vertical"></i>
                                 </button>
                             </div>
                             <div x-cloak x-transition x-show="tooltip"
                                 class="absolute bottom-12 right-3 bg-blue-800 rounded-md"
-                                @click.outside="tooltip = false">
+                                @click.outside="tooltip=false">
                                 <a href="#"
                                     class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
                                     data-tip="Email">
@@ -492,8 +493,8 @@
                         </div>
                     </div>
                     <div class="w-full sm:w-1/2 md:w-full lg:w-1/2 px-2 my-2">
-                        <div x-data="{tooltip: false}"
-                            class="relative bg-gray-200 rounded-lg flex flex-col justify-between h-full">
+                        <div x-data="{tooltip:false}"
+                            class="relative bg-[#f1ead1] rounded-lg flex flex-col justify-between h-full">
                             <div>
                                 <div class="flex items-center pr-2 border-b-2 border-gray-800">
                                     <img src="img/logo_kemenhan.png" alt="Logo Kopri Pertahanan Nalar"
@@ -518,13 +519,13 @@
                                 <a href="#" class="btn bg-blue-800 hover:bg-blue-900 btn-sm flex-1">
                                     Lihat Situs Kopri
                                 </a>
-                                <button @click="tooltip = !tooltip" class="btn bg-blue-800 hover:bg-blue-900 btn-sm">
+                                <button @click="tooltip=!tooltip" class="btn bg-blue-800 hover:bg-blue-900 btn-sm">
                                     <i class="fa-solid fa-ellipsis-vertical"></i>
                                 </button>
                             </div>
                             <div x-cloak x-transition x-show="tooltip"
                                 class="absolute bottom-12 right-3 bg-blue-800 rounded-md"
-                                @click.outside="tooltip = false">
+                                @click.outside="tooltip=false">
                                 <a href="#"
                                     class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
                                     data-tip="Email">
@@ -554,8 +555,8 @@
                         </div>
                     </div>
                     <div class="w-full sm:w-1/2 md:w-full lg:w-1/2 px-2 my-2">
-                        <div x-data="{tooltip: false}"
-                            class="relative bg-gray-200 rounded-lg flex flex-col justify-between h-full">
+                        <div x-data="{tooltip:false}"
+                            class="relative bg-[#f1ead1] rounded-lg flex flex-col justify-between h-full">
                             <div>
                                 <div class="flex items-center pr-2 border-b-2 border-gray-800">
                                     <img src="img/logo_kemenperin.png" alt="Logo Kopri Pembangunan Gerakan"
@@ -580,13 +581,13 @@
                                 <a href="#" class="btn bg-blue-800 hover:bg-blue-900 btn-sm flex-1">
                                     Lihat Situs Kopri
                                 </a>
-                                <button @click="tooltip = !tooltip" class="btn bg-blue-800 hover:bg-blue-900 btn-sm">
+                                <button @click="tooltip=!tooltip" class="btn bg-blue-800 hover:bg-blue-900 btn-sm">
                                     <i class="fa-solid fa-ellipsis-vertical"></i>
                                 </button>
                             </div>
                             <div x-cloak x-transition x-show="tooltip"
                                 class="absolute bottom-12 right-3 bg-blue-800 rounded-md"
-                                @click.outside="tooltip = false">
+                                @click.outside="tooltip=false">
                                 <a href="#"
                                     class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
                                     data-tip="Email">
@@ -616,8 +617,8 @@
                         </div>
                     </div>
                     <div class="w-full sm:w-1/2 md:w-full lg:w-1/2 px-2 my-2">
-                        <div x-data="{tooltip: false}"
-                            class="relative bg-gray-200 rounded-lg flex flex-col justify-between h-full">
+                        <div x-data="{tooltip:false}"
+                            class="relative bg-[#f1ead1] rounded-lg flex flex-col justify-between h-full">
                             <div>
                                 <div class="flex items-center pr-2 border-b-2 border-gray-800">
                                     <img src="img/logo_kemenag.png" alt="Logo Kopri Aswaja"
@@ -642,13 +643,13 @@
                                 <a href="#" class="btn bg-blue-800 hover:bg-blue-900 btn-sm flex-1">
                                     Lihat Situs Rayon
                                 </a>
-                                <button @click="tooltip = !tooltip" class="btn bg-blue-800 hover:bg-blue-900 btn-sm">
+                                <button @click="tooltip=!tooltip" class="btn bg-blue-800 hover:bg-blue-900 btn-sm">
                                     <i class="fa-solid fa-ellipsis-vertical"></i>
                                 </button>
                             </div>
                             <div x-cloak x-transition x-show="tooltip"
                                 class="absolute bottom-12 right-3 bg-blue-800 rounded-md"
-                                @click.outside="tooltip = false">
+                                @click.outside="tooltip=false">
                                 <a href="#"
                                     class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
                                     data-tip="Email">
@@ -681,11 +682,12 @@
             </div>
 
         </section>
+
         <!-- Kegiatan -->
-        <section class="leading-tight my-10 mx-4 sm:mx-8 md:mx-12 lg:mx-16">
-            <div id="kegiatan" class="invisible -mt-24 mb-14 md:-mt-20 md:mb-10">Hello</div>
+        <section id="kegiatan"
+            class="text-gray-200 leading-tight my-10 mx-4 sm:mx-8 md:mx-12 lg:mx-16 scroll-mt-24 md:scroll-mt-16">
             <h2 class="text-5xl font-bold mb-4 text-center">Kegiatan</h2>
-            <p class="mb-2 text-center">
+            <p class="mb-2 text-center text-gray-500">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet.
             </p>
             <div class="flex flex-wrap flex-row mt-4">
@@ -732,9 +734,9 @@
                 </div>
                 <div class="w-full sm:w-1/2 md:w-1/4 space-y-1 my-1 p-2 md:p-4">
                     <div>
-                        <i class="fa-solid fa-video px-2 py-2 bg-gray-200 text-blue-800 text-2xl rounded-md"></i>
+                        <i class="fa-solid fa-seedling px-2 py-2 bg-gray-200 text-blue-800 text-2xl rounded-md"></i>
                     </div>
-                    <h3 class="text-2xl font-semibold">Bedah Film</h3>
+                    <h3 class="text-2xl font-semibold">Mengembangkan Minat & Bakat</h3>
                     <p class="text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis,
                         repellendus.</p>
                 </div>
@@ -748,41 +750,6 @@
                 </div>
                 <div class="w-full sm:w-1/2 md:w-1/4 space-y-1 my-1 p-2 md:p-4">
                     <div>
-                        <i
-                            class="fa-solid fa-person-chalkboard px-2 py-2 bg-gray-200 text-blue-800 text-2xl rounded-md"></i>
-                    </div>
-                    <h3 class="text-2xl font-semibold">Melatih Public Speaking</h3>
-                    <p class="text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis,
-                        repellendus.</p>
-                </div>
-                <div class="w-full sm:w-1/2 md:w-1/4 space-y-1 my-1 p-2 md:p-4">
-                    <div>
-                        <i
-                            class="fa-solid fa-person-arrow-up-from-line px-2 py-2 bg-gray-200 text-blue-800 text-2xl rounded-md"></i>
-                    </div>
-                    <h3 class="text-2xl font-semibold">Mengembangkan Minat & Bakat</h3>
-                    <p class="text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis,
-                        repellendus.</p>
-                </div>
-                <div class="w-full sm:w-1/2 md:w-1/4 space-y-1 my-1 p-2 md:p-4">
-                    <div>
-                        <i
-                            class="fa-solid fa-person-through-window px-2 py-2 bg-gray-200 text-blue-800 text-2xl rounded-md"></i>
-                    </div>
-                    <h3 class="text-2xl font-semibold">Event Organizing</h3>
-                    <p class="text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis,
-                        repellendus.</p>
-                </div>
-                <div class="w-full sm:w-1/2 md:w-1/4 space-y-1 my-1 p-2 md:p-4">
-                    <div>
-                        <i class="fa-solid fa-comments px-2 py-2 bg-gray-200 text-blue-800 text-2xl rounded-md"></i>
-                    </div>
-                    <h3 class="text-2xl font-semibold">Diskusi/Sharing Ilmu</h3>
-                    <p class="text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis,
-                        repellendus.</p>
-                </div>
-                <div class="w-full sm:w-1/2 md:w-1/4 space-y-1 my-1 p-2 md:p-4">
-                    <div>
                         <i class="fa-solid fa-ellipsis px-2 py-2 bg-gray-200 text-blue-800 text-2xl rounded-md"></i>
                     </div>
                     <h3 class="text-2xl font-semibold">Masih Banyak Lagi...</h3>
@@ -791,8 +758,91 @@
                 </div>
             </div>
         </section>
-        <section>
 
+        <!-- Profile -->
+        <section id="profil" class="leading-tight my-10 py-10 bg-slate-50 scroll-m-11 md:scroll-m-5">
+            <h2 class="text-5xl font-bold mb-4 text-center">Profil</h2>
+            <p class="mb-2 text-center text-gray-500">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet.
+            </p>
+            <div x-data="tabs" class="flex flex-col md:flex-row mt-4">
+                <div
+                    class="md:w-1/3 sticky top-[4.76rem] sm:top-11 bg-slate-50 md:ml-12 md:mr-6 md:rounded-lg lg:ml-16 lg:mr-8">
+                    <ul
+                        class="sticky top-[3.3rem] flex md:flex-col overflow-x-auto overflow-y-hidden py-2 px-3 hide-scrollbar shadow md:shadow-none md:space-y-2">
+                        <li class="min-w-max">
+                            <button @click="setActive(1)" :class="(activeTab === 1) ? activeClass:inActiveClass"
+                                class="px-3 py-1 rounded-full md:rounded md:w-full md:mx-0 mx-1">Sejarah</button>
+                        </li>
+                        <li class="min-w-max">
+                            <button @click="setActive(2)" :class="(activeTab === 2) ? activeClass:inActiveClass"
+                                class="px-3 py-1 rounded-full md:rounded md:w-full md:mx-0 mx-1">Visi & Misi</button>
+                        </li>
+                        <li class="min-w-max">
+                            <button @click="setActive(3)" :class="(activeTab === 3) ? activeClass:inActiveClass"
+                                class="px-3 py-1 rounded-full md:rounded md:w-full md:mx-0 mx-1">Susunan
+                                Kepengurusan</button>
+                        </li>
+                        <li class="min-w-max">
+                            <button @click="setActive(4)" :class="(activeTab === 4) ? activeClass:inActiveClass"
+                                class="px-3 py-1 rounded-full md:rounded md:w-full md:mx-0 mx-1">Anggota
+                                Berprestasi</button>
+                        </li>
+                        <li class="min-w-max">
+                            <button @click="setActive(5)" :class="(activeTab === 5) ? activeClass:inActiveClass"
+                                class="px-3 py-1 rounded-full md:rounded md:w-full md:mx-0 mx-1">Pituah Alumni</button>
+                        </li>
+                    </ul>
+                </div>
+                <div id="tab-konten"
+                    class="scroll-mt-32 sm:scroll-mt-24 md:scroll-mt-16 mx-4 sm:mx-8 md:mr-12 md:ml-6 lg:mr-16 lg:ml-8 md:w-2/3 border-2 border-gray-800 mt-2">
+                    <div x-show="activeTab === 1">
+                        <h2>Sejarah</h2>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur corporis nulla atque rem
+                            accusamus vel perspiciatis non eaque. Voluptatem, repudiandae?</p>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur corporis nulla atque rem
+                            accusamus vel perspiciatis non eaque. Voluptatem, repudiandae?</p>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur corporis nulla atque rem
+                            accusamus vel perspiciatis non eaque. Voluptatem, repudiandae?</p>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur corporis nulla atque rem
+                            accusamus vel perspiciatis non eaque. Voluptatem, repudiandae?</p>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur corporis nulla atque rem
+                            accusamus vel perspiciatis non eaque. Voluptatem, repudiandae?</p>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur corporis nulla atque rem
+                            accusamus vel perspiciatis non eaque. Voluptatem, repudiandae?</p>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur corporis nulla atque rem
+                            accusamus vel perspiciatis non eaque. Voluptatem, repudiandae?</p>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur corporis nulla atque rem
+                            accusamus vel perspiciatis non eaque. Voluptatem, repudiandae?</p>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur corporis nulla atque rem
+                            accusamus vel perspiciatis non eaque. Voluptatem, repudiandae?</p>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur corporis nulla atque rem
+                            accusamus vel perspiciatis non eaque. Voluptatem, repudiandae?</p>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur corporis nulla atque rem
+                            accusamus vel perspiciatis non eaque. Voluptatem, repudiandae?</p>
+                    </div>
+                    <div x-cloak x-show="activeTab === 2">
+                        <h2>Visi Misi</h2>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur corporis nulla atque rem
+                            accusamus vel perspiciatis non eaque. Voluptatem, repudiandae?</p>
+                    </div>
+                    <div x-cloak x-show="activeTab === 3">
+                        <h2>Susunan Kepengurusan</h2>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur corporis nulla atque rem
+                            accusamus vel perspiciatis non eaque. Voluptatem, repudiandae?</p>
+                    </div>
+                    <div x-cloak x-show="activeTab === 4">
+                        <h2>Prestasi</h2>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur corporis nulla atque rem
+                            accusamus vel perspiciatis non eaque. Voluptatem, repudiandae?</p>
+                    </div>
+                    <div x-cloak x-show="activeTab === 5">
+                        <h2>Pituah Alumni</h2>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur corporis nulla atque rem
+                            accusamus vel perspiciatis non eaque. Voluptatem, repudiandae?</p>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
     <footer class="bg-sky-900 h-72">Lorem</footer>
