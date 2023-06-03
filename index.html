@@ -686,7 +686,7 @@
         <!-- Kegiatan -->
         <section id="kegiatan"
             class="text-gray-200 leading-tight my-10 mx-4 sm:mx-8 md:mx-12 lg:mx-16 scroll-mt-24 md:scroll-mt-16">
-            <h2 class="text-5xl font-bold mb-4 text-center">Kegiatan</h2>
+            <h2 class="text-5xl font-bold mb-4 text-center">KEGIATAN</h2>
             <p class="mb-2 text-center text-gray-500">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet.
             </p>
@@ -760,8 +760,9 @@
         </section>
 
         <!-- Profile -->
-        <section id="profil" class="leading-tight my-10 py-10 bg-slate-50 scroll-m-11 md:scroll-m-5">
-            <h2 class="text-5xl font-bold mb-4 text-center">Profil</h2>
+        <section id="profil"
+            class="text-base font-normal leading-tight my-10 py-10 bg-slate-50 scroll-m-11 md:scroll-m-5">
+            <h2 class="text-5xl font-bold mb-4 text-center">PROFIL</h2>
             <p class="mb-2 text-center text-gray-500">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet.
             </p>
@@ -780,13 +781,11 @@
                         </li>
                         <li class="min-w-max">
                             <button @click="setActive(3)" :class="(activeTab === 3) ? activeClass:inActiveClass"
-                                class="px-3 py-1 rounded-full md:rounded md:w-full md:mx-0 mx-1">Susunan
-                                Kepengurusan</button>
+                                class="px-3 py-1 rounded-full md:rounded md:w-full md:mx-0 mx-1">Kepengurusan</button>
                         </li>
                         <li class="min-w-max">
                             <button @click="setActive(4)" :class="(activeTab === 4) ? activeClass:inActiveClass"
-                                class="px-3 py-1 rounded-full md:rounded md:w-full md:mx-0 mx-1">Anggota
-                                Berprestasi</button>
+                                class="px-3 py-1 rounded-full md:rounded md:w-full md:mx-0 mx-1">Prestasi</button>
                         </li>
                         <li class="min-w-max">
                             <button @click="setActive(5)" :class="(activeTab === 5) ? activeClass:inActiveClass"
@@ -797,6 +796,7 @@
                 <div id="tab-konten"
                     class="scroll-mt-32 sm:scroll-mt-24 md:scroll-mt-16 mx-4 sm:mx-8 md:mr-12 md:ml-6 lg:mr-16 lg:ml-8 md:w-2/3 mt-2">
                     <div x-show="activeTab === 1">
+                        <h3 class="text-4xl font-bold mb-4">Sejarah</h3>
                         <ol class="relative border-l border-blue-800 dark:border-gray-700 z-[1]">
                             <li class="mb-10 ml-4">
                                 <div
@@ -909,45 +909,184 @@
                     </div>
                     <div x-cloak x-show="activeTab === 2">
                         <h3 class="text-4xl font-bold mb-2">Visi</h3>
-                        <div class="border-l-4 border-blue-800 pl-4 mb-4">Lorem ipsum dolor sit amet consectetur
+                        <div class="text-base font-normal border-l-4 border-blue-800 pl-4 mb-4">Lorem ipsum dolor sit
+                            amet consectetur
                             adipisicing
                             elit.
                             Sunt quas nisi
                             facilis enim,
                             voluptatem soluta natus quis unde error modi.</div>
                         <h3 class="text-4xl font-bold mb-2">Misi</h3>
-                        <ul role="list" class="list-decimal ml-4 marker:text-blue-800 marker:font-bold">
-                            <li>Lorem ipsum dolor sit amet.</li>
-                            <li>Lorem dolor sit amet consectetur.</li>
-                            <li>Lorem ipsum dolor sit.</li>
-                            <li>Consectetur adipisicing elit. Culpa, labore? Lorem ipsum dolor sit amet consectetur
+                        <ul role="list"
+                            class="text-base font-normal list-decimal ml-4 marker:text-blue-800 marker:font-bold">
+                            <li class="pl-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta explicabo
+                                quo consequuntur similique molestias reprehenderit dicta voluptates asperiores, eaque
+                                ratione! Lorem ipsum dolor sit amet.</li>
+                            <li class="pl-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, asperiores!
+                                Lorem dolor sit amet consectetur.</li>
+                            <li class="pl-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti ratione
+                                iste molestias illo magnam ipsa maxime, eveniet ea atque quas nobis quaerat explicabo
+                                eum obcaecati? Lorem ipsum dolor sit.</li>
+                            <li class="pl-2">Consectetur adipisicing elit. Culpa, labore? Lorem ipsum dolor sit amet
+                                consectetur
                                 adipisicing elit. Hic, doloremque.</li>
                         </ul>
                     </div>
                     <div x-cloak x-show="activeTab === 3">
-                        <h2>Susunan Kepengurusan</h2>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur corporis nulla atque rem
-                            accusamus vel perspiciatis non eaque. Voluptatem, repudiandae?</p>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur corporis nulla atque rem
-                            accusamus vel perspiciatis non eaque. Voluptatem, repudiandae?</p>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur corporis nulla atque rem
-                            accusamus vel perspiciatis non eaque. Voluptatem, repudiandae?</p>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur corporis nulla atque rem
-                            accusamus vel perspiciatis non eaque. Voluptatem, repudiandae?</p>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur corporis nulla atque rem
-                            accusamus vel perspiciatis non eaque. Voluptatem, repudiandae?</p>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur corporis nulla atque rem
-                            accusamus vel perspiciatis non eaque. Voluptatem, repudiandae?</p>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur corporis nulla atque rem
-                            accusamus vel perspiciatis non eaque. Voluptatem, repudiandae?</p>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur corporis nulla atque rem
-                            accusamus vel perspiciatis non eaque. Voluptatem, repudiandae?</p>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur corporis nulla atque rem
-                            accusamus vel perspiciatis non eaque. Voluptatem, repudiandae?</p>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur corporis nulla atque rem
-                            accusamus vel perspiciatis non eaque. Voluptatem, repudiandae?</p>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur corporis nulla atque rem
-                            accusamus vel perspiciatis non eaque. Voluptatem, repudiandae?</p>
+                        <h3 class="text-4xl font-bold mb-4">Susunan Kepengurusan</h3>
+                        <div class="relative overflow-x-auto">
+                            <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                                <thead
+                                    class="text-xs text-gray-50 uppercase bg-gradient-to-br from-gray-900 to-blue-800 dark:bg-gray-700 dark:text-gray-400">
+                                    <tr>
+                                        <th scope="col" colspan="2" class="px-6 py-3">
+                                            Badan Pengurus Harian
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                        <th scope="row" class="px-6 py-4 dark:text-white font-normal">
+                                            Ketua Umum
+                                        </th>
+                                        <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                            Sandika Akmal Basit
+                                        </td>
+                                    </tr>
+                                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                        <th scope="row" class="px-6 py-4 dark:text-white font-normal">
+                                            Sekretaris Umum
+                                        </th>
+                                        <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                            Deris Salman Fauzi
+                                        </td>
+                                    </tr>
+                                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                        <th scope="row" class="px-6 py-4 dark:text-white font-normal">
+                                            Bendahara Umum
+                                        </th>
+                                        <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                            Roby Kurnia Nasution
+                                        </td>
+                                    </tr>
+                                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                        <th scope="row" class="px-6 py-4 dark:text-white font-normal">
+                                            Wakil Ketua 1
+                                        </th>
+                                        <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                            Nurdin Saefudin
+                                        </td>
+                                    </tr>
+                                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                        <th scope="row" class="px-6 py-4 dark:text-white font-normal">
+                                            Wakil Ketua 2
+                                        </th>
+                                        <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                            Andri Kusuma Galuh
+                                        </td>
+                                    </tr>
+                                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                        <th scope="row" class="px-6 py-4 dark:text-white font-normal">
+                                            Wakil Ketua 3
+                                        </th>
+                                        <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                            Sinta Laila Safitri
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                <thead
+                                    class="text-xs text-gray-50 uppercase bg-gradient-to-br from-gray-900 to-blue-800 dark:bg-gray-700 dark:text-gray-400">
+                                    <tr>
+                                        <th scope="col" colspan="2" class="px-6 py-3">
+                                            Biro Media
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                        <th scope="row" class="px-6 py-4 dark:text-white font-normal">
+                                            Ketua
+                                        </th>
+                                        <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                            Meriska Sania
+                                        </td>
+                                    </tr>
+                                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                        <th scope="row" class="px-6 py-4 dark:text-white font-normal">
+                                            Anggota
+                                        </th>
+                                        <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                            <ul>
+                                                <li>Kiba Inuzuka</li>
+                                                <li>Shino Aburame</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                <thead
+                                    class="text-xs text-gray-50 uppercase bg-gradient-to-br from-gray-900 to-blue-800 dark:bg-gray-700 dark:text-gray-400">
+                                    <tr>
+                                        <th scope="col" colspan="2" class="px-6 py-3">
+                                            Biro Kaderisasi
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                        <th scope="row" class="px-6 py-4 dark:text-white font-normal">
+                                            Ketua
+                                        </th>
+                                        <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                            Naruto Uzumaki
+                                        </td>
+                                    </tr>
+                                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                        <th scope="row" class="px-6 py-4 dark:text-white font-normal">
+                                            Anggota
+                                        </th>
+                                        <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                            <ul>
+                                                <li>Haruon Sakura</li>
+                                                <li>Uciha Sasuke</li>
+                                                <li>Shikamaru Nara</li>
+                                                <li>Choji Akimici</li>
+                                                <li>Ino Yamanaka</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                <thead
+                                    class="text-xs text-gray-50 uppercase bg-gradient-to-br from-gray-900 to-blue-800 dark:bg-gray-700 dark:text-gray-400">
+                                    <tr>
+                                        <th scope="col" colspan="2" class="px-6 py-3">
+                                            Biro Aswaja
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                        <th scope="row" class="px-6 py-4 dark:text-white font-normal">
+                                            Ketua
+                                        </th>
+                                        <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                            M Maulana Akbar
+                                        </td>
+                                    </tr>
+                                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                        <th scope="row" class="px-6 py-4 dark:text-white font-normal">
+                                            Anggota
+                                        </th>
+                                        <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                            <ul>
+                                                <li>Asyifa Tiara Sakila</li>
+                                                <li>Ridho Ramadhan</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
                     </div>
                     <div x-cloak x-show="activeTab === 4">
                         <h2>Prestasi</h2>
