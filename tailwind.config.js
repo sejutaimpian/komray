@@ -4,12 +4,12 @@ module.exports = {
   theme: {
     extend: {
       animation: {
-        kocok: 'kocok 1s ease-in-out',
+        animasi2: 'animasi2 2s ease-in-out infinite',
       },
       keyframes: {
-        kocok: {
-          '0%, 100%': { transform: 'translateX(0)' },
-          '50%': { transform: 'translateX(7rem)' },
+        animasi2: {
+          '0%': { backgroundColor: 'pink' },
+          '100%': { backgroundColor: 'salmon' },
         }
       },
       screens: {
