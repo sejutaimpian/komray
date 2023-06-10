@@ -404,6 +404,7 @@
                     </div>
                 </div>
             </div>
+
             <!-- Kopri -->
             <div id="kopri" class="flex flex-wrap mt-10 scroll-mt-24 md:scroll-mt-16">
                 <div class="w-full md:w-1/2 md:pr-6">
@@ -761,7 +762,7 @@
 
         <!-- Profile -->
         <section id="profil"
-            class="py-10 my-10 text-base font-normal leading-tight bg-slate-50 scroll-m-11 md:scroll-m-5">
+            class="py-10 my-10 text-base font-normal leading-tight bg-slate-50 scroll-m-14 md:scroll-m-6">
             <h2 class="mb-4 text-5xl font-bold text-center">PROFIL</h2>
             <p class="mb-2 text-center text-gray-500">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet.
@@ -1425,15 +1426,15 @@
                     </p>
                 </div>
             </div>
-            <div class="w-full px-4 text-gray-800 md:w-2/3 sm:px-8 md:pl-0 md:pr-12 lg:pr-16 mb-5">
-                <div x-data="{open: false}" class="flex flex-wrap leading-tight mb-1">
-                    <div class="w-10/12 p-2 pl-3 bg-gray-200 md:w-11/12 rounded-xl rounded-bl-none">
+            <div class="w-full px-4 mb-5 text-gray-800 md:w-2/3 sm:px-8 md:pl-0 md:pr-12 lg:pr-16">
+                <div x-data="{open: false}" class="flex flex-wrap mb-1 leading-tight">
+                    <div class="w-10/12 p-2 pl-3 bg-gray-200 rounded-bl-none md:w-11/12 rounded-xl">
                         Apakah barang ini masih ada?
                     </div>
                     <div class="self-end w-2/12 md:w-1/12">
                         <div @click="open = !open"
-                            class="flex items-center justify-center rounded-full h-9 w-9 mx-auto md:aspect-square bg-gray-200 text-blue-800 cursor-pointer">
-                            <i class="fa-solid text-xl" :class="open ? 'fa-check-double':'fa-paper-plane'"></i>
+                            class="flex items-center justify-center mx-auto text-blue-800 bg-gray-200 rounded-full cursor-pointer h-9 w-9 md:aspect-square">
+                            <i class="text-xl fa-solid" :class="open ? 'fa-check-double':'fa-paper-plane'"></i>
                         </div>
                     </div>
                     <div x-cloak x-show="open" x-transition
@@ -1442,16 +1443,16 @@
                         praesentium atque maxime minima similique commodi obcaecati reiciendis!
                     </div>
                 </div>
-                <div x-data="{open: false}" class="flex flex-wrap leading-tight mb-1">
-                    <div class="w-10/12 p-2 pl-3 bg-gray-200 md:w-11/12 rounded-xl rounded-bl-none">
+                <div x-data="{open: false}" class="flex flex-wrap mb-1 leading-tight">
+                    <div class="w-10/12 p-2 pl-3 bg-gray-200 rounded-bl-none md:w-11/12 rounded-xl">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, ut atque. Nihil neque nobis id
                         atque, laboriosam, corporis voluptatibus cumque ducimus veritatis numquam iste. Laudantium
                         delectus at fugit consequuntur fuga?
                     </div>
                     <div class="self-end w-2/12 md:w-1/12">
                         <div @click="open = !open"
-                            class="flex items-center justify-center rounded-full h-9 w-9 mx-auto md:aspect-square bg-gray-200 text-blue-800 cursor-pointer">
-                            <i class="fa-solid text-xl" :class="open ? 'fa-check-double':'fa-paper-plane'"></i>
+                            class="flex items-center justify-center mx-auto text-blue-800 bg-gray-200 rounded-full cursor-pointer h-9 w-9 md:aspect-square">
+                            <i class="text-xl fa-solid" :class="open ? 'fa-check-double':'fa-paper-plane'"></i>
                         </div>
                     </div>
                     <div x-cloak x-show="open" x-transition
@@ -1460,14 +1461,14 @@
                         praesentium atque maxime minima similique commodi obcaecati reiciendis!
                     </div>
                 </div>
-                <div x-data="{open: false}" class="flex flex-wrap leading-tight mb-1">
-                    <div class="w-10/12 p-2 pl-3 bg-gray-200 md:w-11/12 rounded-xl rounded-bl-none">
+                <div x-data="{open: false}" class="flex flex-wrap mb-1 leading-tight">
+                    <div class="w-10/12 p-2 pl-3 bg-gray-200 rounded-bl-none md:w-11/12 rounded-xl">
                         Siapa?
                     </div>
                     <div class="self-end w-2/12 md:w-1/12">
                         <div @click="open = !open"
-                            class="flex items-center justify-center rounded-full h-9 w-9 mx-auto md:aspect-square bg-gray-200 text-blue-800 cursor-pointer">
-                            <i class="fa-solid text-xl" :class="open ? 'fa-check-double':'fa-paper-plane'"></i>
+                            class="flex items-center justify-center mx-auto text-blue-800 bg-gray-200 rounded-full cursor-pointer h-9 w-9 md:aspect-square">
+                            <i class="text-xl fa-solid" :class="open ? 'fa-check-double':'fa-paper-plane'"></i>
                         </div>
                     </div>
                     <div x-cloak x-show="open" x-transition
@@ -1476,14 +1477,14 @@
                         praesentium atque maxime minima similique commodi obcaecati reiciendis!
                     </div>
                 </div>
-                <div x-data="{open: false}" class="flex flex-wrap leading-tight mb-1">
-                    <div class="w-10/12 p-2 pl-3 bg-gray-200 md:w-11/12 rounded-xl rounded-bl-none">
+                <div x-data="{open: false}" class="flex flex-wrap mb-1 leading-tight">
+                    <div class="w-10/12 p-2 pl-3 bg-gray-200 rounded-bl-none md:w-11/12 rounded-xl">
                         Mengapa?
                     </div>
                     <div class="self-end w-2/12 md:w-1/12">
                         <div @click="open = !open"
-                            class="flex items-center justify-center rounded-full h-9 w-9 mx-auto md:aspect-square bg-gray-200 text-blue-800 cursor-pointer">
-                            <i class="fa-solid text-xl" :class="open ? 'fa-check-double':'fa-paper-plane'"></i>
+                            class="flex items-center justify-center mx-auto text-blue-800 bg-gray-200 rounded-full cursor-pointer h-9 w-9 md:aspect-square">
+                            <i class="text-xl fa-solid" :class="open ? 'fa-check-double':'fa-paper-plane'"></i>
                         </div>
                     </div>
                     <div x-cloak x-show="open" x-transition
@@ -1492,8 +1493,8 @@
                         praesentium atque maxime minima similique commodi obcaecati reiciendis!
                     </div>
                 </div>
-                <div x-data="{open: false}" class="flex flex-wrap leading-tight mb-1">
-                    <div class="w-10/12 p-2 pl-3 bg-gray-200 md:w-11/12 rounded-xl rounded-bl-none">
+                <div x-data="{open: false}" class="flex flex-wrap mb-1 leading-tight">
+                    <div class="w-10/12 p-2 pl-3 bg-gray-200 rounded-bl-none md:w-11/12 rounded-xl">
                         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat modi iure, exercitationem,
                         facilis magni consequuntur quae quasi doloribus id, eaque minima. Voluptates voluptatem quae
                         velit odio dignissimos esse fuga amet qui ducimus harum placeat aspernatur doloribus vero
@@ -1502,8 +1503,8 @@
                     </div>
                     <div class="self-end w-2/12 md:w-1/12">
                         <div @click="open = !open"
-                            class="flex items-center justify-center rounded-full h-9 w-9 mx-auto md:aspect-square bg-gray-200 text-blue-800 cursor-pointer">
-                            <i class="fa-solid text-xl" :class="open ? 'fa-check-double':'fa-paper-plane'"></i>
+                            class="flex items-center justify-center mx-auto text-blue-800 bg-gray-200 rounded-full cursor-pointer h-9 w-9 md:aspect-square">
+                            <i class="text-xl fa-solid" :class="open ? 'fa-check-double':'fa-paper-plane'"></i>
                         </div>
                     </div>
                     <div x-cloak x-show="open" x-transition
@@ -1512,14 +1513,14 @@
                         praesentium atque maxime minima similique commodi obcaecati reiciendis!
                     </div>
                 </div>
-                <div x-data="{open: false}" class="flex flex-wrap leading-tight mb-1">
-                    <div class="w-10/12 p-2 pl-3 bg-gray-200 md:w-11/12 rounded-xl rounded-bl-none">
+                <div x-data="{open: false}" class="flex flex-wrap mb-1 leading-tight">
+                    <div class="w-10/12 p-2 pl-3 bg-gray-200 rounded-bl-none md:w-11/12 rounded-xl">
                         Lorem ipsum dolor sit, amet consectetur adipisicing elit. A, odit.?
                     </div>
                     <div class="self-end w-2/12 md:w-1/12">
                         <div @click="open = !open"
-                            class="flex items-center justify-center rounded-full h-9 w-9 mx-auto md:aspect-square bg-gray-200 text-blue-800 cursor-pointer">
-                            <i class="fa-solid text-xl" :class="open ? 'fa-check-double':'fa-paper-plane'"></i>
+                            class="flex items-center justify-center mx-auto text-blue-800 bg-gray-200 rounded-full cursor-pointer h-9 w-9 md:aspect-square">
+                            <i class="text-xl fa-solid" :class="open ? 'fa-check-double':'fa-paper-plane'"></i>
                         </div>
                     </div>
                     <div x-cloak x-show="open" x-transition
@@ -1528,14 +1529,14 @@
                         praesentium atque maxime minima similique commodi obcaecati reiciendis!
                     </div>
                 </div>
-                <div x-data="{open: false}" class="flex flex-wrap leading-tight mb-1">
-                    <div class="w-10/12 p-2 pl-3 bg-gray-200 md:w-11/12 rounded-xl rounded-bl-none">
+                <div x-data="{open: false}" class="flex flex-wrap mb-1 leading-tight">
+                    <div class="w-10/12 p-2 pl-3 bg-gray-200 rounded-bl-none md:w-11/12 rounded-xl">
                         Dimana?
                     </div>
                     <div class="self-end w-2/12 md:w-1/12">
                         <div @click="open = !open"
-                            class="flex items-center justify-center rounded-full h-9 w-9 mx-auto md:aspect-square bg-gray-200 text-blue-800 cursor-pointer">
-                            <i class="fa-solid text-xl" :class="open ? 'fa-check-double':'fa-paper-plane'"></i>
+                            class="flex items-center justify-center mx-auto text-blue-800 bg-gray-200 rounded-full cursor-pointer h-9 w-9 md:aspect-square">
+                            <i class="text-xl fa-solid" :class="open ? 'fa-check-double':'fa-paper-plane'"></i>
                         </div>
                     </div>
                     <div x-cloak x-show="open" x-transition
@@ -1544,14 +1545,14 @@
                         praesentium atque maxime minima similique commodi obcaecati reiciendis!
                     </div>
                 </div>
-                <div x-data="{open: false}" class="flex flex-wrap leading-tight mb-1">
-                    <div class="w-10/12 p-2 pl-3 bg-gray-200 md:w-11/12 rounded-xl rounded-bl-none">
+                <div x-data="{open: false}" class="flex flex-wrap mb-1 leading-tight">
+                    <div class="w-10/12 p-2 pl-3 bg-gray-200 rounded-bl-none md:w-11/12 rounded-xl">
                         Iya kah?
                     </div>
                     <div class="self-end w-2/12 md:w-1/12">
                         <div @click="open = !open"
-                            class="flex items-center justify-center rounded-full h-9 w-9 mx-auto md:aspect-square bg-gray-200 text-blue-800 cursor-pointer">
-                            <i class="fa-solid text-xl" :class="open ? 'fa-check-double':'fa-paper-plane'"></i>
+                            class="flex items-center justify-center mx-auto text-blue-800 bg-gray-200 rounded-full cursor-pointer h-9 w-9 md:aspect-square">
+                            <i class="text-xl fa-solid" :class="open ? 'fa-check-double':'fa-paper-plane'"></i>
                         </div>
                     </div>
                     <div x-cloak x-show="open" x-transition
@@ -1559,6 +1560,102 @@
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt fugiat ipsam voluptas
                         praesentium atque maxime minima similique commodi obcaecati reiciendis!
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kontak -->
+        <section id="kontak"
+            class="flex flex-wrap text-base font-normal leading-tight bg-slate-50 scroll-m-14 md:scroll-m-6">
+            <div class="w-full px-4 py-10 md:w-1/2 sm:px-8 md:pl-12 lg:pl-16">
+                <h2 class="mb-4 text-5xl font-bold">
+                    KONTAK
+                </h2>
+                <ul class="my-4 leading-none">
+                    <li class="flex mb-2">
+                        <div class="w-1/12"><i class="fa-solid fa-location-dot"></i></div>
+                        <div class="w-11/12">
+                            <a href="#" class="hover:underline">
+                                Jl. Bintaro No. 123, Kec. Kemayoran, Lorem ipsum dolor sit amet consectetur, adipisicing
+                                elit. Ipsa, sunt.
+                            </a>
+                        </div>
+                    </li>
+                    <li class="flex mb-2">
+                        <div class="w-1/12"><i class="fa-regular fa-envelope"></i></div>
+                        <div class="w-11/12">
+                            <a href="#" class="hover:underline">
+                                pmii@gmail.xyz
+                            </a>
+                        </div>
+                    </li>
+                    </li>
+                    <li class="flex mb-2">
+                        <div class="w-1/12"><i class="fa-brands fa-instagram"></i></div>
+                        <div class="w-11/12">
+                            <a href="#" class="hover:underline">
+                                Instagram.com/@pmii
+                            </a>
+                        </div>
+                    </li>
+                    <li class="flex mb-2">
+                        <div class="w-1/12"><i class="fa-brands fa-whatsapp"></i></div>
+                        <div class="w-11/12">
+                            <a href="#" class="hover:underline">
+                                wa.me/62813xxxxxxxx
+                            </a>
+                        </div>
+                    </li>
+                    <li class="flex mb-2">
+                        <div class="w-1/12"><i class="fa-brands fa-tiktok"></i></div>
+                        <div class="w-11/12">
+                            <a href="#" class="hover:underline">
+                                tiktok.com/@pmii
+                            </a>
+                        </div>
+                    </li>
+                    <li class="flex mb-2">
+                        <div class="w-1/12"><i class="fa-brands fa-youtube"></i></div>
+                        <div class="w-11/12">
+                            <a href="#" class="hover:underline">
+                                youtube.com/@pmii
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.534302422761!2d106.85505529999999!3d-6.1930055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f45cdd6e5ad9%3A0xa9cca71fb134cf54!2sSekretariat%20PB%20PMII!5e0!3m2!1sid!2sid!4v1686370190563!5m2!1sid!2sid"
+                    width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="w-full bg-[#29286b] py-10 md:w-1/2 px-4 sm:px-8 md:pr-12 lg:pr-16">
+                <div class="px-8 py-2 bg-[#f1ead1] rounded-md shadow-md">
+                    <h2 class="mb-2 text-5xl font-bold">
+                        Formulir
+                    </h2>
+                    <p class="text-sm text-gray-500">
+                        Hubungi kami melalui formulir untuk keperluan tanya-jawab, pendaftaran anggota, permohonan
+                        informasi, pengaduan, dll. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, iste.
+                    </p>
+                    <form action="#" method="post" class="mt-5">
+                        <div class="flex flex-col mb-2">
+                            <label for="name" class="mb-1">Nama</label>
+                            <input type="text" name="name" id="name" class="p-2 border border-gray-300 rounded-md"
+                                placeholder="Nama">
+                        </div>
+                        <div class="flex flex-col mb-2">
+                            <label for="email" class="mb-1">Email</label>
+                            <input type="email" name="email" id="email" class="p-2 border border-gray-300 rounded-md"
+                                placeholder="Email">
+                        </div>
+                        <div class="flex flex-col mb-2">
+                            <label for="message" class="mb-1">Message</label>
+                            <textarea name="message" id="message"
+                                class="p-2 border border-gray-300 rounded-md"></textarea>
+                        </div>
+                        <button type="submit"
+                            class="w-full py-2 text-gray-300 transition-colors bg-gray-800 rounded-md md:block md:w-1/2 md:mx-auto hover:bg-gray-950 hover:text-white duration- 200">Kirim</button>
+                    </form>
                 </div>
             </div>
         </section>
