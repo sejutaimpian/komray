@@ -18,52 +18,52 @@
 
 <body class="bg-[#29286b] text-gray-800">
     <header class="shadow sticky top-0 bg-slate-50 z-[10]">
-        <nav class="grid-nav grid-rows-1 items-center pt-1">
-            <div class="grit-logo md:py-1 pl-4 sm:pl-8 md:pl-12 lg:pl-16">
+        <nav class="items-center grid-rows-1 pt-1 grid-nav">
+            <div class="pl-4 grit-logo md:py-1 sm:pl-8 md:pl-12 lg:pl-16">
                 <a href="#" class="">
-                    <img src="img/logopmii.png" alt="Logo Komisariat" class="h-10 inline">
+                    <img src="img/logopmii.png" alt="Logo Komisariat" class="inline h-10">
                 </a>
             </div>
-            <ul class="grit-link flex justify-center items-center">
+            <ul class="flex items-center justify-center grit-link">
                 <li x-data="{isHover: false}" x-on:mouseenter="isHover = true" x-on:mouseleave="isHover = false"
                     class="relative">
-                    <a x-on:click="isHover = !isHover" class="btn btn-sm btn-ghost font-bold px-2">
+                    <a class="px-2 font-bold btn btn-sm btn-ghost">
                         <i class="fa-solid fa-sitemap xs:fa-hidden"></i>
                         <span class="hidden xs:block">Struktural <i class="fa-solid fa-chevron-down"></i></span>
                     </a>
                     <ul x-cloak x-show="isHover"
-                        class="min-w-full absolute bottom-auto top-full left-0 bg-gray-50 border-2 rounded py-1">
-                        <li class="w-full hover:bg-gray-200 px-2">
+                        class="absolute left-0 bottom-auto min-w-full py-1 border-2 rounded top-full bg-gray-50">
+                        <li class="w-full px-2 hover:bg-gray-200">
                             <a x-on:click="isHover = false" href="#rayon" class="block">Rayon</a>
                         </li>
-                        <li class="w-full hover:bg-gray-200 px-2">
+                        <li class="w-full px-2 hover:bg-gray-200">
                             <a x-on:click="isHover = false" href="#kopri" class="block">Kopri</a>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#kegiatan" class="btn btn-sm btn-ghost font-bold px-2">
+                    <a href="#kegiatan" class="px-2 font-bold btn btn-sm btn-ghost">
                         <i class="fa-solid fa-bullhorn xs:fa-hidden"></i>
                         <span class="hidden xs:block">Kegiatan</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#profil" class="btn btn-sm btn-ghost font-bold px-2">
+                    <a href="#profil" class="px-2 font-bold btn btn-sm btn-ghost">
                         <i class="fa-solid fa-circle-user xs:fa-hidden"></i>
                         <span class="hidden xs:block">Profil</span>
                     </a>
                 </li>
-                <li><a href="#faq" class="btn btn-sm btn-ghost font-bold px-2">
+                <li><a href="#faq" class="px-2 font-bold btn btn-sm btn-ghost">
                         <i class="fa-solid fa-question xs:fa-hidden"></i>
                         <span class="hidden xs:block">FAQ</span>
                     </a></li>
-                <li><a href="#kontak" class="btn btn-sm btn-ghost font-bold px-2">
+                <li><a href="#kontak" class="px-2 font-bold btn btn-sm btn-ghost">
                         <i class="fa-solid fa-phone-volume xs:fa-hidden"></i>
                         <span class="hidden xs:block">Kontak</span>
                     </a></li>
             </ul>
-            <div class="grit-cta flex justify-end pr-4 sm:pr-8 md:pr-12 lg:pr-16">
-                <a href="#" class="btn btn-sm bg-blue-800 hover:bg-blue-900"><i
+            <div class="flex justify-end pr-4 grit-cta sm:pr-8 md:pr-12 lg:pr-16">
+                <a href="#" class="bg-blue-800 btn btn-sm hover:bg-blue-900"><i
                         class="fa-solid fa-rocket pe-2"></i>Gabung</a>
             </div>
         </nav>
@@ -71,15 +71,15 @@
     <main class="">
 
         <!-- Hero -->
-        <section id="hero" class="mt-32 sm:mt-0 border-t sm:border-t-0 bg-slate-50 sm:flex sm:items-center">
+        <section id="hero" class="mt-32 border-t sm:mt-0 sm:border-t-0 bg-slate-50 sm:flex sm:items-center">
             <div class="aspect-video sm:aspect-[7/9] rounded-md sm:rounded-sm -mt-28 sm:mt-0 mx-3 sm:mx-0 sm:w-1/3">
                 <!-- Aspect Ratio 7/9, 1492px/1917px -->
-                <img src="img/Komray_web 7-9.png" alt="Foto Organisasi Portrait" class="rounded-sm hidden sm:block">
+                <img src="img/Komray_web 7-9.png" alt="Foto Organisasi Portrait" class="hidden rounded-sm sm:block">
                 <!-- Aspect Ratio 16/9, 1920px/1080px -->
                 <img src="img/komray_mobile 16-9.png" alt="Foto Organisasi Landscape" class="rounded-md sm:hidden">
             </div>
-            <div class="sm:w-2/3 px-4 sm:px-5 py-2">
-                <h1 class="leading-tight md:leading-tight font-bold md:font-extrabold text-2xl md:text-5xl my-3">
+            <div class="px-4 py-2 sm:w-2/3 sm:px-5">
+                <h1 class="my-3 text-2xl font-bold leading-tight md:leading-tight md:font-extrabold md:text-5xl">
                     Jadilah bagian dari penggerak perubahan bagi pribadi, agama, dan
                     <span class="strong">Bangsa</span>
                 </h1>
@@ -88,14 +88,14 @@
                     dan bertanggungjawab dalam mengamalkan ilmunya serta komitmen memperjuangkan cita-cita kemerdekaan
                     Indonesia.
                 </p>
-                <p class="text-right text-sm md:text-base">
+                <p class="text-sm text-right md:text-base">
                     - PMII Universitas Tadika Kencana Kota Tasikmalaya
                 </p>
                 <div class="py-3">
-                    <a href="#" class="btn btn-sm bg-blue-800 hover:bg-blue-900">
+                    <a href="#" class="bg-blue-800 btn btn-sm hover:bg-blue-900">
                         <i class="fa-solid fa-rocket pe-2"></i>Gabung PMII
                     </a>
-                    <a href="#data" class="btn btn-sm btn-link no-underline text-gray-800">
+                    <a href="#data" class="text-gray-800 no-underline btn btn-sm btn-link">
                         Kenalan Dulu
                     </a>
                 </div>
@@ -103,36 +103,36 @@
         </section>
 
         <!-- Data -->
-        <section id="data" class="flex justify-center items-center my-10 scroll-mt-28 md:scroll-mt-24 text-gray-200">
-            <div class="flex-auto flex flex-col text-center">
-                <i class="fa-solid fa-user-graduate text-5xl text-blue-950 md:text-8xl"></i>
-                <h5 class="font-extrabold text-2xl md:text-5xl -mt-5">100+</h5>
+        <section id="data" class="flex items-center justify-center my-10 text-gray-200 scroll-mt-28 md:scroll-mt-24">
+            <div class="flex flex-col flex-auto text-center">
+                <i class="text-5xl fa-solid fa-user-graduate text-blue-950 md:text-8xl"></i>
+                <h5 class="-mt-5 text-2xl font-extrabold md:text-5xl">100+</h5>
                 <span class="font-normal uppercase">Alumni</span>
             </div>
-            <div class="flex-auto flex flex-col text-center">
-                <i class="fa-solid fa-school-flag text-5xl text-blue-950 md:text-8xl"></i>
-                <h5 class="font-extrabold text-2xl md:text-5xl -mt-5">4</h5>
+            <div class="flex flex-col flex-auto text-center">
+                <i class="text-5xl fa-solid fa-school-flag text-blue-950 md:text-8xl"></i>
+                <h5 class="-mt-5 text-2xl font-extrabold md:text-5xl">4</h5>
                 <span class="font-normal uppercase">Rayon</span>
             </div>
-            <div class="flex-auto flex flex-col text-center">
-                <i class="fa-solid fa-user-secret text-5xl text-blue-950 md:text-8xl"></i>
-                <h5 class="font-extrabold text-2xl md:text-5xl -mt-5">20</h5>
+            <div class="flex flex-col flex-auto text-center">
+                <i class="text-5xl fa-solid fa-user-secret text-blue-950 md:text-8xl"></i>
+                <h5 class="-mt-5 text-2xl font-extrabold md:text-5xl">20</h5>
                 <span class="font-normal uppercase">Kader</span>
             </div>
-            <div class="flex-auto flex flex-col text-center">
-                <i class="fa-solid fa-user text-5xl text-blue-950 md:text-8xl"></i>
-                <h5 class="font-extrabold text-2xl md:text-5xl -mt-5">50</h5>
+            <div class="flex flex-col flex-auto text-center">
+                <i class="text-5xl fa-solid fa-user text-blue-950 md:text-8xl"></i>
+                <h5 class="-mt-5 text-2xl font-extrabold md:text-5xl">50</h5>
                 <span class="font-normal uppercase">Anggota</span>
             </div>
         </section>
 
         <!-- Struktural -->
-        <section class="flex my-10 flex-wrap bg-slate-50 py-10">
+        <section class="flex flex-wrap py-10 my-10 bg-slate-50">
             <!-- Rayon -->
             <div id="rayon" class="flex flex-wrap mb-10 scroll-mt-24 md:scroll-mt-16">
                 <div class="w-full md:w-1/2 md:pr-6">
-                    <div class="mb-5 leading-tight mx-4 sm:mx-8 md:ml-12 md:mr-0 lg:ml-16">
-                        <h2 class="text-5xl font-bold mb-4">
+                    <div class="mx-4 mb-5 leading-tight sm:mx-8 md:ml-12 md:mr-0 lg:ml-16">
+                        <h2 class="mb-4 text-5xl font-bold">
                             RAYON</h2>
                         <p class="mb-2">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -147,20 +147,20 @@
                             molestias maiores, iure veritatis qui temporibus eius necessitatibus hic!
                         </p>
                     </div>
-                    <div class="aspect-video my-5 sm:mx-8 md:ml-12 md:mr-0 lg:ml-16">
+                    <div class="my-5 aspect-video sm:mx-8 md:ml-12 md:mr-0 lg:ml-16">
                         <!-- Aspect Ratio 16/9, 1920px/1080px -->
                         <img src="img/rayon.png" alt="Foto Organisasi Landscape" class="md:rounded-md">
                     </div>
                 </div>
-                <div class="w-full md:w-1/2 flex justify-center flex-wrap px-4 sm:px-8 md:pl-0 md:pr-12 lg:pr-16">
-                    <div class="w-full sm:w-1/2 md:w-full lg:w-1/2 px-2 my-2">
+                <div class="flex flex-wrap justify-center w-full px-4 md:w-1/2 sm:px-8 md:pl-0 md:pr-12 lg:pr-16">
+                    <div class="w-full px-2 my-2 sm:w-1/2 md:w-full lg:w-1/2">
                         <div x-data="{tooltip:false}"
                             class="relative bg-[#f1ead1] rounded-lg flex flex-col justify-between h-full">
                             <div>
                                 <div class="flex items-center pr-2 border-b-2 border-gray-800">
                                     <img src="img/logo_kemendikbud.png" alt="Logo Rayon Pendidikan"
-                                        class="mx-2 my-2 h-7 inline">
-                                    <h3 class="inline text-lg font-semibold leading-5 my-1">Rayon Pendidikan Merdeka
+                                        class="inline mx-2 my-2 h-7">
+                                    <h3 class="inline my-1 text-lg font-semibold leading-5">Rayon Pendidikan Merdeka
                                     </h3>
                                 </div>
                                 <div class="mx-4 mt-1 mb-4">
@@ -170,60 +170,60 @@
                                         membentuk masa depan yang
                                         sesuai dengan aspirasi kariermu.
                                     </p>
-                                    <ul role="list" class="list-disc pl-5 space-y-0">
+                                    <ul role="list" class="pl-5 space-y-0 list-disc">
                                         <li>Mencerdaskan Bangsa</li>
                                         <li>Menghidupkan Agama</li>
                                         <li>Mengabdi Pada Negara</li>
                                     </ul>
                                 </div>
                             </div>
-                            <div class="btn-group btn-block p-3">
-                                <a href="#" class="btn bg-blue-800 hover:bg-blue-900 btn-sm flex-1">
+                            <div class="p-3 btn-group btn-block">
+                                <a href="#" class="flex-1 bg-blue-800 btn hover:bg-blue-900 btn-sm">
                                     Lihat Situs Rayon
                                 </a>
-                                <button @click="tooltip = ! tooltip" class="btn bg-blue-800 hover:bg-blue-900 btn-sm">
+                                <button @click="tooltip = ! tooltip" class="bg-blue-800 btn hover:bg-blue-900 btn-sm">
                                     <i class="fa-solid fa-ellipsis-vertical"></i>
                                 </button>
                             </div>
                             <div x-cloak x-transition x-show="tooltip"
-                                class="absolute bottom-12 right-3 bg-blue-800 rounded-md"
+                                class="absolute bg-blue-800 rounded-md bottom-12 right-3"
                                 @click.outside="tooltip = false">
                                 <a href="#"
-                                    class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                    class="block px-1 py-1 text-center text-white rounded-md tooltip tooltip-left"
                                     data-tip="Email">
                                     <i class="fa-solid fa-envelope"></i>
                                 </a>
                                 <a href="#"
-                                    class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                    class="block px-1 py-1 text-center text-white rounded-md tooltip tooltip-left"
                                     data-tip="Instagram">
                                     <i class="fa-brands fa-instagram"></i>
                                 </a>
                                 <a href="#"
-                                    class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                    class="block px-1 py-1 text-center text-white rounded-md tooltip tooltip-left"
                                     data-tip="Twitter">
                                     <i class="fa-brands fa-twitter"></i>
                                 </a>
                                 <a href="#"
-                                    class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                    class="block px-1 py-1 text-center text-white rounded-md tooltip tooltip-left"
                                     data-tip="Facebook">
                                     <i class="fa-brands fa-facebook"></i>
                                 </a>
                                 <a href="#"
-                                    class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                    class="block px-1 py-1 text-center text-white rounded-md tooltip tooltip-left"
                                     data-tip="Whatsapp">
                                     <i class="fa-brands fa-whatsapp"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
-                    <div class="w-full sm:w-1/2 md:w-full lg:w-1/2 px-2 my-2">
+                    <div class="w-full px-2 my-2 sm:w-1/2 md:w-full lg:w-1/2">
                         <div x-data="{tooltip:false}"
                             class="relative bg-[#f1ead1] rounded-lg flex flex-col justify-between h-full">
                             <div>
                                 <div class="flex items-center pr-2 border-b-2 border-gray-800">
                                     <img src="img/logo_kemenhan.png" alt="Logo Rayon Pertahanan Nalar"
-                                        class="mx-2 my-2 h-7 inline">
-                                    <h3 class="inline text-lg font-semibold leading-5 my-1">Rayon Pertahanan Nalar
+                                        class="inline mx-2 my-2 h-7">
+                                    <h3 class="inline my-1 text-lg font-semibold leading-5">Rayon Pertahanan Nalar
                                     </h3>
                                 </div>
                                 <div class="mx-4 mt-1 mb-4">
@@ -232,60 +232,60 @@
                                         bela
                                         diri pribadi.
                                     </p>
-                                    <ul role="list" class="list-disc pl-5 space-y-0">
+                                    <ul role="list" class="pl-5 space-y-0 list-disc">
                                         <li>Mencerdaskan Bangsa</li>
                                         <li>Menghidupkan Agama</li>
                                         <li>Mengabdi Pada Negara</li>
                                     </ul>
                                 </div>
                             </div>
-                            <div class=" btn-group btn-block p-3">
-                                <a href="#" class="btn bg-blue-800 hover:bg-blue-900 btn-sm flex-1">
+                            <div class="p-3 btn-group btn-block">
+                                <a href="#" class="flex-1 bg-blue-800 btn hover:bg-blue-900 btn-sm">
                                     Lihat Situs Rayon
                                 </a>
-                                <button @click="tooltip = !tooltip" class="btn bg-blue-800 hover:bg-blue-900 btn-sm">
+                                <button @click="tooltip = !tooltip" class="bg-blue-800 btn hover:bg-blue-900 btn-sm">
                                     <i class="fa-solid fa-ellipsis-vertical"></i>
                                 </button>
                             </div>
                             <div x-cloak x-transition x-show="tooltip"
-                                class="absolute bottom-12 right-3 bg-blue-800 rounded-md"
+                                class="absolute bg-blue-800 rounded-md bottom-12 right-3"
                                 @click.outside="tooltip = false">
                                 <a href="#"
-                                    class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                    class="block px-1 py-1 text-center text-white rounded-md tooltip tooltip-left"
                                     data-tip="Email">
                                     <i class="fa-solid fa-envelope"></i>
                                 </a>
                                 <a href="#"
-                                    class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                    class="block px-1 py-1 text-center text-white rounded-md tooltip tooltip-left"
                                     data-tip="Instagram">
                                     <i class="fa-brands fa-instagram"></i>
                                 </a>
                                 <a href="#"
-                                    class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                    class="block px-1 py-1 text-center text-white rounded-md tooltip tooltip-left"
                                     data-tip="Twitter">
                                     <i class="fa-brands fa-twitter"></i>
                                 </a>
                                 <a href="#"
-                                    class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                    class="block px-1 py-1 text-center text-white rounded-md tooltip tooltip-left"
                                     data-tip="Facebook">
                                     <i class="fa-brands fa-facebook"></i>
                                 </a>
                                 <a href="#"
-                                    class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                    class="block px-1 py-1 text-center text-white rounded-md tooltip tooltip-left"
                                     data-tip="Whatsapp">
                                     <i class="fa-brands fa-whatsapp"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
-                    <div class="w-full sm:w-1/2 md:w-full lg:w-1/2 px-2 my-2">
+                    <div class="w-full px-2 my-2 sm:w-1/2 md:w-full lg:w-1/2">
                         <div x-data="{tooltip:false}"
                             class="relative bg-[#f1ead1] rounded-lg flex flex-col justify-between h-full">
                             <div>
                                 <div class="flex items-center pr-2 border-b-2 border-gray-800">
                                     <img src="img/logo_kemenperin.png" alt="Logo Rayon Pembangunan Gerakan"
-                                        class="mx-2 my-2 h-7 inline">
-                                    <h3 class="inline text-lg font-semibold leading-5 my-1">Rayon Pembangunan Gerakan
+                                        class="inline mx-2 my-2 h-7">
+                                    <h3 class="inline my-1 text-lg font-semibold leading-5">Rayon Pembangunan Gerakan
                                     </h3>
                                 </div>
                                 <div class="mx-4 mt-1 mb-4">
@@ -294,60 +294,60 @@
                                         manusia
                                         yang memanusiakan manusia.
                                     </p>
-                                    <ul role="list" class="list-disc pl-5 space-y-0">
+                                    <ul role="list" class="pl-5 space-y-0 list-disc">
                                         <li>Mencerdaskan Bangsa</li>
                                         <li>Menghidupkan Agama</li>
                                         <li>Mengabdi Pada Negara</li>
                                     </ul>
                                 </div>
                             </div>
-                            <div class=" btn-group btn-block p-3">
-                                <a href="#" class="btn bg-blue-800 hover:bg-blue-900 btn-sm flex-1">
+                            <div class="p-3 btn-group btn-block">
+                                <a href="#" class="flex-1 bg-blue-800 btn hover:bg-blue-900 btn-sm">
                                     Lihat Situs Rayon
                                 </a>
-                                <button @click="tooltip=!tooltip" class="btn bg-blue-800 hover:bg-blue-900 btn-sm">
+                                <button @click="tooltip=!tooltip" class="bg-blue-800 btn hover:bg-blue-900 btn-sm">
                                     <i class="fa-solid fa-ellipsis-vertical"></i>
                                 </button>
                             </div>
                             <div x-cloak x-transition x-show="tooltip"
-                                class="absolute bottom-12 right-3 bg-blue-800 rounded-md"
+                                class="absolute bg-blue-800 rounded-md bottom-12 right-3"
                                 @click.outside="tooltip=false">
                                 <a href="#"
-                                    class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                    class="block px-1 py-1 text-center text-white rounded-md tooltip tooltip-left"
                                     data-tip="Email">
                                     <i class="fa-solid fa-envelope"></i>
                                 </a>
                                 <a href="#"
-                                    class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                    class="block px-1 py-1 text-center text-white rounded-md tooltip tooltip-left"
                                     data-tip="Instagram">
                                     <i class="fa-brands fa-instagram"></i>
                                 </a>
                                 <a href="#"
-                                    class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                    class="block px-1 py-1 text-center text-white rounded-md tooltip tooltip-left"
                                     data-tip="Twitter">
                                     <i class="fa-brands fa-twitter"></i>
                                 </a>
                                 <a href="#"
-                                    class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                    class="block px-1 py-1 text-center text-white rounded-md tooltip tooltip-left"
                                     data-tip="Facebook">
                                     <i class="fa-brands fa-facebook"></i>
                                 </a>
                                 <a href="#"
-                                    class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                    class="block px-1 py-1 text-center text-white rounded-md tooltip tooltip-left"
                                     data-tip="Whatsapp">
                                     <i class="fa-brands fa-whatsapp"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
-                    <div class="w-full sm:w-1/2 md:w-full lg:w-1/2 px-2 my-2">
+                    <div class="w-full px-2 my-2 sm:w-1/2 md:w-full lg:w-1/2">
                         <div x-data="{tooltip:false}"
                             class="relative bg-[#f1ead1] rounded-lg flex flex-col justify-between h-full">
                             <div>
                                 <div class="flex items-center pr-2 border-b-2 border-gray-800">
                                     <img src="img/logo_kemenag.png" alt="Logo Rayon Aswaja"
-                                        class="mx-2 my-2 h-7 inline">
-                                    <h3 class="inline text-lg font-semibold leading-5 my-1">Rayon Aswaja
+                                        class="inline mx-2 my-2 h-7">
+                                    <h3 class="inline my-1 text-lg font-semibold leading-5">Rayon Aswaja
                                     </h3>
                                 </div>
                                 <div class="mx-4 mt-1 mb-4">
@@ -356,46 +356,46 @@
                                         Bersahabat
                                         dalam organisasi juga bersahabat dalam mengejar ridha Allah.
                                     </p>
-                                    <ul role="list" class="list-disc pl-5 space-y-0">
+                                    <ul role="list" class="pl-5 space-y-0 list-disc">
                                         <li>Mencerdaskan Bangsa</li>
                                         <li>Menghidupkan Agama</li>
                                         <li>Mengabdi Pada Negara</li>
                                     </ul>
                                 </div>
                             </div>
-                            <div class=" btn-group btn-block p-3">
-                                <a href="#" class="btn bg-blue-800 hover:bg-blue-900 btn-sm flex-1">
+                            <div class="p-3 btn-group btn-block">
+                                <a href="#" class="flex-1 bg-blue-800 btn hover:bg-blue-900 btn-sm">
                                     Lihat Situs Rayon
                                 </a>
-                                <button @click="tooltip=!tooltip" class="btn bg-blue-800 hover:bg-blue-900 btn-sm">
+                                <button @click="tooltip=!tooltip" class="bg-blue-800 btn hover:bg-blue-900 btn-sm">
                                     <i class="fa-solid fa-ellipsis-vertical"></i>
                                 </button>
                             </div>
                             <div x-cloak x-transition x-show="tooltip"
-                                class="absolute bottom-12 right-3 bg-blue-800 rounded-md"
+                                class="absolute bg-blue-800 rounded-md bottom-12 right-3"
                                 @click.outside="tooltip=false">
                                 <a href="#"
-                                    class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                    class="block px-1 py-1 text-center text-white rounded-md tooltip tooltip-left"
                                     data-tip="Email">
                                     <i class="fa-solid fa-envelope"></i>
                                 </a>
                                 <a href="#"
-                                    class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                    class="block px-1 py-1 text-center text-white rounded-md tooltip tooltip-left"
                                     data-tip="Instagram">
                                     <i class="fa-brands fa-instagram"></i>
                                 </a>
                                 <a href="#"
-                                    class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                    class="block px-1 py-1 text-center text-white rounded-md tooltip tooltip-left"
                                     data-tip="Twitter">
                                     <i class="fa-brands fa-twitter"></i>
                                 </a>
                                 <a href="#"
-                                    class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                    class="block px-1 py-1 text-center text-white rounded-md tooltip tooltip-left"
                                     data-tip="Facebook">
                                     <i class="fa-brands fa-facebook"></i>
                                 </a>
                                 <a href="#"
-                                    class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                    class="block px-1 py-1 text-center text-white rounded-md tooltip tooltip-left"
                                     data-tip="Whatsapp">
                                     <i class="fa-brands fa-whatsapp"></i>
                                 </a>
@@ -407,8 +407,8 @@
             <!-- Kopri -->
             <div id="kopri" class="flex flex-wrap mt-10 scroll-mt-24 md:scroll-mt-16">
                 <div class="w-full md:w-1/2 md:pr-6">
-                    <div class="mb-5 leading-tight mx-4 sm:mx-8 md:ml-12 md:mr-0 lg:ml-16">
-                        <h2 class="text-5xl font-bold mb-4">
+                    <div class="mx-4 mb-5 leading-tight sm:mx-8 md:ml-12 md:mr-0 lg:ml-16">
+                        <h2 class="mb-4 text-5xl font-bold">
                             KOPRI</h2>
                         <p class="mb-2">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -423,20 +423,20 @@
                             molestias maiores, iure veritatis qui temporibus eius necessitatibus hic!
                         </p>
                     </div>
-                    <div class="aspect-video my-5 sm:mx-8 md:ml-12 md:mr-0 lg:ml-16">
+                    <div class="my-5 aspect-video sm:mx-8 md:ml-12 md:mr-0 lg:ml-16">
                         <!-- Aspect Ratio 16/9, 1920px/1080px -->
                         <img src="img/kopri.png" alt="Foto Organisasi Landscape" class="md:rounded-md">
                     </div>
                 </div>
-                <div class="w-full md:w-1/2 flex justify-center flex-wrap px-4 sm:px-8 md:pl-0 md:pr-12 lg:pr-16">
-                    <div class="w-full sm:w-1/2 md:w-full lg:w-1/2 px-2 my-2">
+                <div class="flex flex-wrap justify-center w-full px-4 md:w-1/2 sm:px-8 md:pl-0 md:pr-12 lg:pr-16">
+                    <div class="w-full px-2 my-2 sm:w-1/2 md:w-full lg:w-1/2">
                         <div x-data="{tooltip:false}"
                             class="relative bg-[#f1ead1] rounded-lg flex flex-col justify-between h-full">
                             <div>
                                 <div class="flex items-center pr-2 border-b-2 border-gray-800">
                                     <img src="img/logo_kemendikbud.png" alt="Logo Kopri Pendidikan"
-                                        class="mx-2 my-2 h-7 inline">
-                                    <h3 class="inline text-lg font-semibold leading-5 my-1">Kopri Pendidikan Merdeka
+                                        class="inline mx-2 my-2 h-7">
+                                    <h3 class="inline my-1 text-lg font-semibold leading-5">Kopri Pendidikan Merdeka
                                     </h3>
                                 </div>
                                 <div class="mx-4 mt-1 mb-4">
@@ -446,60 +446,60 @@
                                         membentuk masa depan yang
                                         sesuai dengan aspirasi kariermu.
                                     </p>
-                                    <ul role="list" class="list-disc pl-5 space-y-0">
+                                    <ul role="list" class="pl-5 space-y-0 list-disc">
                                         <li>Mencerdaskan Bangsa</li>
                                         <li>Menghidupkan Agama</li>
                                         <li>Mengabdi Pada Negara</li>
                                     </ul>
                                 </div>
                             </div>
-                            <div class=" btn-group btn-block p-3">
-                                <a href="#" class="btn bg-blue-800 hover:bg-blue-900 btn-sm flex-1">
+                            <div class="p-3 btn-group btn-block">
+                                <a href="#" class="flex-1 bg-blue-800 btn hover:bg-blue-900 btn-sm">
                                     Lihat Situs Kopri
                                 </a>
-                                <button @click="tooltip=!tooltip" class="btn bg-blue-800 hover:bg-blue-900 btn-sm">
+                                <button @click="tooltip=!tooltip" class="bg-blue-800 btn hover:bg-blue-900 btn-sm">
                                     <i class="fa-solid fa-ellipsis-vertical"></i>
                                 </button>
                             </div>
                             <div x-cloak x-transition x-show="tooltip"
-                                class="absolute bottom-12 right-3 bg-blue-800 rounded-md"
+                                class="absolute bg-blue-800 rounded-md bottom-12 right-3"
                                 @click.outside="tooltip=false">
                                 <a href="#"
-                                    class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                    class="block px-1 py-1 text-center text-white rounded-md tooltip tooltip-left"
                                     data-tip="Email">
                                     <i class="fa-solid fa-envelope"></i>
                                 </a>
                                 <a href="#"
-                                    class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                    class="block px-1 py-1 text-center text-white rounded-md tooltip tooltip-left"
                                     data-tip="Instagram">
                                     <i class="fa-brands fa-instagram"></i>
                                 </a>
                                 <a href="#"
-                                    class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                    class="block px-1 py-1 text-center text-white rounded-md tooltip tooltip-left"
                                     data-tip="Twitter">
                                     <i class="fa-brands fa-twitter"></i>
                                 </a>
                                 <a href="#"
-                                    class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                    class="block px-1 py-1 text-center text-white rounded-md tooltip tooltip-left"
                                     data-tip="Facebook">
                                     <i class="fa-brands fa-facebook"></i>
                                 </a>
                                 <a href="#"
-                                    class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                    class="block px-1 py-1 text-center text-white rounded-md tooltip tooltip-left"
                                     data-tip="Whatsapp">
                                     <i class="fa-brands fa-whatsapp"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
-                    <div class="w-full sm:w-1/2 md:w-full lg:w-1/2 px-2 my-2">
+                    <div class="w-full px-2 my-2 sm:w-1/2 md:w-full lg:w-1/2">
                         <div x-data="{tooltip:false}"
                             class="relative bg-[#f1ead1] rounded-lg flex flex-col justify-between h-full">
                             <div>
                                 <div class="flex items-center pr-2 border-b-2 border-gray-800">
                                     <img src="img/logo_kemenhan.png" alt="Logo Kopri Pertahanan Nalar"
-                                        class="mx-2 my-2 h-7 inline">
-                                    <h3 class="inline text-lg font-semibold leading-5 my-1">Kopri Pertahanan Nalar
+                                        class="inline mx-2 my-2 h-7">
+                                    <h3 class="inline my-1 text-lg font-semibold leading-5">Kopri Pertahanan Nalar
                                     </h3>
                                 </div>
                                 <div class="mx-4 mt-1 mb-4">
@@ -508,60 +508,60 @@
                                         bela
                                         diri pribadi.
                                     </p>
-                                    <ul role="list" class="list-disc pl-5 space-y-0">
+                                    <ul role="list" class="pl-5 space-y-0 list-disc">
                                         <li>Mencerdaskan Bangsa</li>
                                         <li>Menghidupkan Agama</li>
                                         <li>Mengabdi Pada Negara</li>
                                     </ul>
                                 </div>
                             </div>
-                            <div class=" btn-group btn-block p-3">
-                                <a href="#" class="btn bg-blue-800 hover:bg-blue-900 btn-sm flex-1">
+                            <div class="p-3 btn-group btn-block">
+                                <a href="#" class="flex-1 bg-blue-800 btn hover:bg-blue-900 btn-sm">
                                     Lihat Situs Kopri
                                 </a>
-                                <button @click="tooltip=!tooltip" class="btn bg-blue-800 hover:bg-blue-900 btn-sm">
+                                <button @click="tooltip=!tooltip" class="bg-blue-800 btn hover:bg-blue-900 btn-sm">
                                     <i class="fa-solid fa-ellipsis-vertical"></i>
                                 </button>
                             </div>
                             <div x-cloak x-transition x-show="tooltip"
-                                class="absolute bottom-12 right-3 bg-blue-800 rounded-md"
+                                class="absolute bg-blue-800 rounded-md bottom-12 right-3"
                                 @click.outside="tooltip=false">
                                 <a href="#"
-                                    class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                    class="block px-1 py-1 text-center text-white rounded-md tooltip tooltip-left"
                                     data-tip="Email">
                                     <i class="fa-solid fa-envelope"></i>
                                 </a>
                                 <a href="#"
-                                    class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                    class="block px-1 py-1 text-center text-white rounded-md tooltip tooltip-left"
                                     data-tip="Instagram">
                                     <i class="fa-brands fa-instagram"></i>
                                 </a>
                                 <a href="#"
-                                    class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                    class="block px-1 py-1 text-center text-white rounded-md tooltip tooltip-left"
                                     data-tip="Twitter">
                                     <i class="fa-brands fa-twitter"></i>
                                 </a>
                                 <a href="#"
-                                    class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                    class="block px-1 py-1 text-center text-white rounded-md tooltip tooltip-left"
                                     data-tip="Facebook">
                                     <i class="fa-brands fa-facebook"></i>
                                 </a>
                                 <a href="#"
-                                    class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                    class="block px-1 py-1 text-center text-white rounded-md tooltip tooltip-left"
                                     data-tip="Whatsapp">
                                     <i class="fa-brands fa-whatsapp"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
-                    <div class="w-full sm:w-1/2 md:w-full lg:w-1/2 px-2 my-2">
+                    <div class="w-full px-2 my-2 sm:w-1/2 md:w-full lg:w-1/2">
                         <div x-data="{tooltip:false}"
                             class="relative bg-[#f1ead1] rounded-lg flex flex-col justify-between h-full">
                             <div>
                                 <div class="flex items-center pr-2 border-b-2 border-gray-800">
                                     <img src="img/logo_kemenperin.png" alt="Logo Kopri Pembangunan Gerakan"
-                                        class="mx-2 my-2 h-7 inline">
-                                    <h3 class="inline text-lg font-semibold leading-5 my-1">Kopri Pembangunan Gerakan
+                                        class="inline mx-2 my-2 h-7">
+                                    <h3 class="inline my-1 text-lg font-semibold leading-5">Kopri Pembangunan Gerakan
                                     </h3>
                                 </div>
                                 <div class="mx-4 mt-1 mb-4">
@@ -570,60 +570,60 @@
                                         manusia
                                         yang memanusiakan manusia.
                                     </p>
-                                    <ul role="list" class="list-disc pl-5 space-y-0">
+                                    <ul role="list" class="pl-5 space-y-0 list-disc">
                                         <li>Mencerdaskan Bangsa</li>
                                         <li>Menghidupkan Agama</li>
                                         <li>Mengabdi Pada Negara</li>
                                     </ul>
                                 </div>
                             </div>
-                            <div class=" btn-group btn-block p-3">
-                                <a href="#" class="btn bg-blue-800 hover:bg-blue-900 btn-sm flex-1">
+                            <div class="p-3 btn-group btn-block">
+                                <a href="#" class="flex-1 bg-blue-800 btn hover:bg-blue-900 btn-sm">
                                     Lihat Situs Kopri
                                 </a>
-                                <button @click="tooltip=!tooltip" class="btn bg-blue-800 hover:bg-blue-900 btn-sm">
+                                <button @click="tooltip=!tooltip" class="bg-blue-800 btn hover:bg-blue-900 btn-sm">
                                     <i class="fa-solid fa-ellipsis-vertical"></i>
                                 </button>
                             </div>
                             <div x-cloak x-transition x-show="tooltip"
-                                class="absolute bottom-12 right-3 bg-blue-800 rounded-md"
+                                class="absolute bg-blue-800 rounded-md bottom-12 right-3"
                                 @click.outside="tooltip=false">
                                 <a href="#"
-                                    class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                    class="block px-1 py-1 text-center text-white rounded-md tooltip tooltip-left"
                                     data-tip="Email">
                                     <i class="fa-solid fa-envelope"></i>
                                 </a>
                                 <a href="#"
-                                    class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                    class="block px-1 py-1 text-center text-white rounded-md tooltip tooltip-left"
                                     data-tip="Instagram">
                                     <i class="fa-brands fa-instagram"></i>
                                 </a>
                                 <a href="#"
-                                    class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                    class="block px-1 py-1 text-center text-white rounded-md tooltip tooltip-left"
                                     data-tip="Twitter">
                                     <i class="fa-brands fa-twitter"></i>
                                 </a>
                                 <a href="#"
-                                    class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                    class="block px-1 py-1 text-center text-white rounded-md tooltip tooltip-left"
                                     data-tip="Facebook">
                                     <i class="fa-brands fa-facebook"></i>
                                 </a>
                                 <a href="#"
-                                    class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                    class="block px-1 py-1 text-center text-white rounded-md tooltip tooltip-left"
                                     data-tip="Whatsapp">
                                     <i class="fa-brands fa-whatsapp"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
-                    <div class="w-full sm:w-1/2 md:w-full lg:w-1/2 px-2 my-2">
+                    <div class="w-full px-2 my-2 sm:w-1/2 md:w-full lg:w-1/2">
                         <div x-data="{tooltip:false}"
                             class="relative bg-[#f1ead1] rounded-lg flex flex-col justify-between h-full">
                             <div>
                                 <div class="flex items-center pr-2 border-b-2 border-gray-800">
                                     <img src="img/logo_kemenag.png" alt="Logo Kopri Aswaja"
-                                        class="mx-2 my-2 h-7 inline">
-                                    <h3 class="inline text-lg font-semibold leading-5 my-1">Kopri Aswaja
+                                        class="inline mx-2 my-2 h-7">
+                                    <h3 class="inline my-1 text-lg font-semibold leading-5">Kopri Aswaja
                                     </h3>
                                 </div>
                                 <div class="mx-4 mt-1 mb-4">
@@ -632,46 +632,46 @@
                                         Bersahabat
                                         dalam organisasi juga bersahabat dalam mengejar ridha Allah.
                                     </p>
-                                    <ul role="list" class="list-disc pl-5 space-y-0">
+                                    <ul role="list" class="pl-5 space-y-0 list-disc">
                                         <li>Mencerdaskan Bangsa</li>
                                         <li>Menghidupkan Agama</li>
                                         <li>Mengabdi Pada Negara</li>
                                     </ul>
                                 </div>
                             </div>
-                            <div class=" btn-group btn-block p-3">
-                                <a href="#" class="btn bg-blue-800 hover:bg-blue-900 btn-sm flex-1">
+                            <div class="p-3 btn-group btn-block">
+                                <a href="#" class="flex-1 bg-blue-800 btn hover:bg-blue-900 btn-sm">
                                     Lihat Situs Rayon
                                 </a>
-                                <button @click="tooltip=!tooltip" class="btn bg-blue-800 hover:bg-blue-900 btn-sm">
+                                <button @click="tooltip=!tooltip" class="bg-blue-800 btn hover:bg-blue-900 btn-sm">
                                     <i class="fa-solid fa-ellipsis-vertical"></i>
                                 </button>
                             </div>
                             <div x-cloak x-transition x-show="tooltip"
-                                class="absolute bottom-12 right-3 bg-blue-800 rounded-md"
+                                class="absolute bg-blue-800 rounded-md bottom-12 right-3"
                                 @click.outside="tooltip=false">
                                 <a href="#"
-                                    class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                    class="block px-1 py-1 text-center text-white rounded-md tooltip tooltip-left"
                                     data-tip="Email">
                                     <i class="fa-solid fa-envelope"></i>
                                 </a>
                                 <a href="#"
-                                    class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                    class="block px-1 py-1 text-center text-white rounded-md tooltip tooltip-left"
                                     data-tip="Instagram">
                                     <i class="fa-brands fa-instagram"></i>
                                 </a>
                                 <a href="#"
-                                    class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                    class="block px-1 py-1 text-center text-white rounded-md tooltip tooltip-left"
                                     data-tip="Twitter">
                                     <i class="fa-brands fa-twitter"></i>
                                 </a>
                                 <a href="#"
-                                    class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                    class="block px-1 py-1 text-center text-white rounded-md tooltip tooltip-left"
                                     data-tip="Facebook">
                                     <i class="fa-brands fa-facebook"></i>
                                 </a>
                                 <a href="#"
-                                    class="block px-1 text-white py-1 rounded-md text-center tooltip tooltip-left"
+                                    class="block px-1 py-1 text-center text-white rounded-md tooltip tooltip-left"
                                     data-tip="Whatsapp">
                                     <i class="fa-brands fa-whatsapp"></i>
                                 </a>
@@ -685,72 +685,72 @@
 
         <!-- Kegiatan -->
         <section id="kegiatan"
-            class="text-gray-200 leading-tight my-10 mx-4 sm:mx-8 md:mx-12 lg:mx-16 scroll-mt-24 md:scroll-mt-16">
-            <h2 class="text-5xl font-bold mb-4 text-center">KEGIATAN</h2>
+            class="mx-4 my-10 leading-tight text-gray-200 sm:mx-8 md:mx-12 lg:mx-16 scroll-mt-24 md:scroll-mt-16">
+            <h2 class="mb-4 text-5xl font-bold text-center">KEGIATAN</h2>
             <p class="mb-2 text-center text-gray-500">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet.
             </p>
-            <div class="flex flex-wrap flex-row mt-4">
-                <div class="w-full sm:w-1/2 md:w-1/4 space-y-1 my-1 p-2 md:p-4">
+            <div class="flex flex-row flex-wrap mt-4">
+                <div class="w-full p-2 my-1 space-y-1 sm:w-1/2 md:w-1/4 md:p-4">
                     <div>
-                        <i class="fa-solid fa-book-quran px-2 py-2 bg-gray-200 text-blue-800 text-2xl rounded-md"></i>
+                        <i class="px-2 py-2 text-2xl text-blue-800 bg-gray-200 rounded-md fa-solid fa-book-quran"></i>
                     </div>
                     <h3 class="text-2xl font-semibold">Mengaji Kitab Kuning</h3>
                     <p class="text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis,
                         repellendus.</p>
                 </div>
-                <div class="w-full sm:w-1/2 md:w-1/4 space-y-1 my-1 p-2 md:p-4">
+                <div class="w-full p-2 my-1 space-y-1 sm:w-1/2 md:w-1/4 md:p-4">
                     <div>
-                        <i class="fa-solid fa-scroll px-2 py-2 bg-gray-200 text-blue-800 text-2xl rounded-md"></i>
+                        <i class="px-2 py-2 text-2xl text-blue-800 bg-gray-200 rounded-md fa-solid fa-scroll"></i>
                     </div>
                     <h3 class="text-2xl font-semibold">Mengkaji Kebijakan Pemerintah</h3>
                     <p class="text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis,
                         repellendus.</p>
                 </div>
-                <div class="w-full sm:w-1/2 md:w-1/4 space-y-1 my-1 p-2 md:p-4">
+                <div class="w-full p-2 my-1 space-y-1 sm:w-1/2 md:w-1/4 md:p-4">
                     <div>
-                        <i class="fa-solid fa-bullhorn px-2 py-2 bg-gray-200 text-blue-800 text-2xl rounded-md"></i>
+                        <i class="px-2 py-2 text-2xl text-blue-800 bg-gray-200 rounded-md fa-solid fa-bullhorn"></i>
                     </div>
                     <h3 class="text-2xl font-semibold">Menyuarakan Aspirasi</h3>
                     <p class="text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis,
                         repellendus.</p>
                 </div>
-                <div class="w-full sm:w-1/2 md:w-1/4 space-y-1 my-1 p-2 md:p-4">
+                <div class="w-full p-2 my-1 space-y-1 sm:w-1/2 md:w-1/4 md:p-4">
                     <div>
-                        <i class="fa-solid fa-brain px-2 py-2 bg-gray-200 text-blue-800 text-2xl rounded-md"></i>
+                        <i class="px-2 py-2 text-2xl text-blue-800 bg-gray-200 rounded-md fa-solid fa-brain"></i>
                     </div>
                     <h3 class="text-2xl font-semibold">Mengasah Nalar</h3>
                     <p class="text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis,
                         repellendus.</p>
                 </div>
-                <div class="w-full sm:w-1/2 md:w-1/4 space-y-1 my-1 p-2 md:p-4">
+                <div class="w-full p-2 my-1 space-y-1 sm:w-1/2 md:w-1/4 md:p-4">
                     <div>
                         <i
-                            class="fa-solid fa-handshake-angle px-2 py-2 bg-gray-200 text-blue-800 text-2xl rounded-md"></i>
+                            class="px-2 py-2 text-2xl text-blue-800 bg-gray-200 rounded-md fa-solid fa-handshake-angle"></i>
                     </div>
                     <h3 class="text-2xl font-semibold">Mengabdi Kepada Masyarakat</h3>
                     <p class="text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis,
                         repellendus.</p>
                 </div>
-                <div class="w-full sm:w-1/2 md:w-1/4 space-y-1 my-1 p-2 md:p-4">
+                <div class="w-full p-2 my-1 space-y-1 sm:w-1/2 md:w-1/4 md:p-4">
                     <div>
-                        <i class="fa-solid fa-seedling px-2 py-2 bg-gray-200 text-blue-800 text-2xl rounded-md"></i>
+                        <i class="px-2 py-2 text-2xl text-blue-800 bg-gray-200 rounded-md fa-solid fa-seedling"></i>
                     </div>
                     <h3 class="text-2xl font-semibold md:break-all">Mengembangkan Minat & Bakat</h3>
                     <p class="text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis,
                         repellendus.</p>
                 </div>
-                <div class="w-full sm:w-1/2 md:w-1/4 space-y-1 my-1 p-2 md:p-4">
+                <div class="w-full p-2 my-1 space-y-1 sm:w-1/2 md:w-1/4 md:p-4">
                     <div>
-                        <i class="fa-solid fa-book px-2 py-2 bg-gray-200 text-blue-800 text-2xl rounded-md"></i>
+                        <i class="px-2 py-2 text-2xl text-blue-800 bg-gray-200 rounded-md fa-solid fa-book"></i>
                     </div>
                     <h3 class="text-2xl font-semibold">Bedah Buku</h3>
                     <p class="text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis,
                         repellendus.</p>
                 </div>
-                <div class="w-full sm:w-1/2 md:w-1/4 space-y-1 my-1 p-2 md:p-4">
+                <div class="w-full p-2 my-1 space-y-1 sm:w-1/2 md:w-1/4 md:p-4">
                     <div>
-                        <i class="fa-solid fa-ellipsis px-2 py-2 bg-gray-200 text-blue-800 text-2xl rounded-md"></i>
+                        <i class="px-2 py-2 text-2xl text-blue-800 bg-gray-200 rounded-md fa-solid fa-ellipsis"></i>
                     </div>
                     <h3 class="text-2xl font-semibold">Masih Banyak Lagi...</h3>
                     <p class="text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis,
@@ -761,44 +761,44 @@
 
         <!-- Profile -->
         <section id="profil"
-            class="text-base font-normal leading-tight my-10 py-10 bg-slate-50 scroll-m-11 md:scroll-m-5">
-            <h2 class="text-5xl font-bold mb-4 text-center">PROFIL</h2>
+            class="py-10 my-10 text-base font-normal leading-tight bg-slate-50 scroll-m-11 md:scroll-m-5">
+            <h2 class="mb-4 text-5xl font-bold text-center">PROFIL</h2>
             <p class="mb-2 text-center text-gray-500">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet.
             </p>
-            <div x-data="tabs" class="flex flex-col md:flex-row mt-4">
+            <div x-data="tabs" class="flex flex-col mt-4 md:flex-row">
                 <div id="tab-button"
                     class="md:w-1/3 sticky top-[4.76rem] sm:top-11 bg-slate-50 md:ml-12 md:mr-6 md:rounded-lg lg:ml-16 lg:mr-8 z-[5]">
                     <ul
                         class="sticky top-[3.3rem] flex md:flex-col overflow-x-auto overflow-y-hidden py-2 px-3 hide-scrollbar shadow md:shadow-none md:space-y-2">
                         <li class="min-w-max">
                             <button @click="setActive(1)" :class="(activeTab === 1) ? activeClass:inActiveClass"
-                                class="px-3 py-1 rounded-full md:rounded md:w-full md:mx-0 mx-1">Sejarah</button>
+                                class="px-3 py-1 mx-1 rounded-full md:rounded md:w-full md:mx-0">Sejarah</button>
                         </li>
                         <li class="min-w-max">
                             <button @click="setActive(2)" :class="(activeTab === 2) ? activeClass:inActiveClass"
-                                class="px-3 py-1 rounded-full md:rounded md:w-full md:mx-0 mx-1">Visi
+                                class="px-3 py-1 mx-1 rounded-full md:rounded md:w-full md:mx-0">Visi
                                 & Misi</button>
                         </li>
                         <li class="min-w-max">
                             <button @click="setActive(3)" :class="(activeTab === 3) ? activeClass:inActiveClass"
-                                class="px-3 py-1 rounded-full md:rounded md:w-full md:mx-0 mx-1">Kepengurusan</button>
+                                class="px-3 py-1 mx-1 rounded-full md:rounded md:w-full md:mx-0">Kepengurusan</button>
                         </li>
                         <li class="min-w-max">
                             <button @click="setActive(4)" :class="(activeTab === 4) ? activeClass:inActiveClass"
-                                class="px-3 py-1 rounded-full md:rounded md:w-full md:mx-0 mx-1">Prestasi</button>
+                                class="px-3 py-1 mx-1 rounded-full md:rounded md:w-full md:mx-0">Prestasi</button>
                         </li>
                         <li class="min-w-max">
                             <button @click="setActive(5)" :class="(activeTab === 5) ? activeClass:inActiveClass"
-                                class="px-3 py-1 rounded-full md:rounded md:w-full md:mx-0 mx-1">Pituah Alumni</button>
+                                class="px-3 py-1 mx-1 rounded-full md:rounded md:w-full md:mx-0">Pituah Alumni</button>
                         </li>
                     </ul>
                 </div>
                 <div id="tab-konten"
-                    class="scroll-mt-32 sm:scroll-mt-24 md:scroll-mt-16 mx-4 sm:mx-8 md:mr-12 md:ml-6 lg:mr-16 lg:ml-8 md:w-2/3 mt-2">
+                    class="mx-4 mt-2 scroll-mt-32 sm:scroll-mt-24 md:scroll-mt-16 sm:mx-8 md:mr-12 md:ml-6 lg:mr-16 lg:ml-8 md:w-2/3">
                     <div x-show="activeTab === 1">
-                        <div class="font-bold mb-4 flex gap-2">
-                            <i class="fa-solid fa-hashtag text-3xl mt-2 text-blue-800"></i>
+                        <div class="flex gap-2 mb-4 font-bold">
+                            <i class="mt-2 text-3xl text-blue-800 fa-solid fa-hashtag"></i>
                             <h3 class="text-4xl">Sejarah</h3>
                         </div>
                         <ol class="relative border-l border-blue-800 dark:border-gray-700 z-[1]">
@@ -912,22 +912,22 @@
                         </ol>
                     </div>
                     <div x-cloak x-show="activeTab === 2">
-                        <div class="font-bold mb-2 flex gap-2">
-                            <i class="fa-solid fa-hashtag text-3xl mt-2 text-blue-800"></i>
+                        <div class="flex gap-2 mb-2 font-bold">
+                            <i class="mt-2 text-3xl text-blue-800 fa-solid fa-hashtag"></i>
                             <h3 class="text-4xl">Visi</h3>
                         </div>
-                        <div class="text-base font-normal border-l-2 border-x-gray-800 pl-4 mb-4">Lorem ipsum dolor sit
+                        <div class="pl-4 mb-4 text-base font-normal border-l-2 border-x-gray-800">Lorem ipsum dolor sit
                             amet consectetur
                             adipisicing
                             elit.
                             Sunt quas nisi
                             facilis enim,
                             voluptatem soluta natus quis unde error modi.</div>
-                        <div class="font-bold mb-2 flex gap-2">
-                            <i class="fa-solid fa-hashtag text-3xl mt-2 text-blue-800"></i>
+                        <div class="flex gap-2 mb-2 font-bold">
+                            <i class="mt-2 text-3xl text-blue-800 fa-solid fa-hashtag"></i>
                             <h3 class="text-4xl">Misi</h3>
                         </div>
-                        <ul role="list" class="text-base font-normal list-decimal ml-4  marker:font-bold">
+                        <ul role="list" class="ml-4 text-base font-normal list-decimal marker:font-bold">
                             <li class="pl-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta explicabo
                                 quo consequuntur similique molestias reprehenderit dicta voluptates asperiores, eaque
                                 ratione! Lorem ipsum dolor sit amet.</li>
@@ -942,14 +942,14 @@
                         </ul>
                     </div>
                     <div x-cloak x-show="activeTab === 3">
-                        <div class="font-bold mb-4 flex gap-2">
-                            <i class="fa-solid fa-hashtag text-3xl mt-2 text-blue-800"></i>
+                        <div class="flex gap-2 mb-4 font-bold">
+                            <i class="mt-2 text-3xl text-blue-800 fa-solid fa-hashtag"></i>
                             <h3 class="text-4xl">Kepengurusan 2022-2023</h3>
                         </div>
                         <div class="relative overflow-x-auto">
                             <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
                                 <thead
-                                    class="text-xs text-gray-50 uppercase bg-gradient-to-br from-gray-900 to-blue-800 dark:bg-gray-700 dark:text-gray-400">
+                                    class="text-xs uppercase text-gray-50 bg-gradient-to-br from-gray-900 to-blue-800 dark:bg-gray-700 dark:text-gray-400">
                                     <tr>
                                         <th scope="col" colspan="2" class="px-6 py-3">
                                             Badan Pengurus Harian
@@ -958,7 +958,7 @@
                                 </thead>
                                 <tbody>
                                     <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                                        <th scope="row" class="px-6 py-4 dark:text-white font-normal">
+                                        <th scope="row" class="px-6 py-4 font-normal dark:text-white">
                                             Ketua Umum
                                         </th>
                                         <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
@@ -966,7 +966,7 @@
                                         </td>
                                     </tr>
                                     <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                                        <th scope="row" class="px-6 py-4 dark:text-white font-normal">
+                                        <th scope="row" class="px-6 py-4 font-normal dark:text-white">
                                             Sekretaris Umum
                                         </th>
                                         <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
@@ -974,7 +974,7 @@
                                         </td>
                                     </tr>
                                     <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                                        <th scope="row" class="px-6 py-4 dark:text-white font-normal">
+                                        <th scope="row" class="px-6 py-4 font-normal dark:text-white">
                                             Bendahara Umum
                                         </th>
                                         <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
@@ -982,7 +982,7 @@
                                         </td>
                                     </tr>
                                     <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                                        <th scope="row" class="px-6 py-4 dark:text-white font-normal">
+                                        <th scope="row" class="px-6 py-4 font-normal dark:text-white">
                                             Wakil Ketua 1
                                         </th>
                                         <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
@@ -990,7 +990,7 @@
                                         </td>
                                     </tr>
                                     <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                                        <th scope="row" class="px-6 py-4 dark:text-white font-normal">
+                                        <th scope="row" class="px-6 py-4 font-normal dark:text-white">
                                             Wakil Ketua 2
                                         </th>
                                         <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
@@ -998,7 +998,7 @@
                                         </td>
                                     </tr>
                                     <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                                        <th scope="row" class="px-6 py-4 dark:text-white font-normal">
+                                        <th scope="row" class="px-6 py-4 font-normal dark:text-white">
                                             Wakil Ketua 3
                                         </th>
                                         <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
@@ -1007,7 +1007,7 @@
                                     </tr>
                                 </tbody>
                                 <thead
-                                    class="text-xs text-gray-50 uppercase bg-gradient-to-br from-gray-900 to-blue-800 dark:bg-gray-700 dark:text-gray-400">
+                                    class="text-xs uppercase text-gray-50 bg-gradient-to-br from-gray-900 to-blue-800 dark:bg-gray-700 dark:text-gray-400">
                                     <tr>
                                         <th scope="col" colspan="2" class="px-6 py-3">
                                             Biro Media
@@ -1016,7 +1016,7 @@
                                 </thead>
                                 <tbody>
                                     <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                                        <th scope="row" class="px-6 py-4 dark:text-white font-normal">
+                                        <th scope="row" class="px-6 py-4 font-normal dark:text-white">
                                             Ketua
                                         </th>
                                         <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
@@ -1024,7 +1024,7 @@
                                         </td>
                                     </tr>
                                     <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                                        <th scope="row" class="px-6 py-4 dark:text-white font-normal">
+                                        <th scope="row" class="px-6 py-4 font-normal dark:text-white">
                                             Anggota
                                         </th>
                                         <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
@@ -1036,7 +1036,7 @@
                                     </tr>
                                 </tbody>
                                 <thead
-                                    class="text-xs text-gray-50 uppercase bg-gradient-to-br from-gray-900 to-blue-800 dark:bg-gray-700 dark:text-gray-400">
+                                    class="text-xs uppercase text-gray-50 bg-gradient-to-br from-gray-900 to-blue-800 dark:bg-gray-700 dark:text-gray-400">
                                     <tr>
                                         <th scope="col" colspan="2" class="px-6 py-3">
                                             Biro Kaderisasi
@@ -1045,7 +1045,7 @@
                                 </thead>
                                 <tbody>
                                     <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                                        <th scope="row" class="px-6 py-4 dark:text-white font-normal">
+                                        <th scope="row" class="px-6 py-4 font-normal dark:text-white">
                                             Ketua
                                         </th>
                                         <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
@@ -1053,7 +1053,7 @@
                                         </td>
                                     </tr>
                                     <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                                        <th scope="row" class="px-6 py-4 dark:text-white font-normal">
+                                        <th scope="row" class="px-6 py-4 font-normal dark:text-white">
                                             Anggota
                                         </th>
                                         <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
@@ -1068,7 +1068,7 @@
                                     </tr>
                                 </tbody>
                                 <thead
-                                    class="text-xs text-gray-50 uppercase bg-gradient-to-br from-gray-900 to-blue-800 dark:bg-gray-700 dark:text-gray-400">
+                                    class="text-xs uppercase text-gray-50 bg-gradient-to-br from-gray-900 to-blue-800 dark:bg-gray-700 dark:text-gray-400">
                                     <tr>
                                         <th scope="col" colspan="2" class="px-6 py-3">
                                             Biro Aswaja
@@ -1077,7 +1077,7 @@
                                 </thead>
                                 <tbody>
                                     <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                                        <th scope="row" class="px-6 py-4 dark:text-white font-normal">
+                                        <th scope="row" class="px-6 py-4 font-normal dark:text-white">
                                             Ketua
                                         </th>
                                         <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
@@ -1085,7 +1085,7 @@
                                         </td>
                                     </tr>
                                     <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                                        <th scope="row" class="px-6 py-4 dark:text-white font-normal">
+                                        <th scope="row" class="px-6 py-4 font-normal dark:text-white">
                                             Anggota
                                         </th>
                                         <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
@@ -1100,19 +1100,19 @@
                         </div>
                     </div>
                     <div x-cloak x-show="activeTab === 4">
-                        <div class="font-bold mb-4 flex gap-2">
-                            <i class="fa-solid fa-hashtag text-3xl mt-2 text-blue-800"></i>
+                        <div class="flex gap-2 mb-4 font-bold">
+                            <i class="mt-2 text-3xl text-blue-800 fa-solid fa-hashtag"></i>
                             <h3 class="text-4xl">Prestasi</h3>
                         </div>
                         <div class="flex flex-col md:flex-row md:flex-wrap md:items-center">
-                            <div class="w-full md:w-1/2 md:px-2 mb-2 md:mb-4">
+                            <div class="w-full mb-2 md:w-1/2 md:px-2 md:mb-4">
                                 <div class="relative flex items-center h-max">
                                     <div class="bg-[#f1ead1] shadow px-2 absolute w-[60%] max-h-[80%] rounded pb-3">
                                         <div
-                                            class="-mt-5 rounded w-10 h-10 bg-blue-800 text-white flex justify-center items-center">
+                                            class="flex items-center justify-center w-10 h-10 -mt-5 text-white bg-blue-800 rounded">
                                             <i class="fa-solid fa-ranking-star"></i>
                                         </div>
-                                        <h4 class="font-semibold mb-2">
+                                        <h4 class="mb-2 font-semibold">
                                             <a href="#">Juara 1 Cerdas Cermat Se-Kecamatan Larangan</a>
                                         </h4>
                                         <a href="#" class="text-blue-700 hover:text-blue-800 hover:underline">
@@ -1120,20 +1120,20 @@
                                             Dokumentasi</a>
                                     </div>
                                     <div x-data="{isClick: false}" :class="isClick ? 'z-[5] w-full' : 'w-[60%]'"
-                                        class="bg-gray-300 transition-all ml-auto aspect-square cursor-pointer">
+                                        class="ml-auto transition-all bg-gray-300 cursor-pointer aspect-square">
                                         <img src="img/prestasi1.png" alt="Foto 1:1" @click="isClick=!isClick"
                                             @click.outside="isClick=false" class="">
                                     </div>
                                 </div>
                             </div>
-                            <div class="w-full md:w-1/2 md:px-2 mb-2 md:mb-4">
+                            <div class="w-full mb-2 md:w-1/2 md:px-2 md:mb-4">
                                 <div class="relative flex items-center h-max">
                                     <div class="bg-[#f1ead1] shadow px-2 absolute w-[60%] max-h-[80%] rounded pb-3">
                                         <div
-                                            class="-mt-5 rounded w-10 h-10 bg-blue-800 text-white flex justify-center items-center">
+                                            class="flex items-center justify-center w-10 h-10 -mt-5 text-white bg-blue-800 rounded">
                                             <i class="fa-solid fa-award"></i>
                                         </div>
-                                        <h4 class="font-semibold mb-2">
+                                        <h4 class="mb-2 font-semibold">
                                             <a href="#">Juara 2 Putri Pasundan Se-Jawa Barat</a>
                                         </h4>
                                         <a href="#" class="text-blue-700 hover:text-blue-800 hover:underline">
@@ -1141,20 +1141,20 @@
                                             Dokumentasi</a>
                                     </div>
                                     <div x-data="{isClick: false}" :class="isClick ? 'z-[5] w-full' : 'w-[60%]'"
-                                        class="bg-gray-300 transition-all ml-auto aspect-square cursor-pointer">
+                                        class="ml-auto transition-all bg-gray-300 cursor-pointer aspect-square">
                                         <img src="img/prestasi2.png" alt="Foto 1:1" @click="isClick=!isClick"
                                             @click.outside="isClick=false" class="">
                                     </div>
                                 </div>
                             </div>
-                            <div class="w-full md:w-1/2 md:px-2 mb-2 md:mb-4">
+                            <div class="w-full mb-2 md:w-1/2 md:px-2 md:mb-4">
                                 <div class="relative flex items-center h-max">
                                     <div class="bg-[#f1ead1] shadow px-2 absolute w-[60%] max-h-[80%] rounded pb-3">
                                         <div
-                                            class="-mt-5 rounded w-10 h-10 bg-blue-800 text-white flex justify-center items-center">
+                                            class="flex items-center justify-center w-10 h-10 -mt-5 text-white bg-blue-800 rounded">
                                             <i class="fa-solid fa-medal"></i>
                                         </div>
-                                        <h4 class="font-semibold mb-2">
+                                        <h4 class="mb-2 font-semibold">
                                             <a href="#">Juara 3 Piala Gubernur Cabor Sepakbola</a>
                                         </h4>
                                         <a href="#" class="text-blue-700 hover:text-blue-800 hover:underline">
@@ -1162,20 +1162,20 @@
                                             Dokumentasi</a>
                                     </div>
                                     <div x-data="{isClick: false}" :class="isClick ? 'z-[5] w-full' : 'w-[60%]'"
-                                        class="bg-gray-300 transition-all ml-auto aspect-square cursor-pointer">
+                                        class="ml-auto transition-all bg-gray-300 cursor-pointer aspect-square">
                                         <img src="img/prestasi3.png" alt="Foto 1:1" @click="isClick=!isClick"
                                             @click.outside="isClick=false" class="">
                                     </div>
                                 </div>
                             </div>
-                            <div class="w-full md:w-1/2 md:px-2 mb-2 md:mb-4">
+                            <div class="w-full mb-2 md:w-1/2 md:px-2 md:mb-4">
                                 <div class="relative flex items-center h-max">
                                     <div class="bg-[#f1ead1] shadow px-2 absolute w-[60%] max-h-[80%] rounded pb-3">
                                         <div
-                                            class="-mt-5 rounded w-10 h-10 bg-blue-800 text-white flex justify-center items-center">
+                                            class="flex items-center justify-center w-10 h-10 -mt-5 text-white bg-blue-800 rounded">
                                             <i class="fa-solid fa-trophy"></i>
                                         </div>
-                                        <h4 class="font-semibold mb-2">
+                                        <h4 class="mb-2 font-semibold">
                                             <a href="#">Juara Harapan Menunggu si Dia untuk Kembali Lagi</a>
                                         </h4>
                                         <a href="#" class="text-blue-700 hover:text-blue-800 hover:underline">
@@ -1183,7 +1183,7 @@
                                             Dokumentasi</a>
                                     </div>
                                     <div x-data="{isClick: false}" :class="isClick ? 'z-[5] w-full' : 'w-[60%]'"
-                                        class="bg-gray-300 transition-all ml-auto aspect-square cursor-pointer">
+                                        class="ml-auto transition-all bg-gray-300 cursor-pointer aspect-square">
                                         <img src="img/prestasi4.png" alt="Foto 1:1" @click="isClick=!isClick"
                                             @click.outside="isClick=false" class="">
                                     </div>
@@ -1191,215 +1191,373 @@
                             </div>
                         </div>
                     </div>
-                    <div x-cloak x-show="activeTab === 5" class="h-full flex flex-col">
-                        <div class="font-bold mb-4 flex gap-2">
-                            <i class="fa-solid fa-hashtag text-3xl mt-2 text-blue-800"></i>
-                            <h3 class="text-4xl">Prestasi</h3>
+                    <div x-cloak x-show="activeTab === 5" class="flex flex-col h-full">
+                        <div class="flex gap-2 mb-4 font-bold">
+                            <i class="mt-2 text-3xl text-blue-800 fa-solid fa-hashtag"></i>
+                            <h3 class="text-4xl">Pituah Alumni</h3>
                         </div>
                         <div class="h-[70vh] md:h-[77vh] flex flex-col flex-wrap overflow-x-scroll hide-scrollbar">
-                            <div class="h-1/2 w-11/12 sm:w-7/12 md:w-11/12 lg:w-7/12 xl:w-5/12 p-1">
+                            <div class="w-11/12 p-1 h-1/2 sm:w-7/12 md:w-11/12 lg:w-7/12 xl:w-5/12">
                                 <div class="h-full bg-[#f1ead1] rounded-lg px-2 flex flex-col">
                                     <div class="flex items-center py-2">
                                         <div>
-                                            <div class="bg-gray-700 rounded-full w-12 h-12 overflow-hidden">
+                                            <div class="w-12 h-12 overflow-hidden bg-gray-700 rounded-full">
                                                 <img src="img/avatar (1).png" alt="foto orang">
                                             </div>
                                         </div>
                                         <div class="pl-2">
-                                            <div class="text-yellow-500 text-xs">
+                                            <div class="text-xs text-yellow-500">
                                                 <i class="fa-solid fa-star"></i>
                                                 <i class="fa-solid fa-star"></i>
                                                 <i class="fa-solid fa-star"></i>
                                                 <i class="fa-solid fa-star"></i>
                                                 <i class="fa-solid fa-star"></i>
                                             </div>
-                                            <h4 class="text-xl font-semibold leading-none my-1">
+                                            <h4 class="my-1 text-xl font-semibold leading-none">
                                                 Kim Jisoo
                                             </h4>
                                             <h5 class="text-sm text-blue-800">Sekretaris Umum (2010-2011)</h5>
                                         </div>
                                     </div>
-                                    <div class="h-full relative">
+                                    <div class="relative h-full">
                                         <p class="text-base text-center italic relative z-[1]">
                                             Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur
                                             adipisicing elit. Aut, libero magni.
                                         </p>
-                                        <div class="absolute bottom-0 w-full flex justify-center opacity-10">
-                                            <i class="fa-solid fa-quote-right text-5xl"></i>
+                                        <div class="absolute bottom-0 flex justify-center w-full opacity-10">
+                                            <i class="text-5xl fa-solid fa-quote-right"></i>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="h-1/2 w-11/12 sm:w-7/12 md:w-11/12 lg:w-7/12 xl:w-5/12 p-1">
+                            <div class="w-11/12 p-1 h-1/2 sm:w-7/12 md:w-11/12 lg:w-7/12 xl:w-5/12">
                                 <div class="h-full bg-[#f1ead1] rounded-lg px-2 flex flex-col">
                                     <div class="flex items-center py-2">
                                         <div>
-                                            <div class="bg-gray-700 rounded-full w-12 h-12 overflow-hidden">
+                                            <div class="w-12 h-12 overflow-hidden bg-gray-700 rounded-full">
                                                 <img src="img/avatar (2).png" alt="foto orang">
                                             </div>
                                         </div>
                                         <div class="pl-2">
-                                            <div class="text-yellow-500 text-xs">
+                                            <div class="text-xs text-yellow-500">
                                                 <i class="fa-solid fa-star"></i>
                                                 <i class="fa-solid fa-star"></i>
                                                 <i class="fa-solid fa-star"></i>
                                                 <i class="fa-solid fa-star"></i>
                                                 <i class="fa-solid fa-star"></i>
                                             </div>
-                                            <h4 class="text-xl font-semibold leading-none my-1">
+                                            <h4 class="my-1 text-xl font-semibold leading-none">
                                                 Laura Nadya
                                             </h4>
                                             <h5 class="text-sm text-blue-800">Bendahara Umum (2012-2013)</h5>
                                         </div>
                                     </div>
-                                    <div class="h-full relative">
+                                    <div class="relative h-full">
                                         <p class="text-base text-center italic relative z-[1]">
                                             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit quas, unde
                                             id eveniet suscipit eos, aspernatur ipsa provident rerum cum atque
                                             voluptates rem eum quibusdam est, debitis neque maxime libero?
                                         </p>
-                                        <div class="absolute bottom-0 w-full flex justify-center opacity-10">
-                                            <i class="fa-solid fa-quote-right text-5xl"></i>
+                                        <div class="absolute bottom-0 flex justify-center w-full opacity-10">
+                                            <i class="text-5xl fa-solid fa-quote-right"></i>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="h-1/2 w-11/12 sm:w-7/12 md:w-11/12 lg:w-7/12 xl:w-5/12 p-1">
+                            <div class="w-11/12 p-1 h-1/2 sm:w-7/12 md:w-11/12 lg:w-7/12 xl:w-5/12">
                                 <div class="h-full bg-[#f1ead1] rounded-lg px-2 flex flex-col">
                                     <div class="flex items-center py-2">
                                         <div>
-                                            <div class="bg-gray-700 rounded-full w-12 h-12 overflow-hidden">
+                                            <div class="w-12 h-12 overflow-hidden bg-gray-700 rounded-full">
                                                 <img src="img/avatar (7).png" alt="foto orang">
                                             </div>
                                         </div>
                                         <div class="pl-2">
-                                            <div class="text-yellow-500 text-xs">
+                                            <div class="text-xs text-yellow-500">
                                                 <i class="fa-solid fa-star"></i>
                                                 <i class="fa-solid fa-star"></i>
                                                 <i class="fa-solid fa-star"></i>
                                                 <i class="fa-solid fa-star"></i>
                                                 <i class="fa-solid fa-star"></i>
                                             </div>
-                                            <h4 class="text-xl font-semibold leading-none my-1">
+                                            <h4 class="my-1 text-xl font-semibold leading-none">
                                                 Ajat Sudarsono
                                             </h4>
                                             <h5 class="text-sm text-blue-800">Ketua Umum (2015-2016)</h5>
                                         </div>
                                     </div>
-                                    <div class="h-full relative">
+                                    <div class="relative h-full">
                                         <p class="text-base text-center italic relative z-[1]">
                                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
                                             consequuntur velit quos quisquam eaque aliquam soluta, quam quasi facere
                                             amet tempore optio minus deleniti error.
                                         </p>
-                                        <div class="absolute bottom-0 w-full flex justify-center opacity-10">
-                                            <i class="fa-solid fa-quote-right text-5xl"></i>
+                                        <div class="absolute bottom-0 flex justify-center w-full opacity-10">
+                                            <i class="text-5xl fa-solid fa-quote-right"></i>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="h-1/2 w-11/12 sm:w-7/12 md:w-11/12 lg:w-7/12 xl:w-5/12 p-1">
+                            <div class="w-11/12 p-1 h-1/2 sm:w-7/12 md:w-11/12 lg:w-7/12 xl:w-5/12">
                                 <div class="h-full bg-[#f1ead1] rounded-lg px-2 flex flex-col">
                                     <div class="flex items-center py-2">
                                         <div>
-                                            <div class="bg-gray-700 rounded-full w-12 h-12 overflow-hidden">
+                                            <div class="w-12 h-12 overflow-hidden bg-gray-700 rounded-full">
                                                 <img src="img/avatar (6).png" alt="foto orang">
                                             </div>
                                         </div>
                                         <div class="pl-2">
-                                            <div class="text-yellow-500 text-xs">
+                                            <div class="text-xs text-yellow-500">
                                                 <i class="fa-solid fa-star"></i>
                                                 <i class="fa-solid fa-star"></i>
                                                 <i class="fa-solid fa-star"></i>
                                                 <i class="fa-solid fa-star"></i>
                                                 <i class="fa-solid fa-star"></i>
                                             </div>
-                                            <h4 class="text-xl font-semibold leading-none my-1">
+                                            <h4 class="my-1 text-xl font-semibold leading-none">
                                                 Ilham Fajar Mustofa
                                             </h4>
                                             <h5 class="text-sm text-blue-800">Wakil Ketua 3 (2017-2018)</h5>
                                         </div>
                                     </div>
-                                    <div class="h-full relative">
+                                    <div class="relative h-full">
                                         <p class="text-base text-center italic relative z-[1]">
                                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam eum soluta
                                             incidunt eius veritatis neque corporis est inventore voluptatum sapiente.
                                             Reprehenderit, illo ipsum!
                                         </p>
-                                        <div class="absolute bottom-0 w-full flex justify-center opacity-10">
-                                            <i class="fa-solid fa-quote-right text-5xl"></i>
+                                        <div class="absolute bottom-0 flex justify-center w-full opacity-10">
+                                            <i class="text-5xl fa-solid fa-quote-right"></i>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="h-1/2 w-11/12 sm:w-7/12 md:w-11/12 lg:w-7/12 xl:w-5/12 p-1">
+                            <div class="w-11/12 p-1 h-1/2 sm:w-7/12 md:w-11/12 lg:w-7/12 xl:w-5/12">
                                 <div class="h-full bg-[#f1ead1] rounded-lg px-2 flex flex-col">
                                     <div class="flex items-center py-2">
                                         <div>
-                                            <div class="bg-gray-700 rounded-full w-12 h-12 overflow-hidden">
+                                            <div class="w-12 h-12 overflow-hidden bg-gray-700 rounded-full">
                                                 <img src="img/avatar (3).png" alt="foto orang">
                                             </div>
                                         </div>
                                         <div class="pl-2">
-                                            <div class="text-yellow-500 text-xs">
+                                            <div class="text-xs text-yellow-500">
                                                 <i class="fa-solid fa-star"></i>
                                                 <i class="fa-solid fa-star"></i>
                                                 <i class="fa-solid fa-star"></i>
                                                 <i class="fa-solid fa-star"></i>
                                                 <i class="fa-solid fa-star"></i>
                                             </div>
-                                            <h4 class="text-xl font-semibold leading-none my-1">
+                                            <h4 class="my-1 text-xl font-semibold leading-none">
                                                 Ayu Sekar Wangi
                                             </h4>
                                             <h5 class="text-sm text-blue-800">Ketua Kopri (2018-2019)</h5>
                                         </div>
                                     </div>
-                                    <div class="h-full relative">
+                                    <div class="relative h-full">
                                         <p class="text-base text-center italic relative z-[1]">
                                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, libero
                                             consequuntur et dolores optio magni reprehenderit! Ipsam, nam officiis?
                                         </p>
-                                        <div class="absolute bottom-0 w-full flex justify-center opacity-10">
-                                            <i class="fa-solid fa-quote-right text-5xl"></i>
+                                        <div class="absolute bottom-0 flex justify-center w-full opacity-10">
+                                            <i class="text-5xl fa-solid fa-quote-right"></i>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="h-1/2 w-11/12 sm:w-7/12 md:w-11/12 lg:w-7/12 xl:w-5/12 p-1">
+                            <div class="w-11/12 p-1 h-1/2 sm:w-7/12 md:w-11/12 lg:w-7/12 xl:w-5/12">
                                 <div class="h-full bg-[#f1ead1] rounded-lg px-2 flex flex-col">
                                     <div class="flex items-center py-2">
                                         <div>
-                                            <div class="bg-gray-700 rounded-full w-12 h-12 overflow-hidden">
+                                            <div class="w-12 h-12 overflow-hidden bg-gray-700 rounded-full">
                                                 <img src="img/avatar (5).png" alt="foto orang">
                                             </div>
                                         </div>
                                         <div class="pl-2">
-                                            <div class="text-yellow-500 text-xs">
+                                            <div class="text-xs text-yellow-500">
                                                 <i class="fa-solid fa-star"></i>
                                                 <i class="fa-solid fa-star"></i>
                                                 <i class="fa-solid fa-star"></i>
                                                 <i class="fa-solid fa-star"></i>
                                                 <i class="fa-solid fa-star"></i>
                                             </div>
-                                            <h4 class="text-xl font-semibold leading-none my-1">
+                                            <h4 class="my-1 text-xl font-semibold leading-none">
                                                 Hilman Aditya Karang
                                             </h4>
                                             <h5 class="text-sm text-blue-800">Wakil Ketua 1 (2021-2022)</h5>
                                         </div>
                                     </div>
-                                    <div class="h-full relative">
+                                    <div class="relative h-full">
                                         <p class="text-base text-center italic relative z-[1]">
                                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem ratione
                                             accusamus totam expedita corporis numquam corrupti magni rem, necessitatibus
                                             recusandae praesentium quisquam!
                                         </p>
-                                        <div class="absolute bottom-0 w-full flex justify-center opacity-10">
-                                            <i class="fa-solid fa-quote-right text-5xl"></i>
+                                        <div class="absolute bottom-0 flex justify-center w-full opacity-10">
+                                            <i class="text-5xl fa-solid fa-quote-right"></i>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="flex flex-wrap mt-10 text-gray-200 scroll-mt-24 md:scroll-mt-16">
+            <div class="w-full md:w-1/3 md:pr-6">
+                <div class="mx-4 mb-5 leading-tight sm:mx-8 md:ml-12 md:mr-0 lg:ml-16">
+                    <h2 class="mb-4 text-5xl font-bold">FAQ</h2>
+                    <p class="mb-2">
+                        Kami mengumpulkan pertanyaan-pertanyaan yang sering dilontarkan Lorem ipsum dolor sit amet
+                        consectetur
+                        adipisicing elit. Mollitia, nisi? Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Sequi,
+                        consectetur.
+                    </p>
+                    <p class="mb-2">
+                        Jika pertanyaanmu belum terwakilkan, hubungi kami melalui form, email, ataupun sosial media kami
+                        yang
+                        tertera pada <a href="#kontak"
+                            class="text-yellow-300 hover:text-yellow-400 hover:underline">Kontak</a>
+                    </p>
+                </div>
+            </div>
+            <div class="w-full px-4 text-gray-800 md:w-2/3 sm:px-8 md:pl-0 md:pr-12 lg:pr-16 mb-5">
+                <div x-data="{open: false}" class="flex flex-wrap leading-tight mb-1">
+                    <div class="w-10/12 p-2 pl-3 bg-gray-200 md:w-11/12 rounded-xl rounded-bl-none">
+                        Apakah barang ini masih ada?
+                    </div>
+                    <div class="self-end w-2/12 md:w-1/12">
+                        <div @click="open = !open"
+                            class="flex items-center justify-center rounded-full h-9 w-9 mx-auto md:aspect-square bg-gray-200 text-blue-800 cursor-pointer">
+                            <i class="fa-solid text-xl" :class="open ? 'fa-check-double':'fa-paper-plane'"></i>
+                        </div>
+                    </div>
+                    <div x-cloak x-show="open" x-transition
+                        class="w-11/12 p-2 pl-3 text-gray-950 mt-1 ml-auto bg-[#f1ead1] rounded-br-none rounded-xl">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt fugiat ipsam voluptas
+                        praesentium atque maxime minima similique commodi obcaecati reiciendis!
+                    </div>
+                </div>
+                <div x-data="{open: false}" class="flex flex-wrap leading-tight mb-1">
+                    <div class="w-10/12 p-2 pl-3 bg-gray-200 md:w-11/12 rounded-xl rounded-bl-none">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, ut atque. Nihil neque nobis id
+                        atque, laboriosam, corporis voluptatibus cumque ducimus veritatis numquam iste. Laudantium
+                        delectus at fugit consequuntur fuga?
+                    </div>
+                    <div class="self-end w-2/12 md:w-1/12">
+                        <div @click="open = !open"
+                            class="flex items-center justify-center rounded-full h-9 w-9 mx-auto md:aspect-square bg-gray-200 text-blue-800 cursor-pointer">
+                            <i class="fa-solid text-xl" :class="open ? 'fa-check-double':'fa-paper-plane'"></i>
+                        </div>
+                    </div>
+                    <div x-cloak x-show="open" x-transition
+                        class="w-11/12 p-2 pl-3 text-gray-950 mt-1 ml-auto bg-[#f1ead1] rounded-br-none rounded-xl">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt fugiat ipsam voluptas
+                        praesentium atque maxime minima similique commodi obcaecati reiciendis!
+                    </div>
+                </div>
+                <div x-data="{open: false}" class="flex flex-wrap leading-tight mb-1">
+                    <div class="w-10/12 p-2 pl-3 bg-gray-200 md:w-11/12 rounded-xl rounded-bl-none">
+                        Siapa?
+                    </div>
+                    <div class="self-end w-2/12 md:w-1/12">
+                        <div @click="open = !open"
+                            class="flex items-center justify-center rounded-full h-9 w-9 mx-auto md:aspect-square bg-gray-200 text-blue-800 cursor-pointer">
+                            <i class="fa-solid text-xl" :class="open ? 'fa-check-double':'fa-paper-plane'"></i>
+                        </div>
+                    </div>
+                    <div x-cloak x-show="open" x-transition
+                        class="w-11/12 p-2 pl-3 text-gray-950 mt-1 ml-auto bg-[#f1ead1] rounded-br-none rounded-xl">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt fugiat ipsam voluptas
+                        praesentium atque maxime minima similique commodi obcaecati reiciendis!
+                    </div>
+                </div>
+                <div x-data="{open: false}" class="flex flex-wrap leading-tight mb-1">
+                    <div class="w-10/12 p-2 pl-3 bg-gray-200 md:w-11/12 rounded-xl rounded-bl-none">
+                        Mengapa?
+                    </div>
+                    <div class="self-end w-2/12 md:w-1/12">
+                        <div @click="open = !open"
+                            class="flex items-center justify-center rounded-full h-9 w-9 mx-auto md:aspect-square bg-gray-200 text-blue-800 cursor-pointer">
+                            <i class="fa-solid text-xl" :class="open ? 'fa-check-double':'fa-paper-plane'"></i>
+                        </div>
+                    </div>
+                    <div x-cloak x-show="open" x-transition
+                        class="w-11/12 p-2 pl-3 text-gray-950 mt-1 ml-auto bg-[#f1ead1] rounded-br-none rounded-xl">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt fugiat ipsam voluptas
+                        praesentium atque maxime minima similique commodi obcaecati reiciendis!
+                    </div>
+                </div>
+                <div x-data="{open: false}" class="flex flex-wrap leading-tight mb-1">
+                    <div class="w-10/12 p-2 pl-3 bg-gray-200 md:w-11/12 rounded-xl rounded-bl-none">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat modi iure, exercitationem,
+                        facilis magni consequuntur quae quasi doloribus id, eaque minima. Voluptates voluptatem quae
+                        velit odio dignissimos esse fuga amet qui ducimus harum placeat aspernatur doloribus vero
+                        suscipit minima pariatur dicta repudiandae minus animi, assumenda explicabo quis? Consequatur,
+                        iste tenetur?
+                    </div>
+                    <div class="self-end w-2/12 md:w-1/12">
+                        <div @click="open = !open"
+                            class="flex items-center justify-center rounded-full h-9 w-9 mx-auto md:aspect-square bg-gray-200 text-blue-800 cursor-pointer">
+                            <i class="fa-solid text-xl" :class="open ? 'fa-check-double':'fa-paper-plane'"></i>
+                        </div>
+                    </div>
+                    <div x-cloak x-show="open" x-transition
+                        class="w-11/12 p-2 pl-3 text-gray-950 mt-1 ml-auto bg-[#f1ead1] rounded-br-none rounded-xl">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt fugiat ipsam voluptas
+                        praesentium atque maxime minima similique commodi obcaecati reiciendis!
+                    </div>
+                </div>
+                <div x-data="{open: false}" class="flex flex-wrap leading-tight mb-1">
+                    <div class="w-10/12 p-2 pl-3 bg-gray-200 md:w-11/12 rounded-xl rounded-bl-none">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. A, odit.?
+                    </div>
+                    <div class="self-end w-2/12 md:w-1/12">
+                        <div @click="open = !open"
+                            class="flex items-center justify-center rounded-full h-9 w-9 mx-auto md:aspect-square bg-gray-200 text-blue-800 cursor-pointer">
+                            <i class="fa-solid text-xl" :class="open ? 'fa-check-double':'fa-paper-plane'"></i>
+                        </div>
+                    </div>
+                    <div x-cloak x-show="open" x-transition
+                        class="w-11/12 p-2 pl-3 text-gray-950 mt-1 ml-auto bg-[#f1ead1] rounded-br-none rounded-xl">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt fugiat ipsam voluptas
+                        praesentium atque maxime minima similique commodi obcaecati reiciendis!
+                    </div>
+                </div>
+                <div x-data="{open: false}" class="flex flex-wrap leading-tight mb-1">
+                    <div class="w-10/12 p-2 pl-3 bg-gray-200 md:w-11/12 rounded-xl rounded-bl-none">
+                        Dimana?
+                    </div>
+                    <div class="self-end w-2/12 md:w-1/12">
+                        <div @click="open = !open"
+                            class="flex items-center justify-center rounded-full h-9 w-9 mx-auto md:aspect-square bg-gray-200 text-blue-800 cursor-pointer">
+                            <i class="fa-solid text-xl" :class="open ? 'fa-check-double':'fa-paper-plane'"></i>
+                        </div>
+                    </div>
+                    <div x-cloak x-show="open" x-transition
+                        class="w-11/12 p-2 pl-3 text-gray-950 mt-1 ml-auto bg-[#f1ead1] rounded-br-none rounded-xl">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt fugiat ipsam voluptas
+                        praesentium atque maxime minima similique commodi obcaecati reiciendis!
+                    </div>
+                </div>
+                <div x-data="{open: false}" class="flex flex-wrap leading-tight mb-1">
+                    <div class="w-10/12 p-2 pl-3 bg-gray-200 md:w-11/12 rounded-xl rounded-bl-none">
+                        Iya kah?
+                    </div>
+                    <div class="self-end w-2/12 md:w-1/12">
+                        <div @click="open = !open"
+                            class="flex items-center justify-center rounded-full h-9 w-9 mx-auto md:aspect-square bg-gray-200 text-blue-800 cursor-pointer">
+                            <i class="fa-solid text-xl" :class="open ? 'fa-check-double':'fa-paper-plane'"></i>
+                        </div>
+                    </div>
+                    <div x-cloak x-show="open" x-transition
+                        class="w-11/12 p-2 pl-3 text-gray-950 mt-1 ml-auto bg-[#f1ead1] rounded-br-none rounded-xl">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt fugiat ipsam voluptas
+                        praesentium atque maxime minima similique commodi obcaecati reiciendis!
                     </div>
                 </div>
             </div>
