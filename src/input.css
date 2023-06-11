@@ -43,6 +43,9 @@
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
   }
+  .text-space {
+    letter-spacing: 0.1em;
+  }
 }
 
 @media (min-width: 640px) {
